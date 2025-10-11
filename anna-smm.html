@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна Серпудько — SMM-спеціаліст | Просування в соцмережах</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Анна Серпудько — SMM-спеціаліст з 3-річним досвідом. Створення контенту, таргетована реклама, ведення соцмереж. Отримайте безкоштовну консультацію.">
+    <meta name="keywords" content="SMM, SMM-спеціаліст, соціальні мережі, таргетована реклама, контент, Instagram, Facebook, TikTok, Анна Серпудько">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Анна Серпудько",
+      "jobTitle": "SMM-спеціаліст",
+      "description": "SMM-спеціаліст з 3-річним досвідом. Створення контенту, таргетована реклама, ведення соціальних мереж для бізнесу.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "SMM-послуги",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ведення соціальних мереж",
+              "description": "Повне ведення ваших соцмереж: контент-план, створення контенту, публікації, комунікація з аудиторією."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Таргетована реклама",
+              "description": "Налаштування та ведення таргетованої реклами в Facebook, Instagram, TikTok."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #111111;
+            color: #E5E7EB;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            min-height: 100vh;
+        }
+        ::selection {
+            background-color: #F8F284;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .section-title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+        }
+        .cta-primary {
+            background-color: #F8F284;
+            color: #111;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .cta-primary:hover {
+            background-color: #FFF9A8;
+            transform: translateY(-2px);
+        }
+        .cta-secondary {
+            background-color: transparent;
+            color: #F9FAFB;
+            border: 1px solid #373737;
+            transition: all 0.3s ease;
+        }
+        .cta-secondary:hover {
+            background-color: #272727;
+            border-color: #444;
+        }
+        .section-title {
+            font-size: 1.25rem; /* 20px for mobile */
+            font-weight: 800;
+            line-height: 1.2;
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3rem; /* 48px for tablet and up */
+            }
+        }
+        .section-subtitle {
+            font-size: 0.9375rem; /* 15px for mobile */
+            color: #9CA3AF;
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .section-subtitle {
+                font-size: 1.125rem; /* 18px for tablet and up */
+            }
+        }
+        .custom-card {
+            background: #1C1C1E;
+            border: 1px solid #2D2D2F;
+            transition: all 0.3s ease;
+        }
+        .custom-card:hover {
+            border-color: #444;
+            transform: translateY(-4px);
+        }
+
+        /* Hamburger menu animation */
+        .hamburger {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            cursor: pointer;
+        }
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 2px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        .hamburger span:nth-child(1) {
+            top: 4px;
+        }
+        .hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+            top: 11px;
+        }
+        .hamburger span:nth-child(4) {
+            top: 18px;
+        }
+        .hamburger.open span:nth-child(1) {
+            top: 11px;
+            width: 0%;
+            left: 50%;
+        }
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+        .hamburger.open span:nth-child(4) {
+            top: 11px;
+            width: 0%;
+            left: 50%;
+        }
+
+        /* Анимации появления */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Стили для табов (кейсы) */
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        .tab-button.active {
+            color: #F8F284;
+            background-color: rgba(248, 242, 132, 0.1);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: grid;
+        }
+
+        /* Стили для модального окна */
+        .modal-content {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        
+        /* Стилизация полей формы */
+        .form-input {
+            background-color: #1C1C1E;
+            border: 1px solid #2D2D2F;
+            color: white;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #F8F284;
+            box-shadow: none;
+            --tw-ring-color: transparent;
+        }
+
+        /* Анимация изменения цвета текста по буквам */
+        .text-color-animate {
+            display: inline-block;
+        }
+        .text-color-animate span {
+            display: inline-block;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        /* Слайдер отзывов */
+        .reviews-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .reviews-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .review-card {
+            flex: 0 0 100%;
+            padding: 0 1rem;
+        }
+        @media (min-width: 768px) {
+            .review-card {
+                flex: 0 0 50%;
+            }
+        }
+        @media (min-width: 1024px) {
+            .review-card {
+                flex: 0 0 33.333%;
+            }
+        }
+        .slider-btn-simple {
+            background: #F8F284;
+            color: #111;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider-btn-simple:hover {
+            background: #FFF9A8;
+            transform: scale(1.1);
+        }
+        .slider-btn-simple:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Glassmorphism эффект для всего main */
+        main {
+            position: relative;
+        }
+        main::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(248, 242, 132, 0.15), transparent 50%),
+                radial-gradient(circle at 80% 40%, rgba(168, 85, 247, 0.12), transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.1), transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(236, 72, 153, 0.08), transparent 50%);
+            filter: blur(100px);
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Стеклянный эффект для всех секций */
+        section {
+            position: relative;
+            backdrop-filter: blur(20px);
+            background: rgba(17, 17, 17, 0.4);
+            content-visibility: auto;
+        }
+
+        section > * {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+
+    <!-- === Хедер === -->
+    <header class="bg-black/30 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-800/50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="logo.png" alt="AXY" class="h-10">
+            </a>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#services" class="text-gray-300 hover:text-white transition">Послуги</a>
+                <a href="#cases" class="text-gray-300 hover:text-white transition">Кейси</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition">Про мене</a>
+                <a href="#reviews" class="text-gray-300 hover:text-white transition">Відгуки</a>
+                <a href="#contacts" class="text-gray-300 hover:text-white transition">Контакти</a>
+            </nav>
+            <div class="hidden lg:flex items-center">
+                <a href="#audit" class="js-open-form cta-primary text-sm font-semibold px-5 py-2.5 rounded-lg">Безкоштовна консультація</a>
+            </div>
+            <button id="mobile-menu-button" class="lg:hidden text-white p-2">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <!-- Мобільне меню -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+            <nav class="flex flex-col space-y-4">
+                 <a href="#services" class="text-gray-300 hover:text-white transition">Послуги</a>
+                 <a href="#cases" class="text-gray-300 hover:text-white transition">Кейси</a>
+                 <a href="#about" class="text-gray-300 hover:text-white transition">Про мене</a>
+                 <a href="#reviews" class="text-gray-300 hover:text-white transition">Відгуки</a>
+                 <a href="#contacts" class="text-gray-300 hover:text-white transition">Контакти</a>
+                <div class="flex flex-col space-y-3 pt-4">
+                     <a href="#audit" class="js-open-form cta-primary w-full text-center text-sm font-semibold px-5 py-2.5 rounded-lg">Безкоштовна консультація</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- === Перший екран (Hero) === -->
+        <section id="hero" class="relative">
+             <div class="absolute inset-0 bg-grid-gray-700/10 bg-grid-14 [mask-image:linear-gradient(to_bottom,white_0%,transparent_100%)]"></div>
+            <div class="container mx-auto px-6 pt-6 pb-6 md:pt-16 md:pb-16 animate-on-scroll">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <p class="text-base md:text-xl font-bold text-white">Анна Серпудько</p>
+                        <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mt-4">
+                            SMM-спеціаліст, який перетворює соцмережі на <span class="text-[#F8F284]">машину продажів</span>
+                        </h1>
+                        <p class="mt-4 text-[0.9375rem] md:text-xl text-gray-400 leading-snug md:leading-relaxed">
+                            Допоможу вашому бізнесу зростати в соціальних мережах: від стратегії та контенту до таргетованої реклами та залучення клієнтів. 3 роки досвіду, 22 роки, понад 50 успішних проєктів.
+                        </p>
+                        <div class="mt-8">
+                            <a href="#audit" class="js-open-form cta-primary w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 rounded-xl text-lg md:text-xl font-bold inline-flex items-center justify-center">
+                                Безкоштовна консультація
+                                <i data-lucide="arrow-right" class="w-5 h-5 md:w-6 md:h-6 ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="mt-6 text-base md:text-base text-gray-500 font-semibold flex justify-center lg:justify-start items-center gap-3 flex-wrap">
+                            <span class="whitespace-nowrap"><span class="text-gray-300">3 роки</span> досвіду в SMM</span>
+                            <span class="hidden sm:inline">•</span>
+                            <span class="whitespace-nowrap"><span class="text-gray-300">50+ проєктів</span> реалізовано</span>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <img src="anna-photo.jpg" alt="Анна Серпудько - SMM-спеціаліст" class="w-full h-auto rounded-2xl shadow-2xl object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === Що я роблю (Каталог послуг) === -->
+        <section id="services" class="py-12 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto animate-on-scroll">
+                    <h2 class="section-title">Допомагаю бізнесу <span class="text-color-animate" data-text-animate>зростати в соціальних мережах</span></h2>
+                    <p class="section-subtitle">Instagram, Facebook, TikTok — не важливо, де ви присутні. Я беру на себе повний цикл SMM або закриваю конкретну задачу, щоб ви отримували результат.</p>
+                </div>
+                <p class="text-center text-white text-sm md:text-base font-semibold mt-12 animate-on-scroll" style="transition-delay: 100ms;">Натисни на послугу, щоб дізнатися більше.</p>
+                <div id="services-grid" class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 animate-on-scroll justify-items-center auto-rows-fr" style="transition-delay: 200ms;">
+                    <!-- Картки послуг будуть вставлені тут через JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- === Секція з кейсами === -->
+        <section id="cases" class="py-20 md:py-28 bg-[#1C1C1E]">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+                    <h2 class="section-title">Мої кейси</h2>
+                    <p class="section-subtitle">Реальні результати роботи з брендами в соціальних мережах. Цифри, які говорять самі за себе.</p>
+                </div>
+
+                <div class="mt-12 animate-on-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="transition-delay: 200ms;">
+                    <div class="custom-card rounded-2xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111111/EC4899?text=Beauty+Brand" alt="Кейс Beauty бренд" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Косметичний бренд</h3>
+                            <p class="text-gray-400 mt-2">Розробка SMM-стратегії та запуск таргетованої реклами в Instagram. Збільшення охоплень та залучення цільової аудиторії.</p>
+                            <p class="mt-4 font-bold text-lg text-green-400">Охоплення: +320% за 3 місяці</p>
+                        </div>
+                    </div>
+                    <div class="custom-card rounded-2xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/1C1C1E/F472B6?text=Fashion+Store" alt="Кейс Fashion магазин" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Магазин одягу</h3>
+                            <p class="text-gray-400 mt-2">Повне ведення Instagram та TikTok: контент-план, зйомки, монтаж, Stories. Залучення через Reels та співпрацю з блогерами.</p>
+                            <p class="mt-4 font-bold text-lg text-green-400">Продажі через соцмережі: +180%</p>
+                        </div>
+                    </div>
+                    <div class="custom-card rounded-2xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111111/A78BFA?text=HoReCa" alt="Кейс Ресторан" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Ресторан (HoReCa)</h3>
+                            <p class="text-gray-400 mt-2">Створення контент-стратегії, фото/відео контент, таргет на локальну аудиторію. Збільшення бронювань через соцмережі.</p>
+                            <p class="mt-4 font-bold text-lg text-green-400">Бронювання: +150% за 2 місяці</p>
+                        </div>
+                    </div>
+                    <div class="custom-card rounded-2xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111111/D4FE44?text=Online+School" alt="Кейс Онлайн-школа" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Онлайн-школа</h3>
+                            <p class="text-gray-400 mt-2">Запуск з нуля в Instagram: позиціонування, контент, таргетована реклама. Створення спільноти навколо бренду.</p>
+                            <p class="mt-4 font-bold text-lg text-green-400">5000 підписників за 4 місяці</p>
+                        </div>
+                    </div>
+                    <div class="custom-card rounded-2xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/1C1C1E/FFFFFF?text=Fitness+Club" alt="Кейс Фітнес-клуб" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">Фітнес-клуб</h3>
+                            <p class="text-gray-400 mt-2">Реактивація сторінки в Facebook та Instagram. Залучення нових клієнтів через таргетовану рекламу та Stories.</p>
+                            <p class="mt-4 font-bold text-lg text-green-400">120 нових абонементів за місяць</p>
+                        </div>
+                    </div>
+                    <div class="custom-card rounded-2xl overflow-hidden group">
+                        <img src="https://placehold.co/600x400/111111/3B82F6?text=E-commerce" alt="Кейс E-commerce" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white">E-commerce проєкт</h3>
+                            <p class="text-gray-400 mt-2">Комплексна SMM-стратегія для інтернет-магазину: ведення соцмереж, UGC-контент, таргет, робота з відгуками.</p>
+                            <p class="mt-4 font-bold text-lg text-green-400">ROI реклами: 450%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === Відгуки === -->
+        <section id="reviews" class="py-20 md:py-28">
+            <div class="text-center max-w-3xl mx-auto px-6 animate-on-scroll">
+                <h2 class="section-title">Відгуки клієнтів</h2>
+                <div class="flex justify-center gap-4 mt-8">
+                    <button class="slider-btn-simple prev" id="reviews-prev" aria-label="Предыдущий отзыв">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <button class="slider-btn-simple next" id="reviews-next" aria-label="Следующий отзыв">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="container mx-auto px-6 mt-16">
+                <div class="reviews-slider relative">
+                    <div class="reviews-track" id="reviews-track">
+                            <!-- Первый набор отзывов -->
+                            <div class="review-card">
+                                <div class="custom-card p-6 rounded-xl h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">М</div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-white">Оксана</h4>
+                                        <p class="text-sm text-gray-400">Власниця косметичного бренду</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-3">
+                                    <span class="text-[#F8F284]">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300">Анна повністю взяла на себе ведення нашого Instagram. За 3 місяці продажі через соцмережі зросли на 250%. Контент завжди якісний, цільовий, Stories живі та цікаві. Дуже задоволені співпрацею!</p>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="custom-card p-6 rounded-xl h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">А</div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-white">Анна</h4>
+                                        <p class="text-sm text-gray-400">Власник онлайн-школи</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-3">
+                                    <span class="text-[#F8F284]">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300">Запустили таргетовану рекламу в Instagram і Facebook. За 2 місяці отримали 300+ заявок з CPL всього 45 грн. Анна дуже вникає в продукт і аудиторію. Рекомендую!</p>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="custom-card p-6 rounded-xl h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">Д</div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-white">Дмитрий</h4>
+                                        <p class="text-sm text-gray-400">Товары для дома</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-3">
+                                    <span class="text-[#F8F284]">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300">После года самостоятельной работы продажи застряли на $20k/мес. Обратились в AXY, через 4 месяца вышли на $85k. Переделали карточки, запустили A+ контент, настроили нормальную рекламу. Инвестиция окупилась в первый месяц.</p>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="custom-card p-6 rounded-xl h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">Е</div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-white">Елена</h4>
+                                        <p class="text-sm text-gray-400">Детские товары</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-3">
+                                    <span class="text-[#F8F284]">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300">Столкнулись с блокировкой аккаунта на Amazon. AXY помогли разобраться за 2 недели, восстановили все позиции. Потом провели аудит и нашли еще кучу проблем, которые могли привести к повторной блокировке. Спасибо огромное!</p>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="custom-card p-6 rounded-xl h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">И</div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-white">Игорь</h4>
+                                        <p class="text-sm text-gray-400">Электроника</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-3">
+                                    <span class="text-[#F8F284]">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300">Полный запуск с нуля на Shopify. От разработки сайта до настройки рекламы и первых продаж. За 6 месяцев вышли на стабильные $30k/мес. ROAS держится на уровне 4.2. Команда профессиональная, всё по делу.</p>
+                                </div>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="custom-card p-6 rounded-xl h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">О</div>
+                                    <div class="ml-4">
+                                        <h4 class="font-bold text-white">Ольга</h4>
+                                        <p class="text-sm text-gray-400">Одежда и аксессуары</p>
+                                    </div>
+                                </div>
+                                <div class="flex mb-3">
+                                    <span class="text-[#F8F284]">★★★★★</span>
+                                </div>
+                                <p class="text-gray-300">Сделали ребрендинг и запустили на TikTok Shop. Органика выстрелила благодаря контенту от микро-инфлюенсеров. За первые 3 месяца - 2500 заказов, средний чек $65. Очень круто, что команда всё время на связи и быстро реагирует.</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- === Кто мы такие === -->
+        <section id="team" class="py-20 md:py-28 bg-[#1C1C1E]">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center animate-on-scroll">
+                    <div>
+                        <h2 class="section-title">Мы — действующие селлеры, поэтому знаем каждый этап</h2>
+                        <ul class="mt-6 text-lg text-gray-400 space-y-3">
+                            <li>• 10+ лет в e-commerce</li>
+                            <li>• 1000+ помогли селлерам</li>
+                            <li>• Опыт на Amazon, Shopify, TikTok Shop, AliExpress, Ozon, Wildberries, Yandex Market и т.д.</li>
+                            <li>• Основатель <span class="text-white font-semibold">Азат Шакуров</span> - CEO Axy Company</li>
+                        </ul>
+                        <div class="mt-8 grid grid-cols-2 gap-6 text-center">
+                            <div>
+                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-experience">0+</p>
+                                <p class="mt-1 text-gray-500">лет в e-commerce</p>
+                            </div>
+                            <div>
+                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-stores">0+</p>
+                                <p class="mt-1 text-gray-500">помогли селлерам</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll" style="transition-delay: 200ms;">
+                        <img src="azat.png" alt="Основатель агентства AXY Marketing Азат Шакуров" class="rounded-2xl object-cover w-full h-full shadow-2xl" loading="lazy" width="848" height="1000">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === CTA Section (Free Audit) === -->
+        <section id="audit" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 animate-on-scroll">
+                <div class="bg-[#1C1C1E] border border-[#2D2D2F] rounded-2xl p-8 md:p-16 text-center">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white">Получите бесплатный аудит своего магазина</h2>
+                    <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">Заполните форму, и наши эксперты свяжутся с вами. Вы поделитесь тем, что у вас болит. Мы посмотрим и расскажем, как вы сможете это решить своими силами или при помощи нашей команды.</p>
+                    <div class="mt-12">
+                        <a href="#" class="js-open-form cta-primary px-10 py-5 rounded-xl text-xl inline-flex items-center">
+                            Получить аудит бесплатно
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === Подвал === -->
+    <footer id="contacts" class="bg-black border-t border-gray-800/50">
+        <div class="container mx-auto px-6 py-12 pb-24 md:pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="logo.png" alt="AXY" class="h-10 mb-4">
+                    <p class="mt-4 text-gray-400">Рост вашего бренда — наша работа.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white">Навигация</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Услуги</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-white">Кейсы</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white">Команда</a></li>
+                        <li><a href="#audit" class="text-gray-400 hover:text-white">Аудит</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white">Контакты</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="mailto:account@axyglobal.com" class="text-gray-400 hover:text-white">account@axyglobal.com</a></li>
+                    </ul>
+                     <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="https://www.instagram.com/axy_co?igsh=MXY4bGJtbWtoYXJsNQ%3D%3D" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white">Свяжитесь с нами</h4>
+                     <div class="mt-4 flex flex-col space-y-3">
+                        <a href="https://wa.me/380990699094" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Написать в WhatsApp</span>
+                        </a>
+                        <a href="https://t.me/vanya_yarmosh" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                             <i data-lucide="send" class="w-5 h-5"></i>
+                            <span>Написать в Telegram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col sm:flex-row justify-between">
+                <p>&copy; 2024 AXY Marketing. Все права защищены.</p>
+                <div class="space-x-4 mt-4 sm:mt-0">
+                    <a href="privacy-policy.html" target="_blank" class="hover:text-white">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === Модальное окно для УСЛУГ === -->
+    <div id="service-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-2xl p-8 transform scale-95 opacity-0 modal-content" style="max-height: 90vh; overflow-y: auto;">
+            <button class="js-close-modal absolute top-4 right-4 text-gray-500 hover:text-white">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <div class="pr-8">
+                 <h3 id="service-modal-title" class="text-3xl font-bold text-white mb-4"></h3>
+                 <p id="service-modal-description" class="text-gray-400 leading-relaxed"></p>
+                 <a href="#" id="service-modal-cta" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу консультацию</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- === Модальное окно для КЕЙСОВ === -->
+    <div id="case-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-3xl p-8 transform scale-95 opacity-0 modal-content" style="max-height: 90vh; overflow-y: auto;">
+            <button class="js-close-modal absolute top-4 right-4 text-gray-500 hover:text-white">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <div class="pr-8">
+                 <h3 id="case-modal-title" class="text-3xl font-bold text-white mb-6"></h3>
+                 <div id="case-modal-content" class="text-gray-300 leading-relaxed space-y-4"></div>
+                 <a href="#" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу такой же проект</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- === Модальное окно для ФОРМЫ (Slide-over Panel) === -->
+    <div id="form-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
+        <div id="form-modal-content" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#1C1C1E] border-l border-[#2D2D2F] shadow-2xl p-8 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out modal-content">
+            <button class="js-close-modal absolute top-4 right-4 text-gray-500 hover:text-white">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <div class="text-center">
+                <h2 class="section-title text-3xl md:text-4xl">Получить аудит</h2>
+                <p class="section-subtitle">Заполните форму и наши эксперты свяжутся с вами</p>
+                <form action="#" method="POST" class="mt-8 space-y-6 text-left">
+                    <div>
+                        <input type="text" name="name" placeholder="Ваше имя" required class="form-input block w-full rounded-md p-4">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="Ваш номер телефона" required class="form-input block w-full rounded-md p-4">
+                    </div>
+                     <div>
+                        <input type="text" name="telegram" placeholder="Ваш Телеграм (@username)" required class="form-input block w-full rounded-md p-4">
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" id="privacy-checkbox" name="privacy" required class="mt-1 w-5 h-5 rounded-none border border-[#F8F284] bg-transparent checked:bg-[#F8F284] checked:border-[#F8F284] focus:ring-2 focus:ring-[#F8F284] focus:ring-offset-0 cursor-pointer appearance-none relative checked:after:content-['✓'] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-black checked:after:font-semibold checked:after:text-xs">
+                        <label for="privacy-checkbox" class="text-sm text-gray-400 cursor-pointer">
+                            Я подтверждаю, что ознакомился с <a href="privacy-policy.html" target="_blank" class="text-[#F8F284] hover:underline">политикой конфиденциальности</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full cta-primary font-bold px-8 py-4 rounded-xl text-lg">Получить аудит бесплатно</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Иконки Lucide ---
+            requestAnimationFrame(() => {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            });
+
+            // --- Логика мобильного меню ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            const hamburger = document.querySelector('.hamburger');
+
+            const toggleMobileMenu = () => {
+                const isOpening = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                hamburger.classList.toggle('open');
+
+                if (isOpening) {
+                    // Menu is opening
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    // Menu is closing
+                    // Check if another modal is open before re-enabling scroll
+                    const anyOpenModal = document.querySelector('.modal-backdrop:not(.hidden)');
+                    if (!anyOpenModal) {
+                        document.body.style.overflow = '';
+                    }
+                }
+            };
+            
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleMobileMenu();
+            });
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // This will close the menu when any link inside it is clicked
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        // The 'js-open-form' buttons have their own listeners that will handle modals correctly after this
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+            // --- Данные для карточек услуг ---
+            const servicesData = [
+                { id: 0, icon: 'rocket', title: 'Полный запуск под ключ', description: 'Мы берём ваш бренд от идеи до первых продаж. Рынок, продукт, упаковка, реклама — всё в одном цикле. Вы получаете готовую систему, которая начинает зарабатывать в долларах с первого дня выхода на рынок.' },
+                { id: 1, icon: 'search', title: 'Подбор продукта и ресерч ниши', description: 'Используем базы Amazon, TikTok, Shopify и AI-аналитику, чтобы выбрать товар с высоким спросом и минимальными рисками.' },
+                { id: 2, icon: 'mouse-pointer-click', title: 'SEO и PPC (Amazon)', description: 'Мы настраиваем рекламу внутри Amazon и поисковиков так, чтобы ваш бренд попадал в топ выдачи и получал целевых покупателей: больше продаж при меньших расходах.' },
+                { id: 3, icon: 'target', title: 'Таргетированная реклама', description: 'Ваш бренд должен быть там, где покупатель проводит время. Мы создаём креативы и настраиваем рекламу (Meta, TikTok, YouTube), которая бьёт прямо в потребности аудитории, чтобы был стабильный поток продаж и рост узнаваемости.' },
+                { id: 4, icon: 'users', title: 'Инфлюенс-маркетинг', description: 'В США и Европе покупают не у брендов, а у людей. Мы подключаем блогеров, создаём UGC-контент (TikTok, Instagram) и формируем доверие через нативные рекомендации. Это самый быстрый способ пробиться в нише и увеличить продажи ×2–×3.' },
+                { id: 5, icon: 'image', title: 'Фото, видео, 3D, A+ контент', description: 'В e-commerce покупают глазами. Мы делаем карточки, которые выглядят как у брендов с миллионными оборотами: студийные фото, lifestyle-съёмки, 3D-рендеры и A+ контент. Ваша карточка не просто продаёт — она выделяет бренд среди конкурентов.' },
+                { id: 6, icon: 'package', title: 'Упаковка и айдентика бренда', description: 'Продукт без бренда — это просто товар. Мы создаём легенду, визуал и стиль, которые вызывают доверие и желание купить с первого взгляда. Бренд — это ваша капитализация и возможность выйти на X3–X5 при продаже.' },
+                { id: 7, icon: 'store', title: 'Разработка сайта (Shopify)', description: 'Собственный сайт — это независимость от маркетплейсов и контроль над клиентской базой. Мы создаём Shopify-магазины с удобной корзиной, логистикой и аналитикой. Ваш бренд получает собственную платформу для роста.' },
+                { id: 8, icon: 'plug-zap', title: 'Интеграции и приложения', description: 'Соединяем маркетплейсы, CRM и платёжные системы так, чтобы всё работало без сбоев. Разрабатываем кастомные приложения под ваш бренд. Вы получаете автоматизацию, которая экономит время и деньги.' },
+                { id: 9, icon: 'bar-chart-2', title: 'Аналитика и стратегия роста', description: 'Рост — это математика. Мы ведём аналитику продаж, трафика и отзывов, видим слабые места и усиливаем сильные стороны. Для вас это значит: каждое решение основано на цифрах, а не на догадках.' }
+            ];
+
+            const servicesGrid = document.getElementById('services-grid');
+            if(servicesGrid) {
+                servicesData.forEach(service => {
+                    const card = document.createElement('div');
+                    card.className = 'service-card custom-card p-[1.2rem] rounded-2xl cursor-pointer w-full flex flex-col items-center justify-center text-center max-w-[250px] h-full';
+                    card.dataset.serviceId = service.id;
+                    card.innerHTML = `
+                        <div class="bg-gray-800 text-[#F8F284] rounded-lg w-12 h-12 flex items-center justify-center">
+                            <i data-lucide="${service.icon}" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="mt-4 font-bold text-lg text-white">${service.title}</h3>
+                    `;
+                    servicesGrid.appendChild(card);
+                });
+                requestAnimationFrame(() => {
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                });
+            }
+            
+            // --- Данные для кейсов ---
+            const casesData = {
+                firearm: {
+                    title: 'Аксессуары для оружия',
+                    content: `
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Проект</h4>
+                        <p class="mb-4">Firearm Accessories</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Миграция</h4>
+                        <p class="mb-4">С WooCommerce на Shopify</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Выбор темы</h4>
+                        <p class="mb-4">Тема выбрана в соответствии с эстетикой бренда</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Основные страницы созданы</h4>
+                        <ul class="list-disc list-inside mb-4 space-y-1">
+                            <li>Главная страница</li>
+                            <li>Страница коллекций</li>
+                            <li>Страница товара</li>
+                            <li>Бизнес-страницы</li>
+                            <li>Дополнительные страницы</li>
+                        </ul>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Ключевые функции реализованы</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Мега-меню</li>
+                            <li>Подписка на рассылку</li>
+                            <li>Всплывающая корзина</li>
+                            <li>Multi-Currency (мультивалютность)</li>
+                            <li>Кастомные опции товаров с редиректами</li>
+                            <li>Аккордеон на основе метаобъектов</li>
+                            <li>Функционал для недоступных опций</li>
+                            <li>Функционал отображения инвентаря (разные страны)</li>
+                        </ul>
+                    `
+                },
+                toys: {
+                    title: 'Игрушки и хобби',
+                    content: `
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Проект</h4>
+                        <p class="mb-4">Toys & Hobbies</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Выбор темы</h4>
+                        <p class="mb-4">Выбранная тема соответствует эстетике бренда</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Основные страницы созданы</h4>
+                        <ul class="list-disc list-inside mb-4 space-y-1">
+                            <li>Главная страница</li>
+                            <li>Страница коллекций</li>
+                            <li>Страница товара</li>
+                            <li>Бизнес-страницы: Оплата, Доставка и Политики</li>
+                        </ul>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Ключевые функции реализованы</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Мега-меню: Расширенная навигационная система</li>
+                            <li>Instagram Feed: Отображение последних постов</li>
+                            <li>Wishlist: Возможность сохранения избранных товаров</li>
+                            <li>Связанные товары: Предложения дополнительных покупок</li>
+                            <li>Виджет поддержки: Мгновенная поддержка клиентов</li>
+                            <li>Отзывы о товарах: Отображение отзывов клиентов</li>
+                        </ul>
+                    `
+                },
+                jewelry: {
+                    title: 'Ювелирные изделия',
+                    content: `
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Проект</h4>
+                        <p class="mb-4">Jewelry</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Реализация темы</h4>
+                        <p class="mb-4">Разработка и кастомизация премиум темы</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Вовлечение клиентов</h4>
+                        <p class="mb-4">Интеграция Google отзывов и быстрого чата</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Пользовательский интерфейс</h4>
+                        <p class="mb-4">Разработан кастомный хедер с мега-меню и единообразный футер</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Аналитика</h4>
+                        <p class="mb-4">Настроены Google Analytics и Facebook Pixel</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Разработка страниц</h4>
+                        <p class="mb-4">Созданы главная страница, страницы коллекций с фильтрами и страницы блога</p>
+
+                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Социальная интеграция</h4>
+                        <p class="mb-4">Интеграция Instagram feed на страницах товаров</p>
+                    `
+                }
+            };
+
+            // --- ОБЩАЯ ЛОГИКА МОДАЛЬНЫХ ОКОН ---
+            const serviceModalBackdrop = document.getElementById('service-modal-backdrop');
+            const caseModalBackdrop = document.getElementById('case-modal-backdrop');
+            const formModalBackdrop = document.getElementById('form-modal-backdrop');
+
+            const closeButtons = document.querySelectorAll('.js-close-modal');
+            const openFormButtons = document.querySelectorAll('.js-open-form');
+
+            // --- Логика модального окна УСЛУГ ---
+            function openServiceModal(service) {
+                if (!service || !serviceModalBackdrop) return;
+                serviceModalBackdrop.querySelector('#service-modal-title').textContent = service.title;
+                serviceModalBackdrop.querySelector('#service-modal-description').textContent = service.description;
+                openModal(serviceModalBackdrop);
+            }
+            
+            if(servicesGrid) {
+                servicesGrid.addEventListener('click', (e) => {
+                    const card = e.target.closest('.service-card');
+                    if (card) {
+                        const service = servicesData.find(s => s.id == card.dataset.serviceId);
+                        openServiceModal(service);
+                    }
+                });
+            }
+
+            // --- Логика модального окна КЕЙСОВ ---
+            function openCaseModal(caseData) {
+                if (!caseData || !caseModalBackdrop) return;
+                caseModalBackdrop.querySelector('#case-modal-title').textContent = caseData.title;
+                caseModalBackdrop.querySelector('#case-modal-content').innerHTML = caseData.content;
+                openModal(caseModalBackdrop);
+                requestAnimationFrame(() => {
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                });
+            }
+
+            document.querySelectorAll('.portfolio-case').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const caseId = card.dataset.caseId;
+                    const caseData = casesData[caseId];
+                    if (caseData) {
+                        openCaseModal(caseData);
+                    }
+                });
+            });
+
+            // --- Логика модального окна ФОРМЫ (Slide-over) ---
+            function openFormModal() {
+                openModal(formModalBackdrop);
+            }
+
+            openFormButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const anyOpenModal = document.querySelector('.modal-backdrop:not(.hidden)');
+                    if(anyOpenModal) closeModal(anyOpenModal);
+                    setTimeout(() => openFormModal(), anyOpenModal ? 300 : 0);
+                });
+            });
+
+            // --- Общие функции открытия/закрытия ---
+            function openModal(modalBackdrop) {
+                if (!modalBackdrop) return;
+                const modalContent = modalBackdrop.querySelector('.modal-content');
+
+                modalBackdrop.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => {
+                    modalBackdrop.classList.remove('opacity-0');
+                    if (modalBackdrop.id === 'form-modal-backdrop') {
+                         if(modalContent) modalContent.classList.remove('translate-x-full');
+                    } else {
+                         if(modalContent) modalContent.classList.remove('scale-95', 'opacity-0');
+                    }
+                }, 10);
+            }
+
+            function closeModal(modalBackdrop) {
+                 if (!modalBackdrop) return;
+                 const modalContent = modalBackdrop.querySelector('.modal-content');
+
+                modalBackdrop.classList.add('opacity-0');
+                
+                if (modalBackdrop.id === 'form-modal-backdrop') {
+                    if(modalContent) modalContent.classList.add('translate-x-full');
+                } else {
+                    if(modalContent) modalContent.classList.add('scale-95', 'opacity-0');
+                }
+                
+                 setTimeout(() => {
+                    modalBackdrop.classList.add('hidden');
+                    const anyOpenModal = document.querySelector('.modal-backdrop:not(.hidden)');
+                    if(!anyOpenModal) document.body.style.overflow = '';
+                }, 300);
+            }
+            
+            closeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const modal = e.target.closest('.modal-backdrop');
+                    closeModal(modal);
+                });
+            });
+
+             document.querySelectorAll('.modal-backdrop').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal(modal);
+                });
+            });
+
+            // --- Анимация при скролле ---
+            const scrollElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+
+                        // Запуск анимации изменения цвета текста по буквам
+                        const textAnimateElement = entry.target.querySelector('[data-text-animate]');
+                        if (textAnimateElement) {
+                            const text = textAnimateElement.textContent;
+                            textAnimateElement.innerHTML = '';
+
+                            // Разбиваем текст на буквы, сохраняя пробелы
+                            text.split('').forEach((char, index) => {
+                                const span = document.createElement('span');
+                                span.textContent = char;
+                                if (char === ' ') {
+                                    span.style.width = '0.25em';
+                                }
+                                textAnimateElement.appendChild(span);
+                            });
+
+                            // Анимируем изменение цвета с задержкой
+                            setTimeout(() => {
+                                const spans = textAnimateElement.querySelectorAll('span');
+                                spans.forEach((span, index) => {
+                                    setTimeout(() => {
+                                        span.style.color = '#F8F284';
+                                    }, index * 50); // 50ms задержка между буквами
+                                });
+                            }, 600); // Задержка после появления текста
+                        }
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            scrollElements.forEach(el => observer.observe(el));
+
+            // --- Анимация счетчика ---
+            const animateCounter = (id, targetValue, duration, suffix = '') => {
+                const element = document.getElementById(id);
+                if (!element) return;
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const currentValue = Math.floor(progress * targetValue);
+                    element.innerText = currentValue + suffix;
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter('count-up-experience', 10, 1500, '+');
+                        animateCounter('count-up-stores', 1000, 2000, '+');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const teamSection = document.getElementById('team');
+            if (teamSection) {
+                counterObserver.observe(teamSection);
+            }
+
+
+            // --- Логика табов для кейсов ---
+            const tabsContainer = document.getElementById('tabs-container');
+            const tabButtons = tabsContainer ? tabsContainer.querySelectorAll('.tab-button') : [];
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            function switchTab(targetTabId) {
+                if (!tabsContainer) return;
+
+                tabButtons.forEach(button => {
+                    if (button.dataset.tab === targetTabId) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+
+                tabContents.forEach(content => {
+                    if (content.id === targetTabId) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+            }
+
+            if(tabsContainer) {
+                tabsContainer.addEventListener('click', (e) => {
+                    const clickedTab = e.target.closest('.tab-button');
+                    if (!clickedTab) return;
+                    switchTab(clickedTab.dataset.tab);
+                });
+            }
+
+            // --- Обработка кликов по ссылкам в навигации ---
+            document.querySelectorAll('.nav-tab-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const targetTab = link.dataset.tab;
+                    if (targetTab) {
+                        setTimeout(() => {
+                            switchTab(targetTab);
+                        }, 100);
+                    }
+                });
+            });
+
+            // --- Логика слайдера отзывов ---
+            const reviewsTrack = document.getElementById('reviews-track');
+            const prevBtn = document.getElementById('reviews-prev');
+            const nextBtn = document.getElementById('reviews-next');
+
+            if (reviewsTrack && prevBtn && nextBtn) {
+                let currentSlide = 0;
+                const reviewCards = reviewsTrack.querySelectorAll('.review-card');
+                const totalSlides = reviewCards.length;
+
+                function getSlidesPerView() {
+                    if (window.innerWidth >= 1024) return 3;
+                    if (window.innerWidth >= 768) return 2;
+                    return 1;
+                }
+
+                function updateSlider() {
+                    const slidesPerView = getSlidesPerView();
+                    const maxSlide = totalSlides - slidesPerView;
+                    currentSlide = Math.max(0, Math.min(currentSlide, maxSlide));
+                    const translateX = -(currentSlide * (100 / slidesPerView));
+                    reviewsTrack.style.transform = `translateX(${translateX}%)`;
+
+                    // Управление состоянием кнопок
+                    prevBtn.disabled = currentSlide === 0;
+                    nextBtn.disabled = currentSlide >= maxSlide;
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    if (currentSlide > 0) {
+                        currentSlide--;
+                        updateSlider();
+                    }
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    const slidesPerView = getSlidesPerView();
+                    const maxSlide = totalSlides - slidesPerView;
+                    if (currentSlide < maxSlide) {
+                        currentSlide++;
+                        updateSlider();
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    updateSlider();
+                });
+
+                updateSlider();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
