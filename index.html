@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анна Серпудько — SMM-спеціаліст | Просування в соцмережах</title>
+    <title>Анна Серпутько — SMM-спеціаліст | Просування в соцмережах</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Анна Серпудько — SMM-спеціаліст з 3-річним досвідом. Створення контенту, таргетована реклама, ведення соцмереж. Отримайте безкоштовну консультацію.">
-    <meta name="keywords" content="SMM, SMM-спеціаліст, соціальні мережі, таргетована реклама, контент, Instagram, Facebook, TikTok, Анна Серпудько">
+    <meta name="description" content="Анна Серпутько — SMM-спеціаліст з 3-річним досвідом. Створення контенту, таргетована реклама, ведення соцмереж. Отримайте безкоштовну консультацію.">
+    <meta name="keywords" content="SMM, SMM-спеціаліст, соціальні мережі, таргетована реклама, контент, Instagram, Facebook, TikTok, Анна Серпутько">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -15,7 +15,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700;800&display=swap" rel="stylesheet">
     <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     
     <!-- JSON-LD Structured Data for SEO -->
@@ -23,7 +23,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Анна Серпудько",
+      "name": "Анна Серпутько",
       "jobTitle": "SMM-спеціаліст",
       "description": "SMM-спеціаліст з 3-річним досвідом. Створення контенту, таргетована реклама, ведення соціальних мереж для бізнесу.",
       "hasOfferCatalog": {
@@ -56,7 +56,7 @@
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Roboto Flex', sans-serif;
             background-color: #111111;
             color: #E5E7EB;
             overflow-x: hidden; /* Prevent horizontal scroll */
@@ -67,8 +67,8 @@
             color: #111111;
         }
         h1, h2, h3, h4, .section-title {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 800;
+            font-family: 'Roboto Flex', sans-serif;
+            font-weight: 400;
         }
         .cta-primary {
             background-color: #F8F284;
@@ -92,7 +92,6 @@
         }
         .section-title {
             font-size: 1.25rem; /* 20px for mobile */
-            font-weight: 800;
             line-height: 1.2;
             color: #FFFFFF;
             letter-spacing: -0.02em;
@@ -177,6 +176,45 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Стили для header с border-radius при скролле */
+        #main-header {
+            border-radius: 0;
+            transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            margin-top: 0;
+        }
+        #main-header.scrolled {
+            left: 60px !important;
+            right: 60px !important;
+            width: calc(100% - 120px) !important;
+            border-radius: 20px;
+            margin-top: 12px;
+        }
+        @media (max-width: 1024px) {
+            #main-header.scrolled {
+                left: 30px !important;
+                right: 30px !important;
+                width: calc(100% - 60px) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            #main-header.scrolled {
+                left: 16px !important;
+                right: 16px !important;
+                width: calc(100% - 32px) !important;
+            }
+        }
+        #main-header.hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Компенсация для body когда header fixed */
+        body {
+            padding-top: 0;
+        }
         
         /* Стили для табов (кейсы) */
         .tab-button {
@@ -210,6 +248,10 @@
             border-color: #F8F284;
             box-shadow: none;
             --tw-ring-color: transparent;
+        }
+
+        .font-bold {
+            font-weight: normal !important;
         }
 
         /* Анимация изменения цвета текста по буквам */
@@ -298,12 +340,44 @@
             position: relative;
             z-index: 1;
         }
+
+        /* Плашка доступності */
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(248, 242, 132, 0.1);
+            border: 1px solid rgba(248, 242, 132, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #F8F284;
+            margin-bottom: 1.5rem;
+        }
+        .availability-indicator {
+            width: 8px;
+            height: 8px;
+            background: #10B981;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1);
+            }
+        }
     </style>
 </head>
 <body class="text-gray-300">
 
     <!-- === Хедер === -->
-    <header class="bg-black/30 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-800/50">
+    <header id="main-header" class="scrolled bg-black/30 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-800/50 transition-transform duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center">
                 <img src="logo.png" alt="AXY" class="h-10">
@@ -344,33 +418,34 @@
 
     <main>
 
-        <!-- === Перший екран (Hero) === -->
-        <section id="hero" class="relative">
-             <div class="absolute inset-0 bg-grid-gray-700/10 bg-grid-14 [mask-image:linear-gradient(to_bottom,white_0%,transparent_100%)]"></div>
-            <div class="container mx-auto px-6 pt-6 pb-6 md:pt-16 md:pb-16 animate-on-scroll">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="text-center lg:text-left">
-                        <p class="text-base md:text-xl font-bold text-white">Анна Серпудько</p>
-                        <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight mt-4">
-                            SMM-спеціаліст, який перетворює соцмережі на <span class="text-[#F8F284]">машину продажів</span>
-                        </h1>
-                        <p class="mt-4 text-[0.9375rem] md:text-xl text-gray-400 leading-snug md:leading-relaxed">
-                            Допоможу вашому бізнесу зростати в соціальних мережах: від стратегії та контенту до таргетованої реклами та залучення клієнтів. 3 роки досвіду, 22 роки, понад 50 успішних проєктів.
+        <!-- === Про мене === -->
+        <section id="about" class="py-20 md:py-28 bg-[#1C1C1E]">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center animate-on-scroll">
+                    <div>
+                        <h2 class="section-title">Привіт! Я Анна — ваш SMM-спеціаліст</h2>
+                        <p class="mt-6 text-lg text-gray-400 leading-relaxed">
+                            Я допомагаю бізнесу зростати в соціальних мережах вже 3 роки. Працювала з брендами у сферах beauty, fashion, HoReCa, освіти та e-commerce.
                         </p>
-                        <div class="mt-8">
-                            <a href="#audit" class="js-open-form cta-primary w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 rounded-xl text-lg md:text-xl font-bold inline-flex items-center justify-center">
-                                Безкоштовна консультація
-                                <i data-lucide="arrow-right" class="w-5 h-5 md:w-6 md:h-6 ml-2"></i>
-                            </a>
-                        </div>
-                        <div class="mt-6 text-base md:text-base text-gray-500 font-semibold flex justify-center lg:justify-start items-center gap-3 flex-wrap">
-                            <span class="whitespace-nowrap"><span class="text-gray-300">3 роки</span> досвіду в SMM</span>
-                            <span class="hidden sm:inline">•</span>
-                            <span class="whitespace-nowrap"><span class="text-gray-300">50+ проєктів</span> реалізовано</span>
+                        <ul class="mt-6 text-lg text-gray-400 space-y-3">
+                            <li>• <span class="text-white font-semibold">3 роки</span> досвіду в SMM</li>
+                            <li>• <span class="text-white font-semibold">50+ успішних проєктів</span> реалізовано</li>
+                            <li>• Досвід роботи з <span class="text-white font-semibold">Instagram, Facebook, TikTok</span></li>
+                            <li>• Спеціалізація: контент, таргет, стратегія</li>
+                        </ul>
+                        <div class="mt-8 grid grid-cols-2 gap-6 text-center">
+                            <div>
+                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-experience">0+</p>
+                                <p class="mt-1 text-gray-500">роки в SMM</p>
+                            </div>
+                            <div>
+                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-stores">0+</p>
+                                <p class="mt-1 text-gray-500">проєктів реалізовано</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="hidden lg:block">
-                        <img src="anna-photo.jpg" alt="Анна Серпудько - SMM-спеціаліст" class="w-full h-auto rounded-2xl shadow-2xl object-cover">
+                    <div class="animate-on-scroll" style="transition-delay: 200ms;">
+                        <img src="anna-photo.jpg" alt="Анна Серпутько - SMM-спеціаліст" class="rounded-2xl object-cover w-full h-full shadow-2xl" loading="lazy" width="848" height="1000">
                     </div>
                 </div>
             </div>
@@ -568,46 +643,15 @@
             </div>
         </section>
 
-
-        <!-- === Кто мы такие === -->
-        <section id="team" class="py-20 md:py-28 bg-[#1C1C1E]">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center animate-on-scroll">
-                    <div>
-                        <h2 class="section-title">Мы — действующие селлеры, поэтому знаем каждый этап</h2>
-                        <ul class="mt-6 text-lg text-gray-400 space-y-3">
-                            <li>• 10+ лет в e-commerce</li>
-                            <li>• 1000+ помогли селлерам</li>
-                            <li>• Опыт на Amazon, Shopify, TikTok Shop, AliExpress, Ozon, Wildberries, Yandex Market и т.д.</li>
-                            <li>• Основатель <span class="text-white font-semibold">Азат Шакуров</span> - CEO Axy Company</li>
-                        </ul>
-                        <div class="mt-8 grid grid-cols-2 gap-6 text-center">
-                            <div>
-                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-experience">0+</p>
-                                <p class="mt-1 text-gray-500">лет в e-commerce</p>
-                            </div>
-                            <div>
-                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-stores">0+</p>
-                                <p class="mt-1 text-gray-500">помогли селлерам</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="animate-on-scroll" style="transition-delay: 200ms;">
-                        <img src="azat.png" alt="Основатель агентства AXY Marketing Азат Шакуров" class="rounded-2xl object-cover w-full h-full shadow-2xl" loading="lazy" width="848" height="1000">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- === CTA Section (Free Audit) === -->
+        <!-- === CTA Section (Free Consultation) === -->
         <section id="audit" class="py-20 md:py-28">
             <div class="container mx-auto px-6 animate-on-scroll">
                 <div class="bg-[#1C1C1E] border border-[#2D2D2F] rounded-2xl p-8 md:p-16 text-center">
-                    <h2 class="text-3xl md:text-5xl font-bold text-white">Получите бесплатный аудит своего магазина</h2>
-                    <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">Заполните форму, и наши эксперты свяжутся с вами. Вы поделитесь тем, что у вас болит. Мы посмотрим и расскажем, как вы сможете это решить своими силами или при помощи нашей команды.</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white">Отримайте безкоштовну консультацію</h2>
+                    <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">Напишіть мені зручним для вас способом. Розкажіть про свій бізнес та завдання. Я проаналізую ваші соцмережі та дам рекомендації, як підвищити продажі через SMM.</p>
                     <div class="mt-12">
                         <a href="#" class="js-open-form cta-primary px-10 py-5 rounded-xl text-xl inline-flex items-center">
-                            Получить аудит бесплатно
+                            Зв'язатися зі мною
                         </a>
                     </div>
                 </div>
@@ -619,50 +663,41 @@
     <!-- === Подвал === -->
     <footer id="contacts" class="bg-black border-t border-gray-800/50">
         <div class="container mx-auto px-6 py-12 pb-24 md:pb-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <img src="logo.png" alt="AXY" class="h-10 mb-4">
-                    <p class="mt-4 text-gray-400">Рост вашего бренда — наша работа.</p>
+                    <img src="logo.png" alt="Анна Серпутько SMM" class="h-10 mb-4">
+                    <p class="mt-4 text-gray-400">Зростання вашого бренду в соцмережах — моя робота.</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-white">Навигация</h4>
+                    <h4 class="font-semibold text-white">Навігація</h4>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-white">Услуги</a></li>
-                        <li><a href="#cases" class="text-gray-400 hover:text-white">Кейсы</a></li>
-                        <li><a href="#team" class="text-gray-400 hover:text-white">Команда</a></li>
-                        <li><a href="#audit" class="text-gray-400 hover:text-white">Аудит</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Послуги</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-white">Кейси</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">Про мене</a></li>
+                        <li><a href="#reviews" class="text-gray-400 hover:text-white">Відгуки</a></li>
+                        <li><a href="#contacts" class="text-gray-400 hover:text-white">Контакти</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-white">Контакты</h4>
-                    <ul class="mt-4 space-y-2">
-                        <li><a href="mailto:account@axyglobal.com" class="text-gray-400 hover:text-white">account@axyglobal.com</a></li>
-                    </ul>
-                     <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                        <a href="https://www.instagram.com/axy_co?igsh=MXY4bGJtbWtoYXJsNQ%3D%3D" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-white">Свяжитесь с нами</h4>
+                    <h4 class="font-semibold text-white">Зв'яжіться зі мною</h4>
                      <div class="mt-4 flex flex-col space-y-3">
                         <a href="https://wa.me/380990699094" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
                             <i data-lucide="message-circle" class="w-5 h-5"></i>
-                            <span>Написать в WhatsApp</span>
+                            <span>Написати в WhatsApp</span>
                         </a>
-                        <a href="https://t.me/vanya_yarmosh" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                        <a href="https://t.me/annserputko" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
                              <i data-lucide="send" class="w-5 h-5"></i>
-                            <span>Написать в Telegram</span>
+                            <span>Написати в Telegram</span>
+                        </a>
+                        <a href="https://www.instagram.com/axy_co?igsh=MXY4bGJtbWtoYXJsNQ%3D%3D" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span>Instagram</span>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col sm:flex-row justify-between">
-                <p>&copy; 2024 AXY Marketing. Все права защищены.</p>
-                <div class="space-x-4 mt-4 sm:mt-0">
-                    <a href="privacy-policy.html" target="_blank" class="hover:text-white">Политика конфиденциальности</a>
-                </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Анна Серпутько. Усі права захищені.</p>
             </div>
         </div>
     </footer>
@@ -676,7 +711,7 @@
             <div class="pr-8">
                  <h3 id="service-modal-title" class="text-3xl font-bold text-white mb-4"></h3>
                  <p id="service-modal-description" class="text-gray-400 leading-relaxed"></p>
-                 <a href="#" id="service-modal-cta" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу консультацию</a>
+                 <a href="#" id="service-modal-cta" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу консультацію</a>
             </div>
         </div>
     </div>
@@ -690,38 +725,37 @@
             <div class="pr-8">
                  <h3 id="case-modal-title" class="text-3xl font-bold text-white mb-6"></h3>
                  <div id="case-modal-content" class="text-gray-300 leading-relaxed space-y-4"></div>
-                 <a href="#" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу такой же проект</a>
+                 <a href="#" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу такий же проєкт</a>
             </div>
         </div>
     </div>
 
-    <!-- === Модальное окно для ФОРМЫ (Slide-over Panel) === -->
-    <div id="form-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
-        <div id="form-modal-content" class="fixed top-0 right-0 h-full w-full max-w-md bg-[#1C1C1E] border-l border-[#2D2D2F] shadow-2xl p-8 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out modal-content">
-            <button class="js-close-modal absolute top-4 right-4 text-gray-500 hover:text-white">
+    <!-- === Модальное окно для ВЫБОРА СПОСОБА СВЯЗИ === -->
+    <div id="contact-choice-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-80 z-[60] hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-2xl p-8 transform translate-x-full transition-transform duration-300 ease-in-out modal-content" style="max-height: 90vh; overflow-y: auto;">
+            <button class="js-close-contact-choice absolute top-4 right-4 text-gray-500 hover:text-white">
                 <i data-lucide="x" class="w-8 h-8"></i>
             </button>
-            <div class="text-center">
-                <h2 class="section-title text-3xl md:text-4xl">Получить аудит</h2>
-                <p class="section-subtitle">Заполните форму и наши эксперты свяжутся с вами</p>
-                <form action="#" method="POST" class="mt-8 space-y-6 text-left">
-                    <div>
-                        <input type="text" name="name" placeholder="Ваше имя" required class="form-input block w-full rounded-md p-4">
-                    </div>
-                    <div>
-                        <input type="tel" name="phone" placeholder="Ваш номер телефона" required class="form-input block w-full rounded-md p-4">
-                    </div>
-                     <div>
-                        <input type="text" name="telegram" placeholder="Ваш Телеграм (@username)" required class="form-input block w-full rounded-md p-4">
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <input type="checkbox" id="privacy-checkbox" name="privacy" required class="mt-1 w-5 h-5 rounded-none border border-[#F8F284] bg-transparent checked:bg-[#F8F284] checked:border-[#F8F284] focus:ring-2 focus:ring-[#F8F284] focus:ring-offset-0 cursor-pointer appearance-none relative checked:after:content-['✓'] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:-translate-x-1/2 checked:after:-translate-y-1/2 checked:after:text-black checked:after:font-semibold checked:after:text-xs">
-                        <label for="privacy-checkbox" class="text-sm text-gray-400 cursor-pointer">
-                            Я подтверждаю, что ознакомился с <a href="privacy-policy.html" target="_blank" class="text-[#F8F284] hover:underline">политикой конфиденциальности</a>
-                        </label>
-                    </div>
-                    <button type="submit" class="w-full cta-primary font-bold px-8 py-4 rounded-xl text-lg">Получить аудит бесплатно</button>
-                </form>
+            <div class="pr-8">
+                <h3 class="text-3xl font-bold text-white mb-4">Оберіть спосіб зв'язку</h3>
+                <p class="text-gray-400 leading-relaxed mb-8">Виберіть зручний для вас спосіб зв'язку, і я відповім вам якнайшвидше</p>
+
+                <div class="space-y-4">
+                    <a href="https://t.me/annserputko" target="_blank" class="block w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                        <i data-lucide="send" class="w-6 h-6"></i>
+                        <span class="text-lg">Написати в Telegram</span>
+                    </a>
+
+                    <a href="https://wa.me/380990699094" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        <span class="text-lg">Написати в WhatsApp</span>
+                    </a>
+
+                    <a href="mailto:account@axyglobal.com" class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                        <span class="text-lg">Написати на Email</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -734,6 +768,31 @@
                     lucide.createIcons();
                 }
             });
+
+            // --- Логика sticky header с hide/show при скролле ---
+            const header = document.getElementById('main-header');
+            let lastScrollTop = 0;
+            let scrollThreshold = 100; // Порог скролла для применения стилей
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // Определяем направление скролла
+                if (scrollTop > scrollThreshold) {
+                    if (scrollTop > lastScrollTop) {
+                        // Скролл вниз - прячем header
+                        header.classList.add('hidden');
+                    } else {
+                        // Скролл вверх - показываем header
+                        header.classList.remove('hidden');
+                    }
+                } else {
+                    // Если скролл меньше порога, показываем header
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            }, false);
 
             // --- Логика мобильного меню ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -776,16 +835,16 @@
 
             // --- Данные для карточек услуг ---
             const servicesData = [
-                { id: 0, icon: 'rocket', title: 'Полный запуск под ключ', description: 'Мы берём ваш бренд от идеи до первых продаж. Рынок, продукт, упаковка, реклама — всё в одном цикле. Вы получаете готовую систему, которая начинает зарабатывать в долларах с первого дня выхода на рынок.' },
-                { id: 1, icon: 'search', title: 'Подбор продукта и ресерч ниши', description: 'Используем базы Amazon, TikTok, Shopify и AI-аналитику, чтобы выбрать товар с высоким спросом и минимальными рисками.' },
-                { id: 2, icon: 'mouse-pointer-click', title: 'SEO и PPC (Amazon)', description: 'Мы настраиваем рекламу внутри Amazon и поисковиков так, чтобы ваш бренд попадал в топ выдачи и получал целевых покупателей: больше продаж при меньших расходах.' },
-                { id: 3, icon: 'target', title: 'Таргетированная реклама', description: 'Ваш бренд должен быть там, где покупатель проводит время. Мы создаём креативы и настраиваем рекламу (Meta, TikTok, YouTube), которая бьёт прямо в потребности аудитории, чтобы был стабильный поток продаж и рост узнаваемости.' },
-                { id: 4, icon: 'users', title: 'Инфлюенс-маркетинг', description: 'В США и Европе покупают не у брендов, а у людей. Мы подключаем блогеров, создаём UGC-контент (TikTok, Instagram) и формируем доверие через нативные рекомендации. Это самый быстрый способ пробиться в нише и увеличить продажи ×2–×3.' },
-                { id: 5, icon: 'image', title: 'Фото, видео, 3D, A+ контент', description: 'В e-commerce покупают глазами. Мы делаем карточки, которые выглядят как у брендов с миллионными оборотами: студийные фото, lifestyle-съёмки, 3D-рендеры и A+ контент. Ваша карточка не просто продаёт — она выделяет бренд среди конкурентов.' },
-                { id: 6, icon: 'package', title: 'Упаковка и айдентика бренда', description: 'Продукт без бренда — это просто товар. Мы создаём легенду, визуал и стиль, которые вызывают доверие и желание купить с первого взгляда. Бренд — это ваша капитализация и возможность выйти на X3–X5 при продаже.' },
-                { id: 7, icon: 'store', title: 'Разработка сайта (Shopify)', description: 'Собственный сайт — это независимость от маркетплейсов и контроль над клиентской базой. Мы создаём Shopify-магазины с удобной корзиной, логистикой и аналитикой. Ваш бренд получает собственную платформу для роста.' },
-                { id: 8, icon: 'plug-zap', title: 'Интеграции и приложения', description: 'Соединяем маркетплейсы, CRM и платёжные системы так, чтобы всё работало без сбоев. Разрабатываем кастомные приложения под ваш бренд. Вы получаете автоматизацию, которая экономит время и деньги.' },
-                { id: 9, icon: 'bar-chart-2', title: 'Аналитика и стратегия роста', description: 'Рост — это математика. Мы ведём аналитику продаж, трафика и отзывов, видим слабые места и усиливаем сильные стороны. Для вас это значит: каждое решение основано на цифрах, а не на догадках.' }
+                { id: 0, icon: 'instagram', title: 'Ведення соціальних мереж', description: 'Повне ведення ваших соцмереж від А до Я: контент-план, створення контенту, публікації, Stories, комунікація з аудиторією. Ви отримуєте живий, залучаючий профіль, який працює на ваш бізнес 24/7.' },
+                { id: 1, icon: 'pen-tool', title: 'Розробка SMM-стратегії', description: 'Створюємо стратегію просування в соціальних мережах на основі аналізу вашої ніші, конкурентів та цільової аудиторії. Чітке позиціонування, tone of voice, контент-стратегія та KPI для вимірювання результатів.' },
+                { id: 2, icon: 'target', title: 'Таргетована реклама', description: 'Налаштовуємо та ведемо таргетовану рекламу в Facebook, Instagram, TikTok. Створюємо креативи, тестуємо аудиторії, оптимізуємо бюджет. Ваша реклама буде приводити клієнтів, а не витрачати бюджет.' },
+                { id: 3, icon: 'video', title: 'Створення контенту', description: 'Створюємо якісний візуальний контент для соцмереж: фотозйомки, відеоролики, Reels, Stories. Від ідеї до готового поста. Ваш контент буде виділятися в стрічці та залучати аудиторію.' },
+                { id: 4, icon: 'users', title: 'Інфлюенс-маркетинг', description: 'Підбираємо блогерів та інфлюенсерів, які підходять вашому бренду. Організовуємо співпрацю, створюємо UGC-контент. Це швидкий спосіб збільшити впізнаваність та довіру до вашого бренду.' },
+                { id: 5, icon: 'message-circle', title: 'Комʼюніті-менеджмент', description: 'Працюємо з вашою аудиторією: відповідаємо на коментарі та повідомлення, модеруємо обговорення, залучаємо підписників. Створюємо активне комʼюніті навколо вашого бренду.' },
+                { id: 6, icon: 'bar-chart-2', title: 'Аналітика та звітність', description: 'Відстежуємо всі важливі метрики: охоплення, залученість, конверсії, ROI реклами. Надаємо детальні звіти та рекомендації для покращення результатів. Кожне рішення базується на даних.' },
+                { id: 7, icon: 'rocket', title: 'Запуск з нуля', description: 'Запускаємо ваш бренд у соціальних мережах з нуля: позиціонування, оформлення профілів, контент-стратегія, перші публікації та залучення аудиторії. Від ідеї до перших клієнтів.' },
+                { id: 8, icon: 'layout', title: 'Контент-план та візуал', description: 'Розробляємо детальний контент-план на місяць, створюємо шаблони для постів, формуємо єдиний стиль профілю. Ваша стрічка буде гармонійною та впізнаваною.' },
+                { id: 9, icon: 'star', title: 'UGC та відгуки', description: 'Збираємо та обробляємо відгуки клієнтів, створюємо UGC-контент (користувацький контент), працюємо з репутацією бренду. Відгуки — це ваш найсильніший інструмент продажів.' }
             ];
 
             const servicesGrid = document.getElementById('services-grid');
@@ -903,10 +962,11 @@
             // --- ОБЩАЯ ЛОГИКА МОДАЛЬНЫХ ОКОН ---
             const serviceModalBackdrop = document.getElementById('service-modal-backdrop');
             const caseModalBackdrop = document.getElementById('case-modal-backdrop');
-            const formModalBackdrop = document.getElementById('form-modal-backdrop');
+            const contactChoiceModalBackdrop = document.getElementById('contact-choice-modal-backdrop');
 
             const closeButtons = document.querySelectorAll('.js-close-modal');
             const openFormButtons = document.querySelectorAll('.js-open-form');
+            const closeContactChoiceButtons = document.querySelectorAll('.js-close-contact-choice');
 
             // --- Логика модального окна УСЛУГ ---
             function openServiceModal(service) {
@@ -949,17 +1009,17 @@
                 });
             });
 
-            // --- Логика модального окна ФОРМЫ (Slide-over) ---
-            function openFormModal() {
-                openModal(formModalBackdrop);
-            }
-
+            // --- Логика кнопок "js-open-form" - открываем окно выбора способа связи ---
             openFormButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const anyOpenModal = document.querySelector('.modal-backdrop:not(.hidden)');
-                    if(anyOpenModal) closeModal(anyOpenModal);
-                    setTimeout(() => openFormModal(), anyOpenModal ? 300 : 0);
+                    // Открываем модальное окно выбора способа связи ПОВЕРХ текущего (не закрываем предыдущее)
+                    openModal(contactChoiceModalBackdrop);
+                    setTimeout(() => {
+                        if (typeof lucide !== 'undefined') {
+                            lucide.createIcons();
+                        }
+                    }, 50);
                 });
             });
 
@@ -972,7 +1032,7 @@
                 document.body.style.overflow = 'hidden';
                 setTimeout(() => {
                     modalBackdrop.classList.remove('opacity-0');
-                    if (modalBackdrop.id === 'form-modal-backdrop') {
+                    if (modalBackdrop.id === 'contact-choice-modal-backdrop') {
                          if(modalContent) modalContent.classList.remove('translate-x-full');
                     } else {
                          if(modalContent) modalContent.classList.remove('scale-95', 'opacity-0');
@@ -985,13 +1045,13 @@
                  const modalContent = modalBackdrop.querySelector('.modal-content');
 
                 modalBackdrop.classList.add('opacity-0');
-                
-                if (modalBackdrop.id === 'form-modal-backdrop') {
+
+                if (modalBackdrop.id === 'contact-choice-modal-backdrop') {
                     if(modalContent) modalContent.classList.add('translate-x-full');
                 } else {
                     if(modalContent) modalContent.classList.add('scale-95', 'opacity-0');
                 }
-                
+
                  setTimeout(() => {
                     modalBackdrop.classList.add('hidden');
                     const anyOpenModal = document.querySelector('.modal-backdrop:not(.hidden)');
@@ -1006,11 +1066,18 @@
                 });
             });
 
+            closeContactChoiceButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    closeModal(contactChoiceModalBackdrop);
+                });
+            });
+
              document.querySelectorAll('.modal-backdrop').forEach(modal => {
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) closeModal(modal);
                 });
             });
+
 
             // --- Анимация при скролле ---
             const scrollElements = document.querySelectorAll('.animate-on-scroll');
@@ -1072,16 +1139,16 @@
             const counterObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        animateCounter('count-up-experience', 10, 1500, '+');
-                        animateCounter('count-up-stores', 1000, 2000, '+');
+                        animateCounter('count-up-experience', 3, 1500, '+');
+                        animateCounter('count-up-stores', 50, 2000, '+');
                         observer.unobserve(entry.target);
                     }
                 });
             }, { threshold: 0.5 });
 
-            const teamSection = document.getElementById('team');
-            if (teamSection) {
-                counterObserver.observe(teamSection);
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                counterObserver.observe(aboutSection);
             }
 
 
