@@ -15,7 +15,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Roboto+Flex:wght@400;700;800&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
     <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     
     <!-- JSON-LD Structured Data for SEO -->
@@ -56,29 +56,31 @@
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Roboto Flex', sans-serif;
+            font-family: 'Jura', 'Arial', sans-serif;
             background-color: #111111;
             color: #E5E7EB;
             overflow-x: hidden; /* Prevent horizontal scroll */
             min-height: 100vh;
         }
         ::selection {
-            background-color: #F8F284;
-            color: #111111;
+            background-color: #10B981;
+            color: #FFFFFF;
         }
         h1, h2, h3, h4, .section-title {
-            font-family: 'Roboto Flex', sans-serif;
-            font-weight: 400;
+            font-family: 'Jura', 'Arial', sans-serif;
+            font-weight: 600;
         }
         .cta-primary {
-            background-color: #F8F284;
-            color: #111;
+            background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+            color: #FFFFFF;
             font-weight: 700;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
         .cta-primary:hover {
-            background-color: #FFF9A8;
+            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
         }
         .cta-secondary {
             background-color: transparent;
@@ -92,6 +94,7 @@
         }
         .section-title {
             font-size: 1.25rem; /* 20px for mobile */
+            font-weight: 600;
             line-height: 1.2;
             color: #FFFFFF;
             letter-spacing: -0.02em;
@@ -221,8 +224,8 @@
             transition: all 0.3s ease;
         }
         .tab-button.active {
-            color: #F8F284;
-            background-color: rgba(248, 242, 132, 0.1);
+            color: #10B981;
+            background-color: rgba(16, 185, 129, 0.1);
         }
         .tab-content {
             display: none;
@@ -288,8 +291,8 @@
             }
         }
         .slider-btn-simple {
-            background: #F8F284;
-            color: #111;
+            background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+            color: #FFFFFF;
             border: none;
             width: 50px;
             height: 50px;
@@ -299,10 +302,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
         .slider-btn-simple:hover {
-            background: #FFF9A8;
+            background: linear-gradient(135deg, #34D399 0%, #6EE7B7 100%);
             transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
         }
         .slider-btn-simple:disabled {
             opacity: 0.5;
@@ -318,10 +323,10 @@
             position: fixed;
             inset: 0;
             background:
-                radial-gradient(circle at 20% 20%, rgba(248, 242, 132, 0.15), transparent 50%),
-                radial-gradient(circle at 80% 40%, rgba(168, 85, 247, 0.12), transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.1), transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(236, 72, 153, 0.08), transparent 50%);
+                radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.15), transparent 50%),
+                radial-gradient(circle at 80% 40%, rgba(52, 211, 153, 0.12), transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(5, 150, 105, 0.1), transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(110, 231, 183, 0.08), transparent 50%);
             filter: blur(100px);
             opacity: 0.8;
             pointer-events: none;
@@ -346,14 +351,35 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(248, 242, 132, 0.1);
-            border: 1px solid rgba(248, 242, 132, 0.3);
-            padding: 0.5rem 1rem;
+            background: rgba(16, 185, 129, 0.25);
+            border: 2px solid rgba(16, 185, 129, 0.6);
+            padding: 0.75rem 1.25rem;
             border-radius: 2rem;
             font-size: 0.875rem;
-            font-weight: 600;
-            color: #F8F284;
+            font-weight: 700;
+            color: #34D399;
             margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+            width: fit-content;
+            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.2);
+        }
+        @media (max-width: 768px) {
+            .availability-badge {
+                font-size: 0.8125rem;
+                padding: 0.65rem 1.1rem;
+                margin-bottom: 1.25rem;
+                background: rgba(16, 185, 129, 0.3);
+                border: 2px solid rgba(16, 185, 129, 0.7);
+            }
+        }
+        .availability-badge:hover {
+            background: rgba(16, 185, 129, 0.35);
+            border-color: rgba(16, 185, 129, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
         }
         .availability-indicator {
             width: 8px;
@@ -372,15 +398,84 @@
                 transform: scale(1.1);
             }
         }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: #1C1C1E;
+            border: 1px solid #2D2D2F;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: #444;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            color: #10B981;
+        }
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+            color: #10B981;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+        }
+        .faq-answer p {
+            color: #9CA3AF;
+            line-height: 1.7;
+        }
+
+        /* Image overlay */
+        .image-overlay {
+            position: relative;
+        }
+        .image-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 1rem;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="text-gray-300">
 
     <!-- === Хедер === -->
     <header id="main-header" class="scrolled bg-black/30 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-800/50 transition-transform duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center">
-                <img src="logo.png" alt="AXY" class="h-10">
+                <span class="text-xl md:text-2xl font-bold text-white">Анна Серпутько</span>
             </a>
             <nav class="hidden lg:flex items-center space-x-8">
                 <a href="#services" class="text-gray-300 hover:text-white transition">Послуги</a>
@@ -402,7 +497,7 @@
             </button>
         </div>
         <!-- Мобільне меню -->
-        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+        <div id="mobile-menu" class="hidden lg:hidden px-4 md:px-6 pb-4">
             <nav class="flex flex-col space-y-4">
                  <a href="#services" class="text-gray-300 hover:text-white transition">Послуги</a>
                  <a href="#cases" class="text-gray-300 hover:text-white transition">Кейси</a>
@@ -419,10 +514,14 @@
     <main>
 
         <!-- === Про мене === -->
-        <section id="about" class="py-20 md:py-28 bg-[#1C1C1E]">
-            <div class="container mx-auto px-6">
+        <section id="about" class="pt-32 pb-20 md:py-28 bg-[#1C1C1E]">
+            <div class="container mx-auto px-4 md:px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center animate-on-scroll">
                     <div>
+                        <div class="availability-badge js-open-form">
+                            <span class="availability-indicator"></span>
+                            <span>Доступна до співпраці</span>
+                        </div>
                         <h2 class="section-title">Привіт! Я Анна — ваш SMM-спеціаліст</h2>
                         <p class="mt-6 text-lg text-gray-400 leading-relaxed">
                             Я допомагаю бізнесу зростати в соціальних мережах вже 3 роки. Працювала з брендами у сферах beauty, fashion, HoReCa, освіти та e-commerce.
@@ -433,19 +532,24 @@
                             <li>• Досвід роботи з <span class="text-white font-semibold">Instagram, Facebook, TikTok</span></li>
                             <li>• Спеціалізація: контент, таргет, стратегія</li>
                         </ul>
-                        <div class="mt-8 grid grid-cols-2 gap-6 text-center">
+                        <div class="mt-8 grid grid-cols-2 gap-6">
                             <div>
-                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-experience">0+</p>
+                                <p class="text-5xl font-bold text-[#10B981]" id="count-up-experience">0+</p>
                                 <p class="mt-1 text-gray-500">роки в SMM</p>
                             </div>
                             <div>
-                                <p class="text-5xl font-bold text-[#F8F284]" id="count-up-stores">0+</p>
+                                <p class="text-5xl font-bold text-[#10B981]" id="count-up-stores">0+</p>
                                 <p class="mt-1 text-gray-500">проєктів реалізовано</p>
                             </div>
                         </div>
+                        <div class="mt-8">
+                            <a href="#" class="js-open-form cta-primary inline-flex items-center px-8 py-4 rounded-xl text-lg font-semibold">
+                                Зв'язатися зі мною
+                            </a>
+                        </div>
                     </div>
-                    <div class="animate-on-scroll" style="transition-delay: 200ms;">
-                        <img src="anna-photo.jpg" alt="Анна Серпутько - SMM-спеціаліст" class="rounded-2xl object-cover w-full h-full shadow-2xl" loading="lazy" width="848" height="1000">
+                    <div class="animate-on-scroll image-overlay" style="transition-delay: 200ms;">
+                        <img src="main-banner.jpg" alt="Анна Серпутько - SMM-спеціаліст" class="rounded-2xl object-cover w-full h-full shadow-2xl" loading="lazy" width="848" height="1000">
                     </div>
                 </div>
             </div>
@@ -453,7 +557,7 @@
 
         <!-- === Що я роблю (Каталог послуг) === -->
         <section id="services" class="py-12 md:py-28">
-            <div class="container mx-auto px-6">
+            <div class="container mx-auto px-4 md:px-6">
                 <div class="text-center max-w-4xl mx-auto animate-on-scroll">
                     <h2 class="section-title">Допомагаю бізнесу <span class="text-color-animate" data-text-animate>зростати в соціальних мережах</span></h2>
                     <p class="section-subtitle">Instagram, Facebook, TikTok — не важливо, де ви присутні. Я беру на себе повний цикл SMM або закриваю конкретну задачу, щоб ви отримували результат.</p>
@@ -467,7 +571,7 @@
 
         <!-- === Секція з кейсами === -->
         <section id="cases" class="py-20 md:py-28 bg-[#1C1C1E]">
-            <div class="container mx-auto px-6">
+            <div class="container mx-auto px-4 md:px-6">
                 <div class="text-center max-w-3xl mx-auto animate-on-scroll">
                     <h2 class="section-title">Мої кейси</h2>
                     <p class="section-subtitle">Реальні результати роботи з брендами в соціальних мережах. Цифри, які говорять самі за себе.</p>
@@ -528,7 +632,7 @@
 
         <!-- === Відгуки === -->
         <section id="reviews" class="py-20 md:py-28">
-            <div class="text-center max-w-3xl mx-auto px-6 animate-on-scroll">
+            <div class="text-center max-w-3xl mx-auto px-4 md:px-6 animate-on-scroll">
                 <h2 class="section-title">Відгуки клієнтів</h2>
                 <div class="flex justify-center gap-4 mt-8">
                     <button class="slider-btn-simple prev" id="reviews-prev" aria-label="Предыдущий отзыв">
@@ -539,21 +643,21 @@
                     </button>
                 </div>
             </div>
-            <div class="container mx-auto px-6 mt-16">
+            <div class="container mx-auto px-4 md:px-6 mt-16">
                 <div class="reviews-slider relative">
                     <div class="reviews-track" id="reviews-track">
                             <!-- Первый набор отзывов -->
                             <div class="review-card">
                                 <div class="custom-card p-6 rounded-xl h-full">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">М</div>
+                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">М</div>
                                     <div class="ml-4">
                                         <h4 class="font-bold text-white">Оксана</h4>
                                         <p class="text-sm text-gray-400">Власниця косметичного бренду</p>
                                     </div>
                                 </div>
                                 <div class="flex mb-3">
-                                    <span class="text-[#F8F284]">★★★★★</span>
+                                    <span class="text-[#10B981]">★★★★★</span>
                                 </div>
                                 <p class="text-gray-300">Анна повністю взяла на себе ведення нашого Instagram. За 3 місяці продажі через соцмережі зросли на 250%. Контент завжди якісний, цільовий, Stories живі та цікаві. Дуже задоволені співпрацею!</p>
                                 </div>
@@ -562,14 +666,14 @@
                             <div class="review-card">
                                 <div class="custom-card p-6 rounded-xl h-full">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">А</div>
+                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">А</div>
                                     <div class="ml-4">
                                         <h4 class="font-bold text-white">Анна</h4>
                                         <p class="text-sm text-gray-400">Власник онлайн-школи</p>
                                     </div>
                                 </div>
                                 <div class="flex mb-3">
-                                    <span class="text-[#F8F284]">★★★★★</span>
+                                    <span class="text-[#10B981]">★★★★★</span>
                                 </div>
                                 <p class="text-gray-300">Запустили таргетовану рекламу в Instagram і Facebook. За 2 місяці отримали 300+ заявок з CPL всього 45 грн. Анна дуже вникає в продукт і аудиторію. Рекомендую!</p>
                                 </div>
@@ -578,14 +682,14 @@
                             <div class="review-card">
                                 <div class="custom-card p-6 rounded-xl h-full">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">Д</div>
+                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">Д</div>
                                     <div class="ml-4">
                                         <h4 class="font-bold text-white">Дмитрий</h4>
                                         <p class="text-sm text-gray-400">Товары для дома</p>
                                     </div>
                                 </div>
                                 <div class="flex mb-3">
-                                    <span class="text-[#F8F284]">★★★★★</span>
+                                    <span class="text-[#10B981]">★★★★★</span>
                                 </div>
                                 <p class="text-gray-300">После года самостоятельной работы продажи застряли на $20k/мес. Обратились в AXY, через 4 месяца вышли на $85k. Переделали карточки, запустили A+ контент, настроили нормальную рекламу. Инвестиция окупилась в первый месяц.</p>
                                 </div>
@@ -594,14 +698,14 @@
                             <div class="review-card">
                                 <div class="custom-card p-6 rounded-xl h-full">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">Е</div>
+                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">Е</div>
                                     <div class="ml-4">
                                         <h4 class="font-bold text-white">Елена</h4>
                                         <p class="text-sm text-gray-400">Детские товары</p>
                                     </div>
                                 </div>
                                 <div class="flex mb-3">
-                                    <span class="text-[#F8F284]">★★★★★</span>
+                                    <span class="text-[#10B981]">★★★★★</span>
                                 </div>
                                 <p class="text-gray-300">Столкнулись с блокировкой аккаунта на Amazon. AXY помогли разобраться за 2 недели, восстановили все позиции. Потом провели аудит и нашли еще кучу проблем, которые могли привести к повторной блокировке. Спасибо огромное!</p>
                                 </div>
@@ -610,14 +714,14 @@
                             <div class="review-card">
                                 <div class="custom-card p-6 rounded-xl h-full">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">И</div>
+                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">И</div>
                                     <div class="ml-4">
                                         <h4 class="font-bold text-white">Игорь</h4>
                                         <p class="text-sm text-gray-400">Электроника</p>
                                     </div>
                                 </div>
                                 <div class="flex mb-3">
-                                    <span class="text-[#F8F284]">★★★★★</span>
+                                    <span class="text-[#10B981]">★★★★★</span>
                                 </div>
                                 <p class="text-gray-300">Полный запуск с нуля на Shopify. От разработки сайта до настройки рекламы и первых продаж. За 6 месяцев вышли на стабильные $30k/мес. ROAS держится на уровне 4.2. Команда профессиональная, всё по делу.</p>
                                 </div>
@@ -626,14 +730,14 @@
                             <div class="review-card">
                                 <div class="custom-card p-6 rounded-xl h-full">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-[#F8F284] rounded-full flex items-center justify-center text-black font-bold text-xl">О</div>
+                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">О</div>
                                     <div class="ml-4">
                                         <h4 class="font-bold text-white">Ольга</h4>
                                         <p class="text-sm text-gray-400">Одежда и аксессуары</p>
                                     </div>
                                 </div>
                                 <div class="flex mb-3">
-                                    <span class="text-[#F8F284]">★★★★★</span>
+                                    <span class="text-[#10B981]">★★★★★</span>
                                 </div>
                                 <p class="text-gray-300">Сделали ребрендинг и запустили на TikTok Shop. Органика выстрелила благодаря контенту от микро-инфлюенсеров. За первые 3 месяца - 2500 заказов, средний чек $65. Очень круто, что команда всё время на связи и быстро реагирует.</p>
                                 </div>
@@ -643,9 +747,81 @@
             </div>
         </section>
 
+        <!-- === Часті питання === -->
+        <section id="faq" class="py-20 md:py-28 bg-[#1C1C1E]">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center max-w-3xl mx-auto animate-on-scroll mb-12">
+                    <h2 class="section-title">Часті питання</h2>
+                    <p class="section-subtitle">Відповіді на найпопularніші запитання про SMM-послуги</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Скільки коштують SMM-послуги?</span>
+                            <i data-lucide="plus" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Вартість залежить від обсягу роботи та ваших цілей. Базове ведення Instagram від 10 000 грн/міс, таргетована реклама від 15 000 грн/міс + бюджет на рекламу. Комплексні пакети обговорюються індивідуально після аналізу вашого проєкту.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Які результати можна очікувати?</span>
+                            <i data-lucide="plus" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Перші результати помітні через 2-4 тижні: зростання охоплень, залучення аудиторії. Стабільний приріст підписників та продажів — через 2-3 місяці системної роботи. Кожен проєкт унікальний, тому я завжди ставлю реалістичні KPI після аналізу вашої ніші.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Як відбувається співпраця?</span>
+                            <i data-lucide="plus" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Спочатку проводжу безкоштовну консультацію, де обговорюємо ваші цілі та завдання. Потім — аналіз ніші та конкурентів, розробка стратегії. Щомісячно надаю детальні звіти з результатами та планом на наступний період. Зв'язок підтримую в Telegram для оперативних питань.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Чи потрібен великий бюджет на рекламу?</span>
+                            <i data-lucide="plus" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Почати можна з мінімального бюджету від 3 000 грн/міс на тестування. Оптимальний бюджет для стабільних результатів — від 10 000 грн/міс. Я допомагаю ефективно розподіляти бюджет та масштабувати рекламу по мірі зростання віддачі.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Які соцмережі найкращі для мого бізнесу?</span>
+                            <i data-lucide="plus" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Це залежить від вашої цільової аудиторії та ніші. Instagram — універсальний для B2C, особливо beauty, fashion, HoReCa. Facebook ефективний для B2B та старшої аудиторії. TikTok — для молодої аудиторії та вірусного контенту. На консультації ми визначимо найкращі канали саме для вас.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Чи можна працювати без довгострокових контрактів?</span>
+                            <i data-lucide="plus" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Так, мінімальний термін співпраці — 1 місяць. Проте для досягнення стабільних результатів рекомендую співпрацю від 3 місяців, адже SMM — це системна робота, яка дає найкращі результати в довгостроковій перспективі.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- === CTA Section (Free Consultation) === -->
         <section id="audit" class="py-20 md:py-28">
-            <div class="container mx-auto px-6 animate-on-scroll">
+            <div class="container mx-auto px-4 md:px-6 animate-on-scroll">
                 <div class="bg-[#1C1C1E] border border-[#2D2D2F] rounded-2xl p-8 md:p-16 text-center">
                     <h2 class="text-3xl md:text-5xl font-bold text-white">Отримайте безкоштовну консультацію</h2>
                     <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">Напишіть мені зручним для вас способом. Розкажіть про свій бізнес та завдання. Я проаналізую ваші соцмережі та дам рекомендації, як підвищити продажі через SMM.</p>
@@ -662,11 +838,11 @@
 
     <!-- === Подвал === -->
     <footer id="contacts" class="bg-black border-t border-gray-800/50">
-        <div class="container mx-auto px-6 py-12 pb-24 md:pb-12">
+        <div class="container mx-auto px-4 md:px-6 py-12 pb-24 md:pb-12">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <img src="logo.png" alt="Анна Серпутько SMM" class="h-10 mb-4">
-                    <p class="mt-4 text-gray-400">Зростання вашого бренду в соцмережах — моя робота.</p>
+                    <h3 class="text-2xl font-bold text-white mb-4">Анна Серпутько</h3>
+                    <p class="text-gray-400">Зростання вашого бренду в соцмережах — моя робота.</p>
                 </div>
                 <div>
                     <h4 class="font-semibold text-white">Навігація</h4>
@@ -854,7 +1030,7 @@
                     card.className = 'service-card custom-card p-[1.2rem] rounded-2xl cursor-pointer w-full flex flex-col items-center justify-center text-center max-w-[250px] h-full';
                     card.dataset.serviceId = service.id;
                     card.innerHTML = `
-                        <div class="bg-gray-800 text-[#F8F284] rounded-lg w-12 h-12 flex items-center justify-center">
+                        <div class="bg-gradient-to-br from-[#10B981] to-[#059669] text-white rounded-lg w-12 h-12 flex items-center justify-center shadow-lg">
                             <i data-lucide="${service.icon}" class="w-6 h-6"></i>
                         </div>
                         <h3 class="mt-4 font-bold text-lg text-white">${service.title}</h3>
@@ -873,16 +1049,16 @@
                 firearm: {
                     title: 'Аксессуары для оружия',
                     content: `
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Проект</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Проект</h4>
                         <p class="mb-4">Firearm Accessories</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Миграция</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Миграция</h4>
                         <p class="mb-4">С WooCommerce на Shopify</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Выбор темы</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Выбор темы</h4>
                         <p class="mb-4">Тема выбрана в соответствии с эстетикой бренда</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Основные страницы созданы</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Основные страницы созданы</h4>
                         <ul class="list-disc list-inside mb-4 space-y-1">
                             <li>Главная страница</li>
                             <li>Страница коллекций</li>
@@ -891,7 +1067,7 @@
                             <li>Дополнительные страницы</li>
                         </ul>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Ключевые функции реализованы</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Ключевые функции реализованы</h4>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Мега-меню</li>
                             <li>Подписка на рассылку</li>
@@ -907,13 +1083,13 @@
                 toys: {
                     title: 'Игрушки и хобби',
                     content: `
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Проект</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Проект</h4>
                         <p class="mb-4">Toys & Hobbies</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Выбор темы</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Выбор темы</h4>
                         <p class="mb-4">Выбранная тема соответствует эстетике бренда</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Основные страницы созданы</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Основные страницы созданы</h4>
                         <ul class="list-disc list-inside mb-4 space-y-1">
                             <li>Главная страница</li>
                             <li>Страница коллекций</li>
@@ -921,7 +1097,7 @@
                             <li>Бизнес-страницы: Оплата, Доставка и Политики</li>
                         </ul>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Ключевые функции реализованы</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Ключевые функции реализованы</h4>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Мега-меню: Расширенная навигационная система</li>
                             <li>Instagram Feed: Отображение последних постов</li>
@@ -935,25 +1111,25 @@
                 jewelry: {
                     title: 'Ювелирные изделия',
                     content: `
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Проект</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Проект</h4>
                         <p class="mb-4">Jewelry</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Реализация темы</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Реализация темы</h4>
                         <p class="mb-4">Разработка и кастомизация премиум темы</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Вовлечение клиентов</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Вовлечение клиентов</h4>
                         <p class="mb-4">Интеграция Google отзывов и быстрого чата</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Пользовательский интерфейс</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Пользовательский интерфейс</h4>
                         <p class="mb-4">Разработан кастомный хедер с мега-меню и единообразный футер</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Аналитика</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Аналитика</h4>
                         <p class="mb-4">Настроены Google Analytics и Facebook Pixel</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Разработка страниц</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Разработка страниц</h4>
                         <p class="mb-4">Созданы главная страница, страницы коллекций с фильтрами и страницы блога</p>
 
-                        <h4 class="text-xl font-bold text-[#F8F284] mb-3">Социальная интеграция</h4>
+                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Социальная интеграция</h4>
                         <p class="mb-4">Интеграция Instagram feed на страницах товаров</p>
                     `
                 }
@@ -1107,7 +1283,7 @@
                                 const spans = textAnimateElement.querySelectorAll('span');
                                 spans.forEach((span, index) => {
                                     setTimeout(() => {
-                                        span.style.color = '#F8F284';
+                                        span.style.color = '#10B981';
                                     }, index * 50); // 50ms задержка между буквами
                                 });
                             }, 600); // Задержка после появления текста
@@ -1247,6 +1423,38 @@
 
                 updateSlider();
             }
+
+            // --- Логика FAQ Accordion ---
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Закрываем все остальные элементы
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Переключаем текущий элемент
+                    if (isActive) {
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.add('active');
+                    }
+
+                    // Обновляем иконки Lucide
+                    requestAnimationFrame(() => {
+                        if (typeof lucide !== 'undefined') {
+                            lucide.createIcons();
+                        }
+                    });
+                });
+            });
         });
     </script>
 
