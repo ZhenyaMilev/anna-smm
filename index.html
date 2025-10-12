@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Анна Серпутько — SMM-спеціаліст | Просування в соцмережах</title>
 
     <!-- SEO Meta Tags -->
@@ -10,7 +10,8 @@
     <meta name="keywords" content="SMM, SMM-спеціаліст, соціальні мережі, таргетована реклама, контент, Instagram, Facebook, TikTok, Анна Серпутько">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -115,13 +116,19 @@
             }
         }
         .custom-card {
-            background: #1C1C1E;
-            border: 1px solid #2D2D2F;
+            background: transparent;
+            border: none;
             transition: all 0.3s ease;
         }
-        .custom-card:hover {
-            border-color: #444;
-            transform: translateY(-4px);
+
+        /* Service cards with background */
+        .service-card.custom-card {
+            background: #1C1C1E;
+            border: 1px solid #2D2D2F;
+        }
+        .service-card.custom-card:hover {
+            border-color: #10B981;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
         }
 
         /* Hamburger menu animation */
@@ -289,6 +296,38 @@
             .review-card {
                 flex: 0 0 33.333%;
             }
+        }
+        .review-card .custom-card {
+            position: relative;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        .review-card .custom-card::before {
+            content: '';
+            position: absolute;
+            inset: -80px;
+            background-image: inherit;
+            background-size: cover;
+            background-position: center;
+            filter: blur(150px) saturate(1.2);
+            opacity: 0.5;
+            z-index: 0;
+            transform: scale(1.2);
+        }
+        .review-card .custom-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 1rem;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .review-card img {
+            border-radius: 1rem;
+            position: relative;
+            z-index: 2;
         }
         .slider-btn-simple {
             background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
@@ -463,9 +502,121 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.35);
             border-radius: 1rem;
             pointer-events: none;
+        }
+
+        /* Running line animation */
+        .running-line {
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+            margin: 3rem 0;
+            border-radius: 1rem;
+        }
+        .running-line::before,
+        .running-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .running-line::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 0.8) 30%, transparent 100%);
+            border-radius: 1rem 0 0 1rem;
+        }
+        .running-line::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 0.8) 30%, transparent 100%);
+            border-radius: 0 1rem 1rem 0;
+        }
+        .running-line-content {
+            display: inline-flex;
+            animation: scroll-left 40s linear infinite;
+        }
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .running-line-item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 1.125rem;
+            color: #9CA3AF;
+            white-space: nowrap;
+        }
+        .running-line-item .brand {
+            color: #10B981;
+            font-weight: 600;
+        }
+
+        /* Timeline animation styles */
+        .timeline-item {
+            opacity: 0;
+        }
+
+        .timeline-item > div:first-child {
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .timeline-item > div:last-child {
+            transform: translateX(50px);
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition-delay: 0.2s;
+        }
+
+        .timeline-item.is-visible {
+            opacity: 1;
+        }
+
+        .timeline-item.is-visible > div:first-child,
+        .timeline-item.is-visible > div:last-child {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Case image animation */
+        .case-image-container {
+            perspective: 1000px;
+        }
+
+        .case-image {
+            transform: scale(0.85) translateY(30px);
+            opacity: 0;
+            will-change: transform, opacity;
+        }
+
+        .timeline-item.is-visible .case-image {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transition-delay: 0.4s;
+        }
+
+        .timeline-progress {
+            transform-origin: top;
+            will-change: height;
+        }
+
+        .timeline-number {
+            opacity: 0;
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .timeline-item.is-visible .timeline-number {
+            opacity: 1;
         }
     </style>
 </head>
@@ -523,10 +674,10 @@
                             <span>Доступна до співпраці</span>
                         </div>
                         <h2 class="section-title">Привіт! Я Анна — ваш SMM-спеціаліст</h2>
-                        <p class="mt-6 text-lg text-gray-400 leading-relaxed">
+                        <p class="mt-6 text-base md:text-lg text-gray-400 leading-relaxed">
                             Я допомагаю бізнесу зростати в соціальних мережах вже 3 роки. Працювала з брендами у сферах beauty, fashion, HoReCa, освіти та e-commerce.
                         </p>
-                        <ul class="mt-6 text-lg text-gray-400 space-y-3">
+                        <ul class="mt-6 text-base md:text-lg text-gray-400 space-y-3">
                             <li>• <span class="text-white font-semibold">3 роки</span> досвіду в SMM</li>
                             <li>• <span class="text-white font-semibold">50+ успішних проєктів</span> реалізовано</li>
                             <li>• Досвід роботи з <span class="text-white font-semibold">Instagram, Facebook, TikTok</span></li>
@@ -534,12 +685,12 @@
                         </ul>
                         <div class="mt-8 grid grid-cols-2 gap-6">
                             <div>
-                                <p class="text-5xl font-bold text-[#10B981]" id="count-up-experience">0+</p>
-                                <p class="mt-1 text-gray-500">роки в SMM</p>
+                                <p class="text-3xl md:text-5xl font-bold text-[#10B981]" id="count-up-experience">0+</p>
+                                <p class="mt-1 text-sm md:text-base text-gray-500">роки в SMM</p>
                             </div>
                             <div>
-                                <p class="text-5xl font-bold text-[#10B981]" id="count-up-stores">0+</p>
-                                <p class="mt-1 text-gray-500">проєктів реалізовано</p>
+                                <p class="text-3xl md:text-5xl font-bold text-[#10B981]" id="count-up-stores">0+</p>
+                                <p class="mt-1 text-sm md:text-base text-gray-500">проєктів реалізовано</p>
                             </div>
                         </div>
                         <div class="mt-8">
@@ -556,74 +707,231 @@
         </section>
 
         <!-- === Що я роблю (Каталог послуг) === -->
-        <section id="services" class="py-12 md:py-28">
+        <section id="services" class="py-12 md:py-28 relative">
             <div class="container mx-auto px-4 md:px-6">
-                <div class="text-center max-w-4xl mx-auto animate-on-scroll">
+                <div class="text-center max-w-4xl mx-auto animate-on-scroll relative">
                     <h2 class="section-title">Допомагаю бізнесу <span class="text-color-animate" data-text-animate>зростати в соціальних мережах</span></h2>
                     <p class="section-subtitle">Instagram, Facebook, TikTok — не важливо, де ви присутні. Я беру на себе повний цикл SMM або закриваю конкретну задачу, щоб ви отримували результат.</p>
+
+                    <!-- Decorative emojis -->
+                    <div class="absolute right-0 top-0 w-96 h-96 pointer-events-none hidden lg:block" style="transform: translate(40%, -20%);">
+                        <span class="parallax-emoji absolute top-0 right-20 text-6xl opacity-20" data-speed="0.3" style="transform: rotate(-15deg); transition: transform 0.3s ease-out;">📱</span>
+                        <span class="parallax-emoji absolute top-16 right-0 text-5xl opacity-15" data-speed="0.5" style="transform: rotate(10deg); transition: transform 0.3s ease-out;">📈</span>
+                        <span class="parallax-emoji absolute top-32 right-32 text-7xl opacity-10" data-speed="0.2" style="transform: rotate(-8deg); transition: transform 0.3s ease-out;">💚</span>
+                        <span class="parallax-emoji absolute top-48 right-12 text-4xl opacity-20" data-speed="0.4" style="transform: rotate(12deg); transition: transform 0.3s ease-out;">✨</span>
+                        <span id="animated-rocket" class="parallax-emoji absolute top-8 right-48 text-5xl opacity-25" data-speed="0.6" style="transform: rotate(-20deg); transition: all 0.6s ease-out;">🚀</span>
+                    </div>
                 </div>
-                <p class="text-center text-white text-sm md:text-base font-semibold mt-12 animate-on-scroll" style="transition-delay: 100ms;">Натисни на послугу, щоб дізнатися більше.</p>
+
+                <!-- Running line with brands -->
+                <div class="running-line">
+                    <div class="running-line-content">
+                        <span class="running-line-item"><span class="brand">Beauty бренди</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">Fashion магазини</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">HoReCa</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">Онлайн-школи</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">Фітнес-клуби</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">E-commerce</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">Beauty бренди</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">Fashion магазини</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">HoReCa</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">Онлайн-школи</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">Фітнес-клуби</span></span>
+                        <span class="running-line-item">•</span>
+                        <span class="running-line-item"><span class="brand">E-commerce</span></span>
+                        <span class="running-line-item">•</span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="inline-flex items-center gap-3 bg-[#10B981]/10 border border-[#10B981]/30 px-4 md:px-6 py-3 rounded-full">
+                        <i data-lucide="hand-metal" class="w-5 h-5 text-[#10B981] flex-shrink-0"></i>
+                        <span class="text-white font-semibold text-sm md:text-base whitespace-nowrap">Натисни на послугу, щоб дізнатися більше</span>
+                    </div>
+                </div>
                 <div id="services-grid" class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 animate-on-scroll justify-items-center auto-rows-fr" style="transition-delay: 200ms;">
                     <!-- Картки послуг будуть вставлені тут через JS -->
                 </div>
             </div>
         </section>
 
-        <!-- === Секція з кейсами === -->
-        <section id="cases" class="py-20 md:py-28 bg-[#1C1C1E]">
+        <!-- === Як я працюю === -->
+        <section id="process" class="py-20 md:py-28 bg-[#1C1C1E]">
             <div class="container mx-auto px-4 md:px-6">
-                <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+                <div class="text-center max-w-3xl mx-auto animate-on-scroll mb-16">
+                    <h2 class="section-title">Як я працюю</h2>
+                    <p class="section-subtitle">Прозорий процес роботи від знайомства до результату. Кожен етап продуманий для досягнення максимальної ефективності.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-on-scroll" style="transition-delay: 200ms;">
+                    <!-- Step 1 -->
+                    <div class="custom-card p-6 rounded-2xl relative">
+                        <div>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="message-square" class="w-6 h-6 text-[#10B981]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Консультація</h3>
+                            <p class="text-gray-400 leading-relaxed">Обговорюємо ваші цілі, аналізуємо поточний стан соцмереж. Визначаємо завдання та KPI.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="custom-card p-6 rounded-2xl relative">
+                        <div>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="search" class="w-6 h-6 text-[#10B981]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Аналіз</h3>
+                            <p class="text-gray-400 leading-relaxed">Досліджую вашу нішу, конкурентів та цільову аудиторію. Шукаю точки зростання.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="custom-card p-6 rounded-2xl relative">
+                        <div>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-[#10B981]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Стратегія</h3>
+                            <p class="text-gray-400 leading-relaxed">Розробляю детальну SMM-стратегію: контент-план, позиціонування, канали просування.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="custom-card p-6 rounded-2xl relative">
+                        <div>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="play-circle" class="w-6 h-6 text-[#10B981]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Реалізація</h3>
+                            <p class="text-gray-400 leading-relaxed">Запускаю стратегію: створюю контент, веду соцмережі, налаштовую рекламу. Щомісячні звіти.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="mt-16 text-center animate-on-scroll" style="transition-delay: 300ms;">
+                    <div class="inline-flex items-center gap-3 bg-[#10B981]/10 border border-[#10B981]/30 px-6 py-3 rounded-full">
+                        <i data-lucide="clock" class="w-5 h-5 text-[#10B981]"></i>
+                        <span class="text-white font-semibold">Середній термін виходу на результат: 2-3 місяці</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === Секція з кейсами === -->
+        <section id="cases" class="py-20 md:py-28 relative">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center max-w-3xl mx-auto animate-on-scroll mb-20">
                     <h2 class="section-title">Мої кейси</h2>
                     <p class="section-subtitle">Реальні результати роботи з брендами в соціальних мережах. Цифри, які говорять самі за себе.</p>
                 </div>
 
-                <div class="mt-12 animate-on-scroll grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="transition-delay: 200ms;">
-                    <div class="custom-card rounded-2xl overflow-hidden group">
-                        <img src="https://placehold.co/600x400/111111/EC4899?text=Beauty+Brand" alt="Кейс Beauty бренд" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">Косметичний бренд</h3>
-                            <p class="text-gray-400 mt-2">Розробка SMM-стратегії та запуск таргетованої реклами в Instagram. Збільшення охоплень та залучення цільової аудиторії.</p>
-                            <p class="mt-4 font-bold text-lg text-green-400">Охоплення: +320% за 3 місяці</p>
-                        </div>
+                <!-- Timeline container -->
+                <div class="relative max-w-7xl mx-auto">
+                    <!-- Animated vertical line -->
+                    <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-800 -translate-x-1/2 hidden lg:block">
+                        <div class="timeline-progress absolute top-0 left-0 w-full bg-gradient-to-b from-[#10B981] to-[#34D399] transition-all duration-300" style="height: 0%;"></div>
                     </div>
-                    <div class="custom-card rounded-2xl overflow-hidden group">
-                        <img src="https://placehold.co/600x400/1C1C1E/F472B6?text=Fashion+Store" alt="Кейс Fashion магазин" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">Магазин одягу</h3>
-                            <p class="text-gray-400 mt-2">Повне ведення Instagram та TikTok: контент-план, зйомки, монтаж, Stories. Залучення через Reels та співпрацю з блогерами.</p>
-                            <p class="mt-4 font-bold text-lg text-green-400">Продажі через соцмережі: +180%</p>
+
+                    <!-- Case items -->
+                    <div class="space-y-20">
+                        <!-- Case 1 -->
+                        <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <!-- Number badge -->
+                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">1</div>
+                            <div class="lg:text-right lg:pr-12">
+                                <div class="inline-block">
+                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">Стоматологія</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Стоматологічна клініка</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4">Розробка контент-стратегії, створення довірчого контенту з прикладами робіт, таргетована реклама. Залучення нових пацієнтів через Instagram та Facebook.</p>
+                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl">
+                                    <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
+                                    <span>Записи: +280% за 3 місяці</span>
+                                </div>
+                            </div>
+                            <div class="lg:pl-12">
+                                <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
+                                    <img src="./1-port.png" alt="Кейс Beauty бренд" class="case-image w-full h-96 md:h-[500px] object-contain transition-all duration-700" loading="lazy" width="600" height="800">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="custom-card rounded-2xl overflow-hidden group">
-                        <img src="https://placehold.co/600x400/111111/A78BFA?text=HoReCa" alt="Кейс Ресторан" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">Ресторан (HoReCa)</h3>
-                            <p class="text-gray-400 mt-2">Створення контент-стратегії, фото/відео контент, таргет на локальну аудиторію. Збільшення бронювань через соцмережі.</p>
-                            <p class="mt-4 font-bold text-lg text-green-400">Бронювання: +150% за 2 місяці</p>
+
+                        <!-- Case 2 -->
+                        <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <!-- Number badge -->
+                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">2</div>
+                            <div class="lg:pl-12 lg:order-2">
+                                <div class="inline-block">
+                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">Beauty</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Салон краси</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4">Повне ведення Instagram: естетичний контент, демонстрація робіт майстрів, Stories з процесами. Запуск таргету на локальну аудиторію та робота з відгуками клієнтів.</p>
+                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl">
+                                    <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
+                                    <span>Клієнти: +195%</span>
+                                </div>
+                            </div>
+                            <div class="lg:pr-12 lg:order-1">
+                                <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
+                                    <img src="./2-port.png" alt="Кейс Fashion магазин" class="case-image w-full h-96 md:h-[500px] object-contain transition-all duration-700" loading="lazy" width="600" height="800">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="custom-card rounded-2xl overflow-hidden group">
-                        <img src="https://placehold.co/600x400/111111/D4FE44?text=Online+School" alt="Кейс Онлайн-школа" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">Онлайн-школа</h3>
-                            <p class="text-gray-400 mt-2">Запуск з нуля в Instagram: позиціонування, контент, таргетована реклама. Створення спільноти навколо бренду.</p>
-                            <p class="mt-4 font-bold text-lg text-green-400">5000 підписників за 4 місяці</p>
+
+                        <!-- Case 3 -->
+                        <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <!-- Number badge -->
+                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">3</div>
+                            <div class="lg:text-right lg:pr-12">
+                                <div class="inline-block">
+                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">E-commerce</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Магазин косметики</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4">Комплексне ведення Instagram та Facebook: огляди продуктів, навчальний контент, UGC від клієнтів. Таргетована реклама з високою конверсією в продажі.</p>
+                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl">
+                                    <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
+                                    <span>Продажі: +340%</span>
+                                </div>
+                            </div>
+                            <div class="lg:pl-12">
+                                <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
+                                    <img src="./3-port.png" alt="Кейс Ресторан" class="case-image w-full h-96 md:h-[500px] object-contain transition-all duration-700" loading="lazy" width="600" height="800">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="custom-card rounded-2xl overflow-hidden group">
-                        <img src="https://placehold.co/600x400/1C1C1E/FFFFFF?text=Fitness+Club" alt="Кейс Фітнес-клуб" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">Фітнес-клуб</h3>
-                            <p class="text-gray-400 mt-2">Реактивація сторінки в Facebook та Instagram. Залучення нових клієнтів через таргетовану рекламу та Stories.</p>
-                            <p class="mt-4 font-bold text-lg text-green-400">120 нових абонементів за місяць</p>
-                        </div>
-                    </div>
-                    <div class="custom-card rounded-2xl overflow-hidden group">
-                        <img src="https://placehold.co/600x400/111111/3B82F6?text=E-commerce" alt="Кейс E-commerce" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" width="600" height="400">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white">E-commerce проєкт</h3>
-                            <p class="text-gray-400 mt-2">Комплексна SMM-стратегія для інтернет-магазину: ведення соцмереж, UGC-контент, таргет, робота з відгуками.</p>
-                            <p class="mt-4 font-bold text-lg text-green-400">ROI реклами: 450%</p>
+
+                        <!-- Case 4 -->
+                        <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <!-- Number badge -->
+                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">4</div>
+                            <div class="lg:pl-12 lg:order-2">
+                                <div class="inline-block">
+                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">Косметологія</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Косметологічна клініка</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4">Створення експертного контенту, демонстрація результатів процедур "до/після", освітні матеріали. Таргетована реклама та залучення через рекомендації клієнтів.</p>
+                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl">
+                                    <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
+                                    <span>Записи: +265%</span>
+                                </div>
+                            </div>
+                            <div class="lg:pr-12 lg:order-1">
+                                <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
+                                    <img src="./4-port.png" alt="Кейс E-commerce" class="case-image w-full h-96 md:h-[500px] object-contain transition-all duration-700" loading="lazy" width="600" height="800">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -648,98 +956,26 @@
                     <div class="reviews-track" id="reviews-track">
                             <!-- Первый набор отзывов -->
                             <div class="review-card">
-                                <div class="custom-card p-6 rounded-xl h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">М</div>
-                                    <div class="ml-4">
-                                        <h4 class="font-bold text-white">Оксана</h4>
-                                        <p class="text-sm text-gray-400">Власниця косметичного бренду</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <span class="text-[#10B981]">★★★★★</span>
-                                </div>
-                                <p class="text-gray-300">Анна повністю взяла на себе ведення нашого Instagram. За 3 місяці продажі через соцмережі зросли на 250%. Контент завжди якісний, цільовий, Stories живі та цікаві. Дуже задоволені співпрацею!</p>
+                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-1.png');">
+                                    <img src="./review-1.png" alt="Відгук клієнта" class="w-full h-full object-contain" loading="lazy">
                                 </div>
                             </div>
 
                             <div class="review-card">
-                                <div class="custom-card p-6 rounded-xl h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">А</div>
-                                    <div class="ml-4">
-                                        <h4 class="font-bold text-white">Анна</h4>
-                                        <p class="text-sm text-gray-400">Власник онлайн-школи</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <span class="text-[#10B981]">★★★★★</span>
-                                </div>
-                                <p class="text-gray-300">Запустили таргетовану рекламу в Instagram і Facebook. За 2 місяці отримали 300+ заявок з CPL всього 45 грн. Анна дуже вникає в продукт і аудиторію. Рекомендую!</p>
+                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-2.png');">
+                                    <img src="./review-2.png" alt="Відгук клієнта" class="w-full h-full object-contain" loading="lazy">
                                 </div>
                             </div>
 
                             <div class="review-card">
-                                <div class="custom-card p-6 rounded-xl h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">Д</div>
-                                    <div class="ml-4">
-                                        <h4 class="font-bold text-white">Дмитрий</h4>
-                                        <p class="text-sm text-gray-400">Товары для дома</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <span class="text-[#10B981]">★★★★★</span>
-                                </div>
-                                <p class="text-gray-300">После года самостоятельной работы продажи застряли на $20k/мес. Обратились в AXY, через 4 месяца вышли на $85k. Переделали карточки, запустили A+ контент, настроили нормальную рекламу. Инвестиция окупилась в первый месяц.</p>
+                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-3.png');">
+                                    <img src="./review-3.png" alt="Відгук клієнта" class="w-full h-full object-contain" loading="lazy">
                                 </div>
                             </div>
 
                             <div class="review-card">
-                                <div class="custom-card p-6 rounded-xl h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">Е</div>
-                                    <div class="ml-4">
-                                        <h4 class="font-bold text-white">Елена</h4>
-                                        <p class="text-sm text-gray-400">Детские товары</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <span class="text-[#10B981]">★★★★★</span>
-                                </div>
-                                <p class="text-gray-300">Столкнулись с блокировкой аккаунта на Amazon. AXY помогли разобраться за 2 недели, восстановили все позиции. Потом провели аудит и нашли еще кучу проблем, которые могли привести к повторной блокировке. Спасибо огромное!</p>
-                                </div>
-                            </div>
-
-                            <div class="review-card">
-                                <div class="custom-card p-6 rounded-xl h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">И</div>
-                                    <div class="ml-4">
-                                        <h4 class="font-bold text-white">Игорь</h4>
-                                        <p class="text-sm text-gray-400">Электроника</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <span class="text-[#10B981]">★★★★★</span>
-                                </div>
-                                <p class="text-gray-300">Полный запуск с нуля на Shopify. От разработки сайта до настройки рекламы и первых продаж. За 6 месяцев вышли на стабильные $30k/мес. ROAS держится на уровне 4.2. Команда профессиональная, всё по делу.</p>
-                                </div>
-                            </div>
-
-                            <div class="review-card">
-                                <div class="custom-card p-6 rounded-xl h-full">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">О</div>
-                                    <div class="ml-4">
-                                        <h4 class="font-bold text-white">Ольга</h4>
-                                        <p class="text-sm text-gray-400">Одежда и аксессуары</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <span class="text-[#10B981]">★★★★★</span>
-                                </div>
-                                <p class="text-gray-300">Сделали ребрендинг и запустили на TikTok Shop. Органика выстрелила благодаря контенту от микро-инфлюенсеров. За первые 3 месяца - 2500 заказов, средний чек $65. Очень круто, что команда всё время на связи и быстро реагирует.</p>
+                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-4.png');">
+                                    <img src="./review-4.png" alt="Відгук клієнта" class="w-full h-full object-contain" loading="lazy">
                                 </div>
                             </div>
                     </div>
@@ -762,7 +998,11 @@
                             <i data-lucide="plus" class="faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Вартість залежить від обсягу роботи та ваших цілей. Базове ведення Instagram від 10 000 грн/міс, таргетована реклама від 15 000 грн/міс + бюджет на рекламу. Комплексні пакети обговорюються індивідуально після аналізу вашого проєкту.</p>
+                            <p>Вартість залежить від обсягу роботи та ваших цілей. Я зможу назвати точну ціну після безкоштовної консультації, коли проаналізую ваш проєкт та потреби. Кожен бізнес унікальний, тому пропоную індивідуальний підхід та розрахунок.</p>
+                            <button class="js-open-form mt-4 inline-flex items-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105">
+                                <i data-lucide="calculator" class="w-5 h-5"></i>
+                                <span>Розрахувати вартість</span>
+                            </button>
                         </div>
                     </div>
 
@@ -857,7 +1097,7 @@
                 <div>
                     <h4 class="font-semibold text-white">Зв'яжіться зі мною</h4>
                      <div class="mt-4 flex flex-col space-y-3">
-                        <a href="https://wa.me/380990699094" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                        <a href="https://wa.me/380980685004" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
                             <i data-lucide="message-circle" class="w-5 h-5"></i>
                             <span>Написати в WhatsApp</span>
                         </a>
@@ -865,9 +1105,13 @@
                              <i data-lucide="send" class="w-5 h-5"></i>
                             <span>Написати в Telegram</span>
                         </a>
-                        <a href="https://www.instagram.com/axy_co?igsh=MXY4bGJtbWtoYXJsNQ%3D%3D" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                        <a href="https://www.instagram.com/annserputko/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                             <span>Instagram</span>
+                        </a>
+                        <a href="mailto:anyaserputko@gmail.com" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            <span>Email</span>
                         </a>
                     </div>
                 </div>
@@ -922,12 +1166,17 @@
                         <span class="text-lg">Написати в Telegram</span>
                     </a>
 
-                    <a href="https://wa.me/380990699094" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                    <a href="https://wa.me/380980685004" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
                         <i data-lucide="message-circle" class="w-6 h-6"></i>
                         <span class="text-lg">Написати в WhatsApp</span>
                     </a>
 
-                    <a href="mailto:account@axyglobal.com" class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                    <a href="https://www.instagram.com/annserputko/" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                        <span class="text-lg">Написати в Instagram</span>
+                    </a>
+
+                    <a href="mailto:anyaserputko@gmail.com" class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
                         <i data-lucide="mail" class="w-6 h-6"></i>
                         <span class="text-lg">Написати на Email</span>
                     </a>
@@ -1295,6 +1544,72 @@
             }, { threshold: 0.1 });
             scrollElements.forEach(el => observer.observe(el));
 
+            // --- Timeline animation ---
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineProgress = document.querySelector('.timeline-progress');
+            const timelineSection = document.getElementById('cases');
+
+            // Position numbers on the timeline
+            function positionTimelineNumbers() {
+                timelineItems.forEach(item => {
+                    const number = item.querySelector('.timeline-number');
+                    if (number) {
+                        const itemRect = item.getBoundingClientRect();
+                        const sectionRect = timelineSection.getBoundingClientRect();
+                        const itemTop = item.offsetTop;
+                        const itemHeight = itemRect.height;
+                        const numberTop = itemTop + (itemHeight / 2);
+                        number.style.top = numberTop + 'px';
+                    }
+                });
+            }
+
+            // Call on load and resize
+            positionTimelineNumbers();
+            window.addEventListener('resize', positionTimelineNumbers);
+
+            // Observer for timeline items
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            timelineItems.forEach(item => timelineObserver.observe(item));
+
+            // Update timeline progress line on scroll
+            function updateTimelineProgress() {
+                if (!timelineSection || !timelineProgress) return;
+
+                const sectionRect = timelineSection.getBoundingClientRect();
+                const sectionTop = sectionRect.top;
+                const sectionHeight = sectionRect.height;
+                const windowHeight = window.innerHeight;
+
+                // Calculate progress percentage
+                if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
+                    const visibleHeight = Math.min(windowHeight - sectionTop, sectionHeight);
+                    const progress = Math.max(0, Math.min(100, (visibleHeight / sectionHeight) * 100));
+
+                    // Update line height
+                    timelineProgress.style.height = progress + '%';
+                }
+            }
+
+            // Throttle scroll event
+            let timelineScrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (timelineScrollTimeout) {
+                    window.cancelAnimationFrame(timelineScrollTimeout);
+                }
+                timelineScrollTimeout = window.requestAnimationFrame(updateTimelineProgress);
+            });
+
+            // Initial call
+            updateTimelineProgress();
+
             // --- Анимация счетчика ---
             const animateCounter = (id, targetValue, duration, suffix = '') => {
                 const element = document.getElementById(id);
@@ -1405,7 +1720,7 @@
                     if (currentSlide > 0) {
                         currentSlide--;
                         updateSlider();
-                    } 
+                    }
                 });
 
                 nextBtn.addEventListener('click', () => {
@@ -1456,6 +1771,51 @@
                 });
             });
         });
+
+        // --- Анимация ракеты при скролле ---
+        const animatedRocket = document.getElementById('animated-rocket');
+        const servicesSection = document.getElementById('services');
+        let lastRocketScroll = 0;
+
+        function animateRocketOnScroll() {
+            if (!animatedRocket || !servicesSection) return;
+
+            const currentScroll = window.pageYOffset;
+            const sectionRect = servicesSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Only animate when services section is in viewport
+            if (sectionRect.top < windowHeight && sectionRect.bottom > 0) {
+                // Calculate scroll progress within the section (0 to 1)
+                const sectionTop = sectionRect.top;
+                const sectionHeight = sectionRect.height;
+                const visibleProgress = Math.max(0, Math.min(1, 1 - (sectionTop / windowHeight)));
+
+                // Smooth scale: grows from 1 to 1.2
+                const scale = 1 + (visibleProgress * 0.2);
+
+                // Smooth movement: moves right and slightly up
+                const moveX = visibleProgress * 25;
+                const moveY = -visibleProgress * 15;
+
+                // Apply transform with smooth transition
+                animatedRocket.style.transform = `translate(${moveX}px, ${moveY}px) rotate(-20deg) scale(${scale})`;
+            }
+
+            lastRocketScroll = currentScroll;
+        }
+
+        // Use requestAnimationFrame for smooth animation
+        let rocketAnimationFrame;
+        window.addEventListener('scroll', () => {
+            if (rocketAnimationFrame) {
+                window.cancelAnimationFrame(rocketAnimationFrame);
+            }
+            rocketAnimationFrame = window.requestAnimationFrame(animateRocketOnScroll);
+        });
+
+        // Initial call
+        animateRocketOnScroll();
     </script>
 
 </body>
