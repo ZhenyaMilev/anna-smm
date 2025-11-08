@@ -37,7 +37,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Roboto+Flex:wght@400;700;800&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     
     <!-- JSON-LD Structured Data for SEO -->
@@ -121,31 +121,31 @@
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Jura', 'Arial', sans-serif;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background-color: #111111;
             color: #E5E7EB;
             overflow-x: hidden; /* Prevent horizontal scroll */
             min-height: 100vh;
         }
         ::selection {
-            background-color: #10B981;
+            background-color: #D896C6;
             color: #FFFFFF;
         }
         h1, h2, h3, h4, .section-title {
-            font-family: 'Jura', 'Arial', sans-serif;
-            font-weight: 600;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 700;
         }
         .cta-primary {
-            background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+            background: linear-gradient(135deg, #D896C6 0%, #E5B8D8 100%);
             color: #FFFFFF;
             font-weight: 700;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 4px 15px rgba(216, 150, 198, 0.3);
         }
         .cta-primary:hover {
-            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+            background: linear-gradient(135deg, #C279B0 0%, #D896C6 100%);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 6px 20px rgba(216, 150, 198, 0.4);
         }
         .cta-secondary {
             background-color: transparent;
@@ -191,8 +191,8 @@
             border: 1px solid #2D2D2F;
         }
         .service-card.custom-card:hover {
-            border-color: #10B981;
-            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+            border-color: #D896C6;
+            box-shadow: 0 4px 20px rgba(216, 150, 198, 0.15);
         }
 
         /* Hamburger menu animation */
@@ -295,8 +295,8 @@
             transition: all 0.3s ease;
         }
         .tab-button.active {
-            color: #10B981;
-            background-color: rgba(16, 185, 129, 0.1);
+            color: #D896C6;
+            background-color: rgba(216, 150, 198, 0.1);
         }
         .tab-content {
             display: none;
@@ -415,7 +415,7 @@
             z-index: 1;
         }
         .slider-btn-simple {
-            background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+            background: linear-gradient(135deg, #D896C6 0%, #E5B8D8 100%);
             color: #FFFFFF;
             border: none;
             width: 50px;
@@ -426,12 +426,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 4px 15px rgba(216, 150, 198, 0.3);
         }
         .slider-btn-simple:hover {
-            background: linear-gradient(135deg, #34D399 0%, #6EE7B7 100%);
+            background: linear-gradient(135deg, #E5B8D8 0%, #FAF3F8 100%);
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 6px 20px rgba(216, 150, 198, 0.4);
         }
         .slider-btn-simple:disabled {
             opacity: 0.5;
@@ -447,10 +447,10 @@
             position: fixed;
             inset: 0;
             background:
-                radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.15), transparent 50%),
-                radial-gradient(circle at 80% 40%, rgba(52, 211, 153, 0.12), transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(5, 150, 105, 0.1), transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(110, 231, 183, 0.08), transparent 50%);
+                radial-gradient(circle at 20% 20%, rgba(216, 150, 198, 0.08), transparent 50%),
+                radial-gradient(circle at 80% 40%, rgba(229, 184, 216, 0.06), transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(194, 121, 176, 0.05), transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(216, 150, 198, 0.04), transparent 50%);
             filter: blur(100px);
             opacity: 0.8;
             pointer-events: none;
@@ -475,40 +475,40 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(16, 185, 129, 0.25);
-            border: 2px solid rgba(16, 185, 129, 0.6);
+            background: rgba(216, 150, 198, 0.15);
+            border: 2px solid rgba(216, 150, 198, 0.5);
             padding: 0.75rem 1.25rem;
             border-radius: 2rem;
             font-size: 0.875rem;
             font-weight: 700;
-            color: #34D399;
+            color: #E5B8D8;
             margin-bottom: 1.5rem;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
             z-index: 10;
             width: fit-content;
-            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.2);
+            box-shadow: 0 2px 10px rgba(216, 150, 198, 0.2);
         }
         @media (max-width: 768px) {
             .availability-badge {
                 font-size: 0.8125rem;
                 padding: 0.65rem 1.1rem;
                 margin-bottom: 1.25rem;
-                background: rgba(16, 185, 129, 0.3);
-                border: 2px solid rgba(16, 185, 129, 0.7);
+                background: rgba(216, 150, 198, 0.2);
+                border: 2px solid rgba(216, 150, 198, 0.6);
             }
         }
         .availability-badge:hover {
-            background: rgba(16, 185, 129, 0.35);
-            border-color: rgba(16, 185, 129, 0.8);
+            background: rgba(216, 150, 198, 0.25);
+            border-color: rgba(216, 150, 198, 0.7);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 4px 15px rgba(216, 150, 198, 0.4);
         }
         .availability-indicator {
             width: 8px;
             height: 8px;
-            background: #10B981;
+            background: #D896C6;
             border-radius: 50%;
             animation: pulse 2s ease-in-out infinite;
         }
@@ -551,13 +551,13 @@
             transition: all 0.3s ease;
         }
         .faq-question:hover {
-            color: #10B981;
+            color: #D896C6;
         }
         .faq-icon {
             width: 24px;
             height: 24px;
             transition: transform 0.3s ease;
-            color: #10B981;
+            color: #D896C6;
             flex-shrink: 0;
             margin-left: 1rem;
         }
@@ -640,7 +640,7 @@
             white-space: nowrap;
         }
         .running-line-item .brand {
-            color: #10B981;
+            color: #D896C6;
             font-weight: 600;
         }
 
@@ -703,6 +703,212 @@
         .timeline-item.is-visible .timeline-number {
             opacity: 1;
         }
+
+        /* Language Switcher Styles */
+        .lang-btn {
+            color: #9CA3AF;
+        }
+        .lang-btn.active {
+            background: linear-gradient(135deg, #D896C6 0%, #E5B8D8 100%);
+            color: #FFFFFF;
+        }
+        .lang-btn:hover:not(.active) {
+            color: #FFFFFF;
+        }
+
+        /* Reviews Grid */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .reviews-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .review-card {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+                        0 0 0 1px rgba(216, 150, 198, 0.1);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                        0 0 0 1px rgba(216, 150, 198, 0.3);
+        }
+
+        .review-card::before {
+            content: attr(data-hover-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 10;
+            white-space: nowrap;
+            backdrop-filter: blur(10px);
+        }
+
+        .review-card:hover::before {
+            opacity: 1;
+        }
+
+        .review-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(216, 150, 198, 0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .review-card:hover::after {
+            opacity: 1;
+        }
+
+        .review-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 0.5rem;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            z-index: 10001;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            z-index: 10001;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-prev {
+            left: 2rem;
+        }
+
+        .lightbox-next {
+            right: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-prev,
+            .lightbox-next {
+                top: auto;
+                bottom: 2rem;
+                transform: translateY(0);
+            }
+
+            .lightbox-prev {
+                left: 50%;
+                transform: translateX(-100%);
+                margin-left: -3rem;
+            }
+
+            .lightbox-next {
+                right: auto;
+                left: 50%;
+                transform: translateX(0);
+                margin-left: 1rem;
+            }
+
+            .lightbox-close {
+                top: 1rem;
+                right: 1rem;
+            }
+        }
     </style>
 </head>
 <body class="text-gray-300">
@@ -714,14 +920,19 @@
                 <span class="text-xl md:text-2xl font-bold text-white">Анна Серпутько</span>
             </a>
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#services" class="text-gray-300 hover:text-white transition">Послуги</a>
-                <a href="#cases" class="text-gray-300 hover:text-white transition">Кейси</a>
-                <a href="#about" class="text-gray-300 hover:text-white transition">Про мене</a>
-                <a href="#reviews" class="text-gray-300 hover:text-white transition">Відгуки</a>
-                <a href="#contacts" class="text-gray-300 hover:text-white transition">Контакти</a>
+                <a href="#services" class="text-gray-300 hover:text-white transition" data-i18n="nav.services">Послуги</a>
+                <a href="#cases" class="text-gray-300 hover:text-white transition" data-i18n="nav.cases">Кейси</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition" data-i18n="nav.about">Про мене</a>
+                <a href="#reviews" class="text-gray-300 hover:text-white transition" data-i18n="nav.reviews">Відгуки</a>
+                <a href="#contacts" class="text-gray-300 hover:text-white transition" data-i18n="nav.contacts">Контакти</a>
             </nav>
-            <div class="hidden lg:flex items-center">
-                <a href="#audit" class="js-open-form cta-primary text-sm font-semibold px-5 py-2.5 rounded-lg">Безкоштовна консультація</a>
+            <div class="hidden lg:flex items-center gap-4">
+                <!-- Language Switcher -->
+                <div class="flex items-center gap-2 bg-[#1C1C1E] rounded-lg p-1">
+                    <button class="lang-btn px-3 py-1.5 rounded text-sm font-medium transition-all" data-lang="uk">UK</button>
+                    <button class="lang-btn px-3 py-1.5 rounded text-sm font-medium transition-all" data-lang="en">EN</button>
+                </div>
+                <a href="#audit" class="js-open-form cta-primary text-sm font-semibold px-5 py-2.5 rounded-lg" data-i18n="nav.consultation">Безкоштовна консультація</a>
             </div>
             <button id="mobile-menu-button" class="lg:hidden text-white p-2">
                 <div class="hamburger">
@@ -735,13 +946,18 @@
         <!-- Мобільне меню -->
         <div id="mobile-menu" class="hidden lg:hidden px-4 md:px-6 pb-4">
             <nav class="flex flex-col space-y-4">
-                 <a href="#services" class="text-gray-300 hover:text-white transition">Послуги</a>
-                 <a href="#cases" class="text-gray-300 hover:text-white transition">Кейси</a>
-                 <a href="#about" class="text-gray-300 hover:text-white transition">Про мене</a>
-                 <a href="#reviews" class="text-gray-300 hover:text-white transition">Відгуки</a>
-                 <a href="#contacts" class="text-gray-300 hover:text-white transition">Контакти</a>
+                 <a href="#services" class="text-gray-300 hover:text-white transition" data-i18n="nav.services">Послуги</a>
+                 <a href="#cases" class="text-gray-300 hover:text-white transition" data-i18n="nav.cases">Кейси</a>
+                 <a href="#about" class="text-gray-300 hover:text-white transition" data-i18n="nav.about">Про мене</a>
+                 <a href="#reviews" class="text-gray-300 hover:text-white transition" data-i18n="nav.reviews">Відгуки</a>
+                 <a href="#contacts" class="text-gray-300 hover:text-white transition" data-i18n="nav.contacts">Контакти</a>
                 <div class="flex flex-col space-y-3 pt-4">
-                     <a href="#audit" class="js-open-form cta-primary w-full text-center text-sm font-semibold px-5 py-2.5 rounded-lg">Безкоштовна консультація</a>
+                     <!-- Language Switcher Mobile -->
+                     <div class="flex items-center gap-2 bg-[#1C1C1E] rounded-lg p-1">
+                         <button class="lang-btn flex-1 px-3 py-1.5 rounded text-sm font-medium transition-all" data-lang="uk">UK</button>
+                         <button class="lang-btn flex-1 px-3 py-1.5 rounded text-sm font-medium transition-all" data-lang="en">EN</button>
+                     </div>
+                     <a href="#audit" class="js-open-form cta-primary w-full text-center text-sm font-semibold px-5 py-2.5 rounded-lg" data-i18n="nav.consultation">Безкоштовна консультація</a>
                 </div>
             </nav>
         </div>
@@ -753,38 +969,38 @@
         <section id="about" class="pt-32 pb-20 md:py-28 bg-[#1C1C1E]">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center animate-on-scroll">
-                    <div>
+                    <div class="order-2 lg:order-1">
                         <div class="availability-badge js-open-form">
                             <span class="availability-indicator"></span>
-                            <span>Доступна до співпраці</span>
+                            <span data-i18n="about.available">Доступна до співпраці</span>
                         </div>
-                        <h2 class="section-title">Привіт! Я <em>Анна</em> — ваш <em>SMM-спеціаліст</em></h2>
-                        <p class="mt-6 text-base md:text-lg text-gray-400 leading-relaxed">
-                            Я <em>допомагаю бізнесу зростати</em> в <em>соціальних мережах</em> вже 3 роки. Працювала з брендами у сферах beauty, fashion, HoReCa, освіти та e-commerce.
+                        <h2 class="section-title" data-i18n="about.title">Привіт! Я Анна — ваш SMM-спеціаліст</h2>
+                        <p class="mt-6 text-base md:text-lg text-gray-400 leading-relaxed" data-i18n="about.description">
+                            Я допомагаю бізнесу зростати в соціальних мережах вже 3 роки. Працювала з брендами у сферах beauty, fashion, HoReCa, освіти та e-commerce.
                         </p>
                         <ul class="mt-6 text-base md:text-lg text-gray-400 space-y-3">
-                            <li>• <span class="text-white font-semibold">3 роки</span> досвіду в SMM</li>
-                            <li>• <span class="text-white font-semibold">50+ успішних проєктів</span> реалізовано</li>
-                            <li>• Досвід роботи з <span class="text-white font-semibold">Instagram, Facebook, TikTok</span></li>
-                            <li>• Спеціалізація: контент, таргет, стратегія</li>
+                            <li data-i18n-html="about.list1">• <span class="text-white font-semibold">3 роки</span> досвіду в SMM</li>
+                            <li data-i18n-html="about.list2">• <span class="text-white font-semibold">50+ успішних проєктів</span> реалізовано</li>
+                            <li data-i18n-html="about.list3">• Досвід роботи з <span class="text-white font-semibold">Instagram, Facebook, TikTok</span></li>
+                            <li data-i18n="about.list4">• Спеціалізація: контент, таргет, стратегія</li>
                         </ul>
                         <div class="mt-8 grid grid-cols-2 gap-6">
                             <div>
-                                <p class="text-3xl md:text-5xl font-bold text-[#10B981]" id="count-up-experience">0+</p>
-                                <p class="mt-1 text-sm md:text-base text-gray-500">роки в SMM</p>
+                                <p class="text-3xl md:text-5xl font-bold text-[#D896C6]" id="count-up-experience">0+</p>
+                                <p class="mt-1 text-sm md:text-base text-gray-500" data-i18n="about.stat1">роки в SMM</p>
                             </div>
                             <div>
-                                <p class="text-3xl md:text-5xl font-bold text-[#10B981]" id="count-up-stores">0+</p>
-                                <p class="mt-1 text-sm md:text-base text-gray-500">проєктів реалізовано</p>
+                                <p class="text-3xl md:text-5xl font-bold text-[#D896C6]" id="count-up-stores">0+</p>
+                                <p class="mt-1 text-sm md:text-base text-gray-500" data-i18n="about.stat2">проєктів реалізовано</p>
                             </div>
                         </div>
                         <div class="mt-8">
-                            <a href="#" class="js-open-form cta-primary inline-flex items-center px-8 py-4 rounded-xl text-lg font-semibold">
+                            <a href="#" class="js-open-form cta-primary inline-flex items-center px-12 py-5 rounded-xl text-lg font-semibold w-full lg:max-w-xs justify-center" data-i18n="about.contact">
                                 Зв'язатися зі мною
                             </a>
                         </div>
                     </div>
-                    <div class="animate-on-scroll image-overlay" style="transition-delay: 200ms;">
+                    <div class="order-1 lg:order-2 animate-on-scroll image-overlay" style="transition-delay: 200ms;">
                         <img src="main-banner.jpg" alt="Анна Серпутько - SMM-спеціаліст" class="rounded-2xl object-cover w-full h-full shadow-2xl" loading="lazy" width="848" height="1000">
                     </div>
                 </div>
@@ -795,8 +1011,8 @@
         <section id="services" class="py-12 md:py-28 relative">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="text-center max-w-4xl mx-auto animate-on-scroll relative">
-                    <h2 class="section-title">Допомагаю бізнесу <span class="text-color-animate" data-text-animate><em>зростати</em> в <em>соціальних мережах</em></span></h2>
-                    <p class="section-subtitle">Instagram, Facebook, TikTok — не важливо, де ви присутні. Я беру на себе повний цикл SMM або закриваю конкретну задачу, щоб ви отримували результат.</p>
+                    <h2 class="section-title" data-i18n-html="services.title">Допомагаю бізнесу <span class="text-color-animate" data-text-animate>зростати в соціальних мережах</span></h2>
+                    <p class="section-subtitle" data-i18n="services.subtitle">Instagram, Facebook, TikTok — не важливо, де ви присутні. Я беру на себе повний цикл SMM або закриваю конкретну задачу, щоб ви отримували результат.</p>
 
                     <!-- Decorative emojis -->
                     <div class="absolute right-0 top-0 w-96 h-96 pointer-events-none hidden lg:block" style="transform: translate(40%, -20%);">
@@ -839,9 +1055,9 @@
                 </div>
 
                 <div class="text-center mt-12 animate-on-scroll" style="transition-delay: 100ms;">
-                    <div class="inline-flex items-center gap-3 bg-[#10B981]/10 border border-[#10B981]/30 px-4 md:px-6 py-3 rounded-full">
-                        <i data-lucide="hand-metal" class="w-5 h-5 text-[#10B981] flex-shrink-0"></i>
-                        <span class="text-white font-semibold text-sm md:text-base whitespace-nowrap">Натисни на послугу, щоб дізнатися більше</span>
+                    <div class="inline-flex items-center gap-3 bg-[#D896C6]/10 border border-[#D896C6]/30 px-4 md:px-6 py-3 rounded-full">
+                        <i data-lucide="hand-metal" class="w-5 h-5 text-[#D896C6] flex-shrink-0"></i>
+                        <span class="text-white font-semibold text-sm md:text-base whitespace-nowrap" data-i18n="services.clickTip">Натисни на послугу, щоб дізнатися більше</span>
                     </div>
                 </div>
                 <div id="services-grid" class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 animate-on-scroll justify-items-center auto-rows-fr" style="transition-delay: 200ms;">
@@ -854,61 +1070,61 @@
         <section id="process" class="py-20 md:py-28 bg-[#1C1C1E]">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="text-center max-w-3xl mx-auto animate-on-scroll mb-16">
-                    <h2 class="section-title"><em>Як я працюю</em></h2>
-                    <p class="section-subtitle">Прозорий процес роботи від знайомства до результату. Кожен етап продуманий для досягнення максимальної ефективності.</p>
+                    <h2 class="section-title" data-i18n="process.title">Як я працюю</h2>
+                    <p class="section-subtitle" data-i18n="process.subtitle">Прозорий процес роботи від знайомства до результату. Кожен етап продуманий для досягнення максимальної ефективності.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-on-scroll" style="transition-delay: 200ms;">
                     <!-- Step 1 -->
                     <div class="custom-card p-6 rounded-2xl relative">
                         <div>
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="message-square" class="w-6 h-6 text-[#10B981]"></i>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#D896C6]/20 to-[#E5B8D8]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="message-square" class="w-6 h-6 text-[#D896C6]"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-3">Консультація</h3>
-                            <p class="text-gray-400 leading-relaxed">Обговорюємо ваші цілі, аналізуємо поточний стан соцмереж. Визначаємо завдання та KPI.</p>
+                            <h3 class="text-xl font-bold text-white mb-3" data-i18n="process.step1Title">Консультація</h3>
+                            <p class="text-gray-400 leading-relaxed" data-i18n="process.step1Desc">Обговорюємо ваші цілі, аналізуємо поточний стан соцмереж. Визначаємо завдання та KPI.</p>
                         </div>
                     </div>
 
                     <!-- Step 2 -->
                     <div class="custom-card p-6 rounded-2xl relative">
                         <div>
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="search" class="w-6 h-6 text-[#10B981]"></i>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#D896C6]/20 to-[#E5B8D8]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="search" class="w-6 h-6 text-[#D896C6]"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-3">Аналіз</h3>
-                            <p class="text-gray-400 leading-relaxed">Досліджую вашу нішу, конкурентів та цільову аудиторію. Шукаю точки зростання.</p>
+                            <h3 class="text-xl font-bold text-white mb-3" data-i18n="process.step2Title">Аналіз</h3>
+                            <p class="text-gray-400 leading-relaxed" data-i18n="process.step2Desc">Досліджую вашу нішу, конкурентів та цільову аудиторію. Шукаю точки зростання.</p>
                         </div>
                     </div>
 
                     <!-- Step 3 -->
                     <div class="custom-card p-6 rounded-2xl relative">
                         <div>
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="trending-up" class="w-6 h-6 text-[#10B981]"></i>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#D896C6]/20 to-[#E5B8D8]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-[#D896C6]"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-3">Стратегія</h3>
-                            <p class="text-gray-400 leading-relaxed">Розробляю детальну SMM-стратегію: контент-план, позиціонування, канали просування.</p>
+                            <h3 class="text-xl font-bold text-white mb-3" data-i18n="process.step3Title">Стратегія</h3>
+                            <p class="text-gray-400 leading-relaxed" data-i18n="process.step3Desc">Розробляю детальну SMM-стратегію: контент-план, позиціонування, канали просування.</p>
                         </div>
                     </div>
 
                     <!-- Step 4 -->
                     <div class="custom-card p-6 rounded-2xl relative">
                         <div>
-                            <div class="w-12 h-12 bg-gradient-to-br from-[#10B981]/20 to-[#34D399]/20 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="play-circle" class="w-6 h-6 text-[#10B981]"></i>
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#D896C6]/20 to-[#E5B8D8]/20 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="play-circle" class="w-6 h-6 text-[#D896C6]"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-3">Реалізація</h3>
-                            <p class="text-gray-400 leading-relaxed">Запускаю стратегію: створюю контент, веду соцмережі, налаштовую рекламу. Щомісячні звіти.</p>
+                            <h3 class="text-xl font-bold text-white mb-3" data-i18n="process.step4Title">Реалізація</h3>
+                            <p class="text-gray-400 leading-relaxed" data-i18n="process.step4Desc">Запускаю стратегію: створюю контент, веду соцмережі, налаштовую рекламу. Щомісячні звіти.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Additional Info -->
                 <div class="mt-16 text-center animate-on-scroll" style="transition-delay: 300ms;">
-                    <div class="inline-flex items-center gap-3 bg-[#10B981]/10 border border-[#10B981]/30 px-6 py-3 rounded-full">
-                        <i data-lucide="clock" class="w-5 h-5 text-[#10B981]"></i>
-                        <span class="text-white font-semibold">Середній термін виходу на результат: 2-3 місяці</span>
+                    <div class="inline-flex items-center gap-3 bg-[#D896C6]/10 border border-[#D896C6]/30 px-6 py-3 rounded-full">
+                        <i data-lucide="clock" class="w-5 h-5 text-[#D896C6]"></i>
+                        <span class="text-white font-semibold" data-i18n="process.timeframe">Середній термін виходу на результат: 2-3 місяці</span>
                     </div>
                 </div>
             </div>
@@ -918,15 +1134,15 @@
         <section id="cases" class="py-20 md:py-28 relative">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="text-center max-w-3xl mx-auto animate-on-scroll mb-20">
-                    <h2 class="section-title"><em>Мої кейси</em></h2>
-                    <p class="section-subtitle">Реальні результати роботи з брендами в соціальних мережах. Цифри, які говорять самі за себе.</p>
+                    <h2 class="section-title" data-i18n="cases.title">Мої кейси</h2>
+                    <p class="section-subtitle" data-i18n="cases.subtitle">Реальні результати роботи з брендами в соціальних мережах. Цифри, які говорять самі за себе.</p>
                 </div>
 
                 <!-- Timeline container -->
                 <div class="relative max-w-7xl mx-auto">
                     <!-- Animated vertical line -->
                     <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-800 -translate-x-1/2 hidden lg:block">
-                        <div class="timeline-progress absolute top-0 left-0 w-full bg-gradient-to-b from-[#10B981] to-[#34D399] transition-all duration-300" style="height: 0%;"></div>
+                        <div class="timeline-progress absolute top-0 left-0 w-full bg-gradient-to-b from-[#D896C6] to-[#E5B8D8] transition-all duration-300" style="height: 0%;"></div>
                     </div>
 
                     <!-- Case items -->
@@ -934,17 +1150,21 @@
                         <!-- Case 1 -->
                         <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <!-- Number badge -->
-                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">1</div>
+                            <div class="timeline-number absolute w-12 h-12 bg-[#D896C6] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#D896C6]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">1</div>
                             <div class="lg:text-right lg:pr-12">
                                 <div class="inline-block">
-                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">Стоматологія</span>
+                                    <span class="inline-block px-4 py-1 bg-[#D896C6]/10 border border-[#D896C6]/30 rounded-full text-[#D896C6] text-sm font-semibold mb-4" data-i18n="cases.case1.category">Стоматологія</span>
                                 </div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Стоматологічна клініка</h3>
-                                <p class="text-gray-400 text-base md:text-lg mb-4">Розробка контент-стратегії, створення довірчого контенту з прикладами робіт, таргетована реклама. Залучення нових пацієнтів через Instagram та Facebook.</p>
-                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl">
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="cases.case1.title">Стоматологічна клініка</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4" data-i18n="cases.case1.description">Розробка контент-стратегії, створення довірчого контенту з прикладами робіт, таргетована реклама. Залучення нових пацієнтів через Instagram та Facebook.</p>
+                                <div class="inline-flex items-center gap-2 text-[#D896C6] font-bold text-lg md:text-xl mb-4">
                                     <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
-                                    <span>Записи: +280% за 3 місяці</span>
+                                    <span data-i18n="cases.case1.result">Записи: +280% за 3 місяці</span>
                                 </div>
+                                <a href="https://www.instagram.com/komfortna_stomatologia/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#D896C6] to-[#C279B0] text-white rounded-lg hover:shadow-lg hover:shadow-[#D896C6]/30 transition-all duration-300 font-semibold w-fit lg:ml-auto">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                    <span data-i18n="cases.viewProfile">Переглянути профіль</span>
+                                </a>
                             </div>
                             <div class="lg:pl-12">
                                 <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
@@ -956,17 +1176,21 @@
                         <!-- Case 2 -->
                         <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <!-- Number badge -->
-                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">2</div>
+                            <div class="timeline-number absolute w-12 h-12 bg-[#D896C6] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#D896C6]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">2</div>
                             <div class="lg:pl-12 lg:order-2">
                                 <div class="inline-block">
-                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">Beauty</span>
+                                    <span class="inline-block px-4 py-1 bg-[#D896C6]/10 border border-[#D896C6]/30 rounded-full text-[#D896C6] text-sm font-semibold mb-4" data-i18n="cases.case2.category">Beauty</span>
                                 </div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Салон краси</h3>
-                                <p class="text-gray-400 text-base md:text-lg mb-4">Повне ведення Instagram: естетичний контент, демонстрація робіт майстрів, Stories з процесами. Запуск таргету на локальну аудиторію та робота з відгуками клієнтів.</p>
-                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl">
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="cases.case2.title">Салон краси</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4" data-i18n="cases.case2.description">Повне ведення Instagram: естетичний контент, демонстрація робіт майстрів, Stories з процесами. Запуск таргету на локальну аудиторію та робота з відгуками клієнтів.</p>
+                                <div class="inline-flex items-center gap-2 text-[#D896C6] font-bold text-lg md:text-xl mb-4">
                                     <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
-                                    <span>Клієнти: +195%</span>
+                                    <span data-i18n="cases.case2.result">Клієнти: +195%</span>
                                 </div>
+                                <a href="https://www.instagram.com/veronica_boryspil/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#D896C6] to-[#C279B0] text-white rounded-lg hover:shadow-lg hover:shadow-[#D896C6]/30 transition-all duration-300 font-semibold w-fit">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                    <span data-i18n="cases.viewProfile">Переглянути профіль</span>
+                                </a>
                             </div>
                             <div class="lg:pr-12 lg:order-1">
                                 <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
@@ -978,17 +1202,21 @@
                         <!-- Case 3 -->
                         <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <!-- Number badge -->
-                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">3</div>
+                            <div class="timeline-number absolute w-12 h-12 bg-[#D896C6] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#D896C6]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">3</div>
                             <div class="lg:text-right lg:pr-12">
                                 <div class="inline-block">
-                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">E-commerce</span>
+                                    <span class="inline-block px-4 py-1 bg-[#D896C6]/10 border border-[#D896C6]/30 rounded-full text-[#D896C6] text-sm font-semibold mb-4" data-i18n="cases.case3.category">E-commerce</span>
                                 </div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Магазин косметики</h3>
-                                <p class="text-gray-400 text-base md:text-lg mb-4">Комплексне ведення Instagram та Facebook: огляди продуктів, навчальний контент, UGC від клієнтів. Таргетована реклама з високою конверсією в продажі.</p>
-                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl">
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="cases.case3.title">Магазин косметики</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4" data-i18n="cases.case3.description">Комплексне ведення Instagram та Facebook: огляди продуктів, навчальний контент, UGC від клієнтів. Таргетована реклама з високою конверсією в продажі.</p>
+                                <div class="inline-flex items-center gap-2 text-[#D896C6] font-bold text-lg md:text-xl mb-4">
                                     <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
-                                    <span>Продажі: +340%</span>
+                                    <span data-i18n="cases.case3.result">Продажі: +340%</span>
                                 </div>
+                                <a href="https://www.instagram.com/veronica_beauty_shop/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#D896C6] to-[#C279B0] text-white rounded-lg hover:shadow-lg hover:shadow-[#D896C6]/30 transition-all duration-300 font-semibold w-fit lg:ml-auto">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                    <span data-i18n="cases.viewProfile">Переглянути профіль</span>
+                                </a>
                             </div>
                             <div class="lg:pl-12">
                                 <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
@@ -1000,21 +1228,77 @@
                         <!-- Case 4 -->
                         <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <!-- Number badge -->
-                            <div class="timeline-number absolute w-12 h-12 bg-[#10B981] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#10B981]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">4</div>
+                            <div class="timeline-number absolute w-12 h-12 bg-[#D896C6] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#D896C6]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">4</div>
                             <div class="lg:pl-12 lg:order-2 animate-on-scroll">
                                 <div class="inline-block animate-on-scroll">
-                                    <span class="inline-block px-4 py-1 bg-[#10B981]/10 border border-[#10B981]/30 rounded-full text-[#10B981] text-sm font-semibold mb-4">Косметологія</span>
+                                    <span class="inline-block px-4 py-1 bg-[#D896C6]/10 border border-[#D896C6]/30 rounded-full text-[#D896C6] text-sm font-semibold mb-4" data-i18n="cases.case4.category">Косметологія</span>
                                 </div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 animate-on-scroll" style="transition-delay: 100ms;">Косметологічна клініка</h3>
-                                <p class="text-gray-400 text-base md:text-lg mb-4 animate-on-scroll" style="transition-delay: 200ms;">Створення експертного контенту, демонстрація результатів процедур "до/після", освітні матеріали. Таргетована реклама та залучення через рекомендації клієнтів.</p>
-                                <div class="inline-flex items-center gap-2 text-[#10B981] font-bold text-lg md:text-xl animate-on-scroll" style="transition-delay: 300ms;">
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 animate-on-scroll" style="transition-delay: 100ms;" data-i18n="cases.case4.title">Косметологічна клініка</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4 animate-on-scroll" style="transition-delay: 200ms;" data-i18n="cases.case4.description">Створення експертного контенту, демонстрація результатів процедур "до/після", освітні матеріали. Таргетована реклама та залучення через рекомендації клієнтів.</p>
+                                <div class="inline-flex items-center gap-2 text-[#D896C6] font-bold text-lg md:text-xl mb-4 animate-on-scroll" style="transition-delay: 300ms;">
                                     <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
-                                    <span>Записи: +265%</span>
+                                    <span data-i18n="cases.case4.result">Записи: +265%</span>
                                 </div>
+                                <a href="https://www.instagram.com/fambeauty_london/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#D896C6] to-[#C279B0] text-white rounded-lg hover:shadow-lg hover:shadow-[#D896C6]/30 transition-all duration-300 font-semibold w-fit animate-on-scroll" style="transition-delay: 400ms;">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                    <span data-i18n="cases.viewProfile">Переглянути профіль</span>
+                                </a>
                             </div>
                             <div class="lg:pr-12 lg:order-1">
                                 <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
                                     <img src="./4-port.png" alt="Кейс просування косметологічної клініки - записи на 265% більше" class="case-image w-full h-96 md:h-[500px] object-contain transition-all duration-700" loading="lazy" width="600" height="800">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 5 -->
+                        <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <!-- Number badge -->
+                            <div class="timeline-number absolute w-12 h-12 bg-[#D896C6] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#D896C6]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">5</div>
+                            <div class="lg:text-right lg:pr-12">
+                                <div class="inline-block">
+                                    <span class="inline-block px-4 py-1 bg-[#D896C6]/10 border border-[#D896C6]/30 rounded-full text-[#D896C6] text-sm font-semibold mb-4" data-i18n="cases.case5.category">Військова сфера</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="cases.case5.title">Військовий батальйон</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4" data-i18n="cases.case5.description">Повне ведення Instagram профілю батальйону: офіційне інформування, залучення підтримки (донати, допомога), публікація новостей, фото та відео про службу і операції, мотивація та набір нових бійців.</p>
+                                <div class="inline-flex items-center gap-2 text-[#D896C6] font-bold text-lg md:text-xl mb-4">
+                                    <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
+                                    <span data-i18n="cases.case5.result">Підписники: +450%</span>
+                                </div>
+                                <a href="https://www.instagram.com/1dshb.95.army.ua?igsh=MWlyeWkzeDY0MGxrcg==" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#D896C6] to-[#C279B0] text-white rounded-lg hover:shadow-lg hover:shadow-[#D896C6]/30 transition-all duration-300 font-semibold w-fit lg:ml-auto">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                    <span data-i18n="cases.viewProfile">Переглянути профіль</span>
+                                </a>
+                            </div>
+                            <div class="lg:pl-12">
+                                <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
+                                    <img src="./5-port.png" alt="Кейс SMM для військового батальйону" class="case-image w-full h-96 md:h-[500px] object-contain transition-all duration-700" loading="lazy" width="600" height="800">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 6 -->
+                        <div class="timeline-item grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <!-- Number badge -->
+                            <div class="timeline-number absolute w-12 h-12 bg-[#D896C6] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-[#D896C6]/50 hidden lg:flex z-10" style="left: 50%; transform: translate(-50%, -50%);">6</div>
+                            <div class="lg:pl-12 lg:order-2">
+                                <div class="inline-block">
+                                    <span class="inline-block px-4 py-1 bg-[#D896C6]/10 border border-[#D896C6]/30 rounded-full text-[#D896C6] text-sm font-semibold mb-4" data-i18n="cases.case6.category">Fashion</span>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="cases.case6.title">Магазин одягу</h3>
+                                <p class="text-gray-400 text-base md:text-lg mb-4" data-i18n="cases.case6.description">Розробка контент-стратегії, стилізовані фотосесії колекцій, Stories з луками та порадами зі стилю. Таргетована реклама та співпраця з модними блогерами.</p>
+                                <div class="inline-flex items-center gap-2 text-[#D896C6] font-bold text-lg md:text-xl mb-4">
+                                    <i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6"></i>
+                                    <span data-i18n="cases.case6.result">Продажі: +220%</span>
+                                </div>
+                                <a href="https://www.instagram.com/unison_dance_studio/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#D896C6] to-[#C279B0] text-white rounded-lg hover:shadow-lg hover:shadow-[#D896C6]/30 transition-all duration-300 font-semibold w-fit">
+                                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                                    <span data-i18n="cases.viewProfile">Переглянути профіль</span>
+                                </a>
+                            </div>
+                            <div class="lg:pr-12 lg:order-1">
+                                <div class="custom-card rounded-2xl overflow-hidden group case-image-container">
+                                    <img src="./6-port.png" alt="Кейс просування магазину одягу в Instagram" class="case-image w-full h-96 md:h-[500px] object-contain transition-all duration-700" loading="lazy" width="600" height="800">
                                 </div>
                             </div>
                         </div>
@@ -1024,120 +1308,121 @@
         </section>
 
         <!-- === Відгуки === -->
-        <section id="reviews" class="py-20 md:py-28">
-            <div class="text-center max-w-3xl mx-auto px-4 md:px-6 animate-on-scroll">
-                <h2 class="section-title"><em>Відгуки клієнтів</em></h2>
-                <div class="flex justify-center gap-4 mt-8">
-                    <button class="slider-btn-simple prev" id="reviews-prev" aria-label="Предыдущий отзыв">
-                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                    </button>
-                    <button class="slider-btn-simple next" id="reviews-next" aria-label="Следующий отзыв">
-                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                    </button>
-                </div>
+        <section id="reviews" class="py-10 md:py-16 overflow-hidden">
+            <div class="text-center max-w-3xl mx-auto px-6 animate-on-scroll mb-12">
+                <h2 class="section-title" data-i18n="reviews.title">Відгуки клієнтів</h2>
+                <p class="text-gray-400 mt-3" data-i18n="reviews.subtitle">Реальні відгуки з наших робочих чатів</p>
             </div>
-            <div class="container mx-auto px-4 md:px-6 mt-16">
-                <div class="reviews-slider relative">
-                    <div class="reviews-track" id="reviews-track">
-                            <!-- Первый набор отзывов -->
-                            <div class="review-card">
-                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-1.png');">
-                                    <img src="./review-1.png" alt="Відгук клієнта про роботу SMM-спеціаліста Анни Серпутько" class="w-full h-full object-contain" loading="lazy">
-                                </div>
-                            </div>
 
-                            <div class="review-card">
-                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-2.png');">
-                                    <img src="./review-2.png" alt="Позитивний відгук про SMM-послуги та просування в соцмережах" class="w-full h-full object-contain" loading="lazy">
-                                </div>
-                            </div>
-
-                            <div class="review-card">
-                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-3.png');">
-                                    <img src="./review-3.png" alt="Відгук про ефективність таргетованої реклами та контент-маркетингу" class="w-full h-full object-contain" loading="lazy">
-                                </div>
-                            </div>
-
-                            <div class="review-card">
-                                <div class="custom-card rounded-xl h-full overflow-hidden" style="background-image: url('./review-4.png');">
-                                    <img src="./review-4.png" alt="Рекомендація SMM-спеціаліста від задоволеного клієнта" class="w-full h-full object-contain" loading="lazy">
-                                </div>
-                            </div>
-                    </div>
+            <!-- Reviews Grid -->
+            <div class="reviews-grid">
+                <div class="review-card" data-hover-text="Натисніть, щоб збільшити">
+                    <img src="./review-1.png" alt="Відгук клієнта">
+                </div>
+                <div class="review-card" data-hover-text="Натисніть, щоб збільшити">
+                    <img src="./review-2.png" alt="Відгук клієнта">
+                </div>
+                <div class="review-card" data-hover-text="Натисніть, щоб збільшити">
+                    <img src="./review-3.png" alt="Відгук клієнта">
+                </div>
+                <div class="review-card" data-hover-text="Натисніть, щоб збільшити">
+                    <img src="./review-4.png" alt="Відгук клієнта">
+                </div>
+                <div class="review-card" data-hover-text="Натисніть, щоб збільшити">
+                    <img src="./review-1.png" alt="Відгук клієнта">
+                </div>
+                <div class="review-card" data-hover-text="Натисніть, щоб збільшити">
+                    <img src="./review-2.png" alt="Відгук клієнта">
                 </div>
             </div>
         </section>
+
+        <!-- Lightbox Modal -->
+        <div id="reviewLightbox" class="lightbox-modal">
+            <button class="lightbox-close" aria-label="Закрыть">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <button class="lightbox-prev" aria-label="Предыдущий">
+                <i data-lucide="chevron-left" class="w-8 h-8"></i>
+            </button>
+            <button class="lightbox-next" aria-label="Следующий">
+                <i data-lucide="chevron-right" class="w-8 h-8"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="" alt="Відгук клієнта">
+            </div>
+        </div>
 
         <!-- === Часті питання === -->
         <section id="faq" class="py-20 md:py-28 bg-[#1C1C1E]">
             <div class="container mx-auto px-4 md:px-6">
                 <div class="text-center max-w-3xl mx-auto animate-on-scroll mb-12">
-                    <h2 class="section-title"><em>Часті питання</em></h2>
-                    <p class="section-subtitle">Відповіді на найпопularніші запитання про SMM-послуги</p>
+                    <h2 class="section-title" data-i18n="faq.title">Часті питання</h2>
+                    <p class="section-subtitle" data-i18n="faq.subtitle">Відповіді на найпопularніші запитання про SMM-послуги</p>
                 </div>
 
                 <div class="max-w-4xl mx-auto animate-on-scroll" style="transition-delay: 200ms;">
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Скільки коштують SMM-послуги?</span>
+                            <span data-i18n="faq.q1.question">Скільки коштують SMM-послуги?</span>
                             <i data-lucide="plus" class="faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Вартість залежить від обсягу роботи та ваших цілей. Я зможу назвати точну ціну після безкоштовної консультації, коли проаналізую ваш проєкт та потреби. Кожен бізнес унікальний, тому пропоную індивідуальний підхід та розрахунок.</p>
-                            <button class="js-open-form mt-4 inline-flex items-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105">
+                            <p data-i18n="faq.q1.answer">Вартість залежить від обсягу роботи та ваших цілей. Я зможу назвати точну ціну після безкоштовної консультації, коли проаналізую ваш проєкт та потреби. Кожен бізнес унікальний, тому пропоную індивідуальний підхід та розрахунок.</p>
+                            <button class="js-open-form mt-4 inline-flex items-center gap-2 bg-[#D896C6] hover:bg-[#C279B0] text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105">
                                 <i data-lucide="calculator" class="w-5 h-5"></i>
-                                <span>Розрахувати вартість</span>
+                                <span data-i18n="faq.q1.button">Розрахувати вартість</span>
                             </button>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Які результати можна очікувати?</span>
+                            <span data-i18n="faq.q2.question">Які результати можна очікувати?</span>
                             <i data-lucide="plus" class="faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Перші результати помітні через 2-4 тижні: зростання охоплень, залучення аудиторії. Стабільний приріст підписників та продажів — через 2-3 місяці системної роботи. Кожен проєкт унікальний, тому я завжди ставлю реалістичні KPI після аналізу вашої ніші.</p>
+                            <p data-i18n="faq.q2.answer">Перші результати помітні через 2-4 тижні: зростання охоплень, залучення аудиторії. Стабільний приріст підписників та продажів — через 2-3 місяці системної роботи. Кожен проєкт унікальний, тому я завжди ставлю реалістичні KPI після аналізу вашої ніші.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Як відбувається співпраця?</span>
+                            <span data-i18n="faq.q3.question">Як відбувається співпраця?</span>
                             <i data-lucide="plus" class="faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Спочатку проводжу безкоштовну консультацію, де обговорюємо ваші цілі та завдання. Потім — аналіз ніші та конкурентів, розробка стратегії. Щомісячно надаю детальні звіти з результатами та планом на наступний період. Зв'язок підтримую в Telegram для оперативних питань.</p>
+                            <p data-i18n="faq.q3.answer">Спочатку проводжу безкоштовну консультацію, де обговорюємо ваші цілі та завдання. Потім — аналіз ніші та конкурентів, розробка стратегії. Щомісячно надаю детальні звіти з результатами та планом на наступний період. Зв'язок підтримую в Telegram для оперативних питань.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Чи потрібен великий бюджет на рекламу?</span>
+                            <span data-i18n="faq.q4.question">Чи потрібен великий бюджет на рекламу?</span>
                             <i data-lucide="plus" class="faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Почати можна з мінімального бюджету від 3 000 грн/міс на тестування. Оптимальний бюджет для стабільних результатів — від 10 000 грн/міс. Я допомагаю ефективно розподіляти бюджет та масштабувати рекламу по мірі зростання віддачі.</p>
+                            <p data-i18n="faq.q4.answer">Почати можна з мінімального бюджету від 3 000 грн/міс на тестування. Оптимальний бюджет для стабільних результатів — від 10 000 грн/міс. Я допомагаю ефективно розподіляти бюджет та масштабувати рекламу по мірі зростання віддачі.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Які соцмережі найкращі для мого бізнесу?</span>
+                            <span data-i18n="faq.q5.question">Які соцмережі найкращі для мого бізнесу?</span>
                             <i data-lucide="plus" class="faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Це залежить від вашої цільової аудиторії та ніші. Instagram — універсальний для B2C, особливо beauty, fashion, HoReCa. Facebook ефективний для B2B та старшої аудиторії. TikTok — для молодої аудиторії та вірусного контенту. На консультації ми визначимо найкращі канали саме для вас.</p>
+                            <p data-i18n="faq.q5.answer">Це залежить від вашої цільової аудиторії та ніші. Instagram — універсальний для B2C, особливо beauty, fashion, HoReCa. Facebook ефективний для B2B та старшої аудиторії. TikTok — для молодої аудиторії та вірусного контенту. На консультації ми визначимо найкращі канали саме для вас.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Чи можна працювати без довгострокових контрактів?</span>
+                            <span data-i18n="faq.q6.question">Чи можна працювати без довгострокових контрактів?</span>
                             <i data-lucide="plus" class="faq-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Так, мінімальний термін співпраці — 1 місяць. Проте для досягнення стабільних результатів рекомендую співпрацю від 3 місяців, адже SMM — це системна робота, яка дає найкращі результати в довгостроковій перспективі.</p>
+                            <p data-i18n="faq.q6.answer">Так, мінімальний термін співпраці — 1 місяць. Проте для досягнення стабільних результатів рекомендую співпрацю від 3 місяців, адже SMM — це системна робота, яка дає найкращі результати в довгостроковій перспективі.</p>
                         </div>
                     </div>
                 </div>
@@ -1148,10 +1433,10 @@
         <section id="audit" class="py-20 md:py-28">
             <div class="container mx-auto px-4 md:px-6 animate-on-scroll">
                 <div class="bg-[#1C1C1E] border border-[#2D2D2F] rounded-2xl p-8 md:p-16 text-center">
-                    <h2 class="text-3xl md:text-5xl font-bold text-white">Отримайте <em>безкоштовну</em> консультацію</h2>
-                    <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">Напишіть мені зручним для вас способом. Розкажіть про свій бізнес та завдання. Я проаналізую ваші соцмережі та дам рекомендації, як підвищити продажі через SMM.</p>
+                    <h2 class="text-3xl md:text-5xl font-bold text-white" data-i18n="audit.title">Отримайте безкоштовну консультацію</h2>
+                    <p class="mt-6 text-lg text-gray-400 max-w-3xl mx-auto" data-i18n="audit.description">Напишіть мені зручним для вас способом. Розкажіть про свій бізнес та завдання. Я проаналізую ваші соцмережі та дам рекомендації, як підвищити продажі через SMM.</p>
                     <div class="mt-12">
-                        <a href="#" class="js-open-form cta-primary px-10 py-5 rounded-xl text-xl inline-flex items-center">
+                        <a href="#" class="js-open-form cta-primary px-12 py-5 rounded-xl text-xl inline-flex items-center justify-center w-full max-w-md" data-i18n="audit.button">
                             Зв'язатися зі мною
                         </a>
                     </div>
@@ -1167,34 +1452,34 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-4">Анна Серпутько</h3>
-                    <p class="text-gray-400">Зростання вашого бренду в соцмережах — моя робота.</p>
+                    <p class="text-gray-400" data-i18n="footer.tagline">Зростання вашого бренду в соцмережах — моя робота.</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-white">Навігація</h4>
+                    <h4 class="font-semibold text-white" data-i18n="footer.navigation">Навігація</h4>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-white">Послуги</a></li>
-                        <li><a href="#cases" class="text-gray-400 hover:text-white">Кейси</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white">Про мене</a></li>
-                        <li><a href="#reviews" class="text-gray-400 hover:text-white">Відгуки</a></li>
-                        <li><a href="#contacts" class="text-gray-400 hover:text-white">Контакти</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white" data-i18n="nav.services">Послуги</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-white" data-i18n="nav.cases">Кейси</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white" data-i18n="nav.about">Про мене</a></li>
+                        <li><a href="#reviews" class="text-gray-400 hover:text-white" data-i18n="nav.reviews">Відгуки</a></li>
+                        <li><a href="#contacts" class="text-gray-400 hover:text-white" data-i18n="nav.contacts">Контакти</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-white">Зв'яжіться зі мною</h4>
+                    <h4 class="font-semibold text-white" data-i18n="footer.contactMe">Зв'яжіться зі мною</h4>
                      <div class="mt-4 flex flex-col space-y-3">
-                        <a href="https://wa.me/380980685004" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                        <a href="https://wa.me/380980685004" target="_blank" class="bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-all hover:scale-105">
                             <i data-lucide="message-circle" class="w-5 h-5"></i>
-                            <span>Написати в WhatsApp</span>
+                            <span data-i18n="footer.whatsapp">Написати в WhatsApp</span>
                         </a>
-                        <a href="https://t.me/annserputko" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                        <a href="https://t.me/annserputko" target="_blank" class="bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-all hover:scale-105">
                              <i data-lucide="send" class="w-5 h-5"></i>
-                            <span>Написати в Telegram</span>
+                            <span data-i18n="footer.telegram">Написати в Telegram</span>
                         </a>
-                        <a href="https://www.instagram.com/annserputko/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                        <a href="https://www.instagram.com/annserputko/" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-all hover:scale-105">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                             <span>Instagram</span>
                         </a>
-                        <a href="mailto:anyaserputko@gmail.com" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-transform hover:scale-105">
+                        <a href="mailto:anyaserputko@gmail.com" class="bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-all hover:scale-105">
                             <i data-lucide="mail" class="w-5 h-5"></i>
                             <span>Email</span>
                         </a>
@@ -1202,68 +1487,68 @@
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 Анна Серпутько. Усі права захищені.</p>
+                <p data-i18n="footer.copyright">&copy; 2024 Анна Серпутько. Усі права захищені.</p>
             </div>
         </div>
     </footer>
 
     <!-- === Модальное окно для УСЛУГ === -->
-    <div id="service-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-2xl p-8 transform scale-95 opacity-0 modal-content" style="max-height: 90vh; overflow-y: auto;">
+    <div id="service-modal-backdrop" class="fixed inset-0 bg-black/95 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1a1a1a] border border-[#D896C6]/20 rounded-2xl shadow-2xl w-full max-w-2xl p-8 transform scale-95 opacity-0 modal-content" style="max-height: 90vh; overflow-y: auto;">
             <button class="js-close-modal absolute top-4 right-4 text-gray-500 hover:text-white">
                 <i data-lucide="x" class="w-8 h-8"></i>
             </button>
             <div class="pr-8">
                  <h3 id="service-modal-title" class="text-3xl font-bold text-white mb-4"></h3>
                  <p id="service-modal-description" class="text-gray-400 leading-relaxed"></p>
-                 <a href="#" id="service-modal-cta" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу консультацію</a>
+                 <a href="#" id="service-modal-cta" class="js-open-form cta-primary inline-flex items-center justify-center font-semibold px-10 py-4 rounded-xl mt-8 w-full max-w-sm" data-i18n="modal.wantConsultation">Хочу консультацію</a>
             </div>
         </div>
     </div>
     
     <!-- === Модальное окно для КЕЙСОВ === -->
-    <div id="case-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-3xl p-8 transform scale-95 opacity-0 modal-content" style="max-height: 90vh; overflow-y: auto;">
+    <div id="case-modal-backdrop" class="fixed inset-0 bg-black/95 z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1a1a1a] border border-[#D896C6]/20 rounded-2xl shadow-2xl w-full max-w-3xl p-8 transform scale-95 opacity-0 modal-content" style="max-height: 90vh; overflow-y: auto;">
             <button class="js-close-modal absolute top-4 right-4 text-gray-500 hover:text-white">
                 <i data-lucide="x" class="w-8 h-8"></i>
             </button>
             <div class="pr-8">
                  <h3 id="case-modal-title" class="text-3xl font-bold text-white mb-6"></h3>
                  <div id="case-modal-content" class="text-gray-300 leading-relaxed space-y-4"></div>
-                 <a href="#" class="js-open-form cta-primary inline-block font-semibold px-6 py-3 rounded-lg mt-8">Хочу такий же проєкт</a>
+                 <a href="#" class="js-open-form cta-primary inline-flex items-center justify-center font-semibold px-10 py-4 rounded-xl mt-8 w-full max-w-sm">Хочу такий же проєкт</a>
             </div>
         </div>
     </div>
 
     <!-- === Модальное окно для ВЫБОРА СПОСОБА СВЯЗИ === -->
-    <div id="contact-choice-modal-backdrop" class="fixed inset-0 bg-black bg-opacity-80 z-[60] hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full max-w-2xl p-8 transform translate-x-full transition-transform duration-300 ease-in-out modal-content" style="max-height: 90vh; overflow-y: auto;">
+    <div id="contact-choice-modal-backdrop" class="fixed inset-0 bg-black/95 z-[60] hidden opacity-0 transition-opacity duration-300 ease-in-out modal-backdrop">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1a1a1a] border border-[#D896C6]/20 rounded-2xl shadow-2xl w-full max-w-2xl p-8 transform translate-x-full transition-transform duration-300 ease-in-out modal-content" style="max-height: 90vh; overflow-y: auto;">
             <button class="js-close-contact-choice absolute top-4 right-4 text-gray-500 hover:text-white">
                 <i data-lucide="x" class="w-8 h-8"></i>
             </button>
             <div class="pr-8">
-                <h3 class="text-3xl font-bold text-white mb-4">Оберіть спосіб зв'язку</h3>
-                <p class="text-gray-400 leading-relaxed mb-8">Виберіть зручний для вас спосіб зв'язку, і я відповім вам якнайшвидше</p>
+                <h3 class="text-3xl font-bold text-white mb-4" data-i18n="contactModal.title">Оберіть спосіб зв'язку</h3>
+                <p class="text-gray-400 leading-relaxed mb-8" data-i18n="contactModal.subtitle">Виберіть зручний для вас спосіб зв'язку, і я відповім вам якнайшвидше</p>
 
                 <div class="space-y-4">
-                    <a href="https://t.me/annserputko" target="_blank" class="block w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                    <a href="https://t.me/annserputko" target="_blank" class="block w-full bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] hover:border-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
                         <i data-lucide="send" class="w-6 h-6"></i>
-                        <span class="text-lg">Написати в Telegram</span>
+                        <span class="text-lg" data-i18n="contactModal.telegram">Написати в Telegram</span>
                     </a>
 
-                    <a href="https://wa.me/380980685004" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                    <a href="https://wa.me/380980685004" target="_blank" class="block w-full bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] hover:border-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
                         <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        <span class="text-lg">Написати в WhatsApp</span>
+                        <span class="text-lg" data-i18n="contactModal.whatsapp">Написати в WhatsApp</span>
                     </a>
 
-                    <a href="https://www.instagram.com/annserputko/" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                    <a href="https://www.instagram.com/annserputko/" target="_blank" rel="noopener noreferrer" class="block w-full bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] hover:border-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
                         <i data-lucide="instagram" class="w-6 h-6"></i>
-                        <span class="text-lg">Написати в Instagram</span>
+                        <span class="text-lg" data-i18n="contactModal.instagram">Написати в Instagram</span>
                     </a>
 
-                    <a href="mailto:anyaserputko@gmail.com" class="block w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
+                    <a href="mailto:anyaserputko@gmail.com" class="block w-full bg-transparent border-2 border-[#D896C6] hover:bg-[#D896C6] hover:border-[#D896C6] text-[#D896C6] hover:text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center space-x-3 transition-all hover:scale-105">
                         <i data-lucide="mail" class="w-6 h-6"></i>
-                        <span class="text-lg">Написати на Email</span>
+                        <span class="text-lg" data-i18n="contactModal.email">Написати на Email</span>
                     </a>
                 </div>
             </div>
@@ -1271,7 +1556,452 @@
     </div>
 
     <script>
+        // === i18n Translation System ===
+        const translations = {
+            uk: {
+                nav: {
+                    services: 'Послуги',
+                    cases: 'Кейси',
+                    about: 'Про мене',
+                    reviews: 'Відгуки',
+                    contacts: 'Контакти',
+                    consultation: 'Безкоштовна консультація'
+                },
+                about: {
+                    available: 'Доступна до співпраці',
+                    title: 'Привіт! Я Анна — ваш SMM-спеціаліст',
+                    description: 'Я допомагаю бізнесу зростати в соціальних мережах вже 3 роки. Працювала з брендами у сферах beauty, fashion, HoReCa, освіти та e-commerce.',
+                    list1: '• <span class="text-white font-semibold">3 роки</span> досвіду в SMM',
+                    list2: '• <span class="text-white font-semibold">50+ успішних проєктів</span> реалізовано',
+                    list3: '• Досвід роботи з <span class="text-white font-semibold">Instagram, Facebook, TikTok</span>',
+                    list4: '• Спеціалізація: контент, таргет, стратегія',
+                    stat1: 'роки в SMM',
+                    stat2: 'проєктів реалізовано',
+                    contact: 'Зв\'язатися зі мною'
+                },
+                services: {
+                    title: 'Допомагаю бізнесу <span class="text-color-animate" data-text-animate>зростати в соціальних мережах</span>',
+                    subtitle: 'Instagram, Facebook, TikTok — не важливо, де ви присутні. Я беру на себе повний цикл SMM або закриваю конкретну задачу, щоб ви отримували результат.',
+                    clickTip: 'Натисни на послугу, щоб дізнатися більше',
+                    items: [
+                        { title: 'Ведення соціальних мереж', description: 'Повне ведення ваших соцмереж від А до Я: контент-план, створення контенту, публікації, Stories, комунікація з аудиторією. Ви отримуєте живий, залучаючий профіль, який працює на ваш бізнес 24/7.' },
+                        { title: 'Розробка SMM-стратегії', description: 'Створюємо стратегію просування в соціальних мережах на основі аналізу вашої ніші, конкурентів та цільової аудиторії. Чітке позиціонування, tone of voice, контент-стратегія та KPI для вимірювання результатів.' },
+                        { title: 'Таргетована реклама', description: 'Налаштовуємо та ведемо таргетовану рекламу в Facebook, Instagram, TikTok. Створюємо креативи, тестуємо аудиторії, оптимізуємо бюджет. Ваша реклама буде приводити клієнтів, а не витрачати бюджет.' },
+                        { title: 'Створення контенту', description: 'Створюємо якісний візуальний контент для соцмереж: фотозйомки, відеоролики, Reels, Stories. Від ідеї до готового поста. Ваш контент буде виділятися в стрічці та залучати аудиторію.' },
+                        { title: 'Інфлюенс-маркетинг', description: 'Підбираємо блогерів та інфлюенсерів, які підходять вашому бренду. Організовуємо співпрацю, створюємо UGC-контент. Це швидкий спосіб збільшити впізнаваність та довіру до вашого бренду.' },
+                        { title: 'Комʼюніті-менеджмент', description: 'Працюємо з вашою аудиторією: відповідаємо на коментарі та повідомлення, модеруємо обговорення, залучаємо підписників. Створюємо активне комʼюніті навколо вашого бренду.' },
+                        { title: 'Аналітика та звітність', description: 'Відстежуємо всі важливі метрики: охоплення, залученість, конверсії, ROI реклами. Надаємо детальні звіти та рекомендації для покращення результатів. Кожне рішення базується на даних.' },
+                        { title: 'Запуск з нуля', description: 'Запускаємо ваш бренд у соціальних мережах з нуля: позиціонування, оформлення профілів, контент-стратегія, перші публікації та залучення аудиторії. Від ідеї до перших клієнтів.' },
+                        { title: 'Контент-план та візуал', description: 'Розробляємо детальний контент-план на місяць, створюємо шаблони для постів, формуємо єдиний стиль профілю. Ваша стрічка буде гармонійною та впізнаваною.' },
+                        { title: 'UGC та відгуки', description: 'Збираємо та обробляємо відгуки клієнтів, створюємо UGC-контент (користувацький контент), працюємо з репутацією бренду. Відгуки — це ваш найсильніший інструмент продажів.' }
+                    ]
+                },
+                process: {
+                    title: 'Як я працюю',
+                    subtitle: 'Прозорий процес роботи від знайомства до результату. Кожен етап продуманий для досягнення максимальної ефективності.',
+                    step1Title: 'Консультація',
+                    step1Desc: 'Обговорюємо ваші цілі, аналізуємо поточний стан соцмереж. Визначаємо завдання та KPI.',
+                    step2Title: 'Аналіз',
+                    step2Desc: 'Досліджую вашу нішу, конкурентів та цільову аудиторію. Шукаю точки зростання.',
+                    step3Title: 'Стратегія',
+                    step3Desc: 'Розробляю детальну SMM-стратегію: контент-план, позиціонування, канали просування.',
+                    step4Title: 'Реалізація',
+                    step4Desc: 'Запускаю стратегію: створюю контент, веду соцмережі, налаштовую рекламу. Щомісячні звіти.',
+                    timeframe: 'Середній термін виходу на результат: 2-3 місяці'
+                },
+                cases: {
+                    title: 'Мої кейси',
+                    subtitle: 'Реальні результати роботи з брендами в соціальних мережах. Цифри, які говорять самі за себе.',
+                    viewProfile: 'Переглянути профіль',
+                    case1: {
+                        category: 'Стоматологія',
+                        title: 'Стоматологічна клініка',
+                        description: 'Розробка контент-стратегії, створення довірчого контенту з прикладами робіт, таргетована реклама. Залучення нових пацієнтів через Instagram та Facebook.',
+                        result: 'Записи: +280% за 3 місяці'
+                    },
+                    case2: {
+                        category: 'Beauty',
+                        title: 'Салон краси',
+                        description: 'Повне ведення Instagram: естетичний контент, демонстрація робіт майстрів, Stories з процесами. Запуск таргету на локальну аудиторію та робота з відгуками клієнтів.',
+                        result: 'Клієнти: +195%'
+                    },
+                    case3: {
+                        category: 'E-commerce',
+                        title: 'Магазин косметики',
+                        description: 'Комплексне ведення Instagram та Facebook: огляди продуктів, навчальний контент, UGC від клієнтів. Таргетована реклама з високою конверсією в продажі.',
+                        result: 'Продажі: +340%'
+                    },
+                    case4: {
+                        category: 'Косметологія',
+                        title: 'Косметологічна клініка',
+                        description: 'Створення експертного контенту, демонстрація результатів процедур "до/після", освітні матеріали. Таргетована реклама та залучення через рекомендації клієнтів.',
+                        result: 'Записи: +265%'
+                    },
+                    case5: {
+                        category: 'Військова сфера',
+                        title: 'Військовий батальйон',
+                        description: 'Повне ведення Instagram профілю батальйону: офіційне інформування про діяльність, залучення підтримки (донати, допомога, участь), публікація новин, фото та відео про службу, операції та життя підрозділу, мотивація та набір нових бійців.',
+                        result: 'Підписники: +450%'
+                    },
+                    case6: {
+                        category: 'Танці',
+                        title: 'Школа бальних танців',
+                        description: 'Створення контенту для школи бальних танців у Відні: закулісні матеріали, відгуки, змагання та нагороди, дитячі групи, FAQ. Фото/відео з занять та виступів, анонси набору та записи, інформація про конкурси, опитування та промо для залучення нових учнів.',
+                        result: 'Учні: +320%'
+                    }
+                },
+                reviews: {
+                    title: 'Відгуки клієнтів',
+                    subtitle: 'Реальні відгуки з наших робочих чатів'
+                },
+                faq: {
+                    title: 'Часті питання',
+                    subtitle: 'Відповіді на найпопularніші запитання про SMM-послуги',
+                    q1: {
+                        question: 'Скільки коштують SMM-послуги?',
+                        answer: 'Вартість залежить від обсягу роботи та ваших цілей. Я зможу назвати точну ціну після безкоштовної консультації, коли проаналізую ваш проєкт та потреби. Кожен бізнес унікальний, тому пропоную індивідуальний підхід та розрахунок.',
+                        button: 'Розрахувати вартість'
+                    },
+                    q2: {
+                        question: 'Які результати можна очікувати?',
+                        answer: 'Перші результати помітні через 2-4 тижні: зростання охоплень, залучення аудиторії. Стабільний приріст підписників та продажів — через 2-3 місяці системної роботи. Кожен проєкт унікальний, тому я завжди ставлю реалістичні KPI після аналізу вашої ніші.'
+                    },
+                    q3: {
+                        question: 'Як відбувається співпраця?',
+                        answer: 'Спочатку проводжу безкоштовну консультацію, де обговорюємо ваші цілі та завдання. Потім — аналіз ніші та конкурентів, розробка стратегії. Щомісячно надаю детальні звіти з результатами та планом на наступний період. Зв\'язок підтримую в Telegram для оперативних питань.'
+                    },
+                    q4: {
+                        question: 'Чи потрібен великий бюджет на рекламу?',
+                        answer: 'Почати можна з мінімального бюджету від 3 000 грн/міс на тестування. Оптимальний бюджет для стабільних результатів — від 10 000 грн/міс. Я допомагаю ефективно розподіляти бюджет та масштабувати рекламу по мірі зростання віддачі.'
+                    },
+                    q5: {
+                        question: 'Які соцмережі найкращі для мого бізнесу?',
+                        answer: 'Це залежить від вашої цільової аудиторії та ніші. Instagram — універсальний для B2C, особливо beauty, fashion, HoReCa. Facebook ефективний для B2B та старшої аудиторії. TikTok — для молодої аудиторії та вірусного контенту. На консультації ми визначимо найкращі канали саме для вас.'
+                    },
+                    q6: {
+                        question: 'Чи можна працювати без довгострокових контрактів?',
+                        answer: 'Так, мінімальний термін співпраці — 1 місяць. Проте для досягнення стабільних результатів рекомендую співпрацю від 3 місяців, адже SMM — це системна робота, яка дає найкращі результати в довгостроковій перспективі.'
+                    }
+                },
+                audit: {
+                    title: 'Отримайте безкоштовну консультацію',
+                    description: 'Напишіть мені зручним для вас способом. Розкажіть про свій бізнес та завдання. Я проаналізую ваші соцмережі та дам рекомендації, як підвищити продажі через SMM.',
+                    button: 'Зв\'язатися зі мною'
+                },
+                footer: {
+                    tagline: 'Зростання вашого бренду в соцмережах — моя робота.',
+                    navigation: 'Навігація',
+                    contactMe: 'Зв\'яжіться зі мною',
+                    whatsapp: 'Написати в WhatsApp',
+                    telegram: 'Написати в Telegram',
+                    copyright: '© 2024 Анна Серпутько. Усі права захищені.'
+                },
+                modal: {
+                    wantConsultation: 'Хочу консультацію'
+                },
+                contactModal: {
+                    title: 'Оберіть спосіб зв\'язку',
+                    subtitle: 'Виберіть зручний для вас спосіб зв\'язку, і я відповім вам якнайшвидше',
+                    telegram: 'Написати в Telegram',
+                    whatsapp: 'Написати в WhatsApp',
+                    instagram: 'Написати в Instagram',
+                    email: 'Написати на Email'
+                }
+            },
+            en: {
+                nav: {
+                    services: 'Services',
+                    cases: 'Cases',
+                    about: 'About',
+                    reviews: 'Reviews',
+                    contacts: 'Contacts',
+                    consultation: 'Free Consultation'
+                },
+                about: {
+                    available: 'Available for collaboration',
+                    title: 'Hi! I\'m Anna — your SMM specialist',
+                    description: 'I help businesses grow on social media for 3 years. Worked with brands in beauty, fashion, HoReCa, education, and e-commerce.',
+                    list1: '• <span class="text-white font-semibold">3 years</span> of experience in SMM',
+                    list2: '• <span class="text-white font-semibold">50+ successful projects</span> delivered',
+                    list3: '• Experience with <span class="text-white font-semibold">Instagram, Facebook, TikTok</span>',
+                    list4: '• Specialization: content, targeting, strategy',
+                    stat1: 'years in SMM',
+                    stat2: 'projects delivered',
+                    contact: 'Contact me'
+                },
+                services: {
+                    title: 'I help businesses <span class="text-color-animate" data-text-animate>grow on social media</span>',
+                    subtitle: 'Instagram, Facebook, TikTok — no matter where you are. I handle the full SMM cycle or solve specific tasks to deliver results.',
+                    clickTip: 'Click on a service to learn more',
+                    items: [
+                        { title: 'Social Media Management', description: 'Full management of your social media from A to Z: content planning, content creation, publications, Stories, audience communication. You get a lively, engaging profile that works for your business 24/7.' },
+                        { title: 'SMM Strategy Development', description: 'We create a social media promotion strategy based on analysis of your niche, competitors, and target audience. Clear positioning, tone of voice, content strategy, and KPIs for measuring results.' },
+                        { title: 'Targeted Advertising', description: 'We set up and manage targeted ads on Facebook, Instagram, TikTok. Create creatives, test audiences, optimize budgets. Your ads will bring clients, not waste money.' },
+                        { title: 'Content Creation', description: 'We create high-quality visual content for social media: photo shoots, videos, Reels, Stories. From idea to finished post. Your content will stand out in the feed and engage your audience.' },
+                        { title: 'Influencer Marketing', description: 'We select bloggers and influencers that fit your brand. Organize collaborations, create UGC content. It\'s a fast way to increase brand awareness and trust.' },
+                        { title: 'Community Management', description: 'We work with your audience: respond to comments and messages, moderate discussions, engage subscribers. Create an active community around your brand.' },
+                        { title: 'Analytics & Reporting', description: 'We track all important metrics: reach, engagement, conversions, ad ROI. Provide detailed reports and recommendations for improvement. Every decision is data-driven.' },
+                        { title: 'Launch from Scratch', description: 'We launch your brand on social media from scratch: positioning, profile design, content strategy, first publications and audience engagement. From idea to first clients.' },
+                        { title: 'Content Plan & Visuals', description: 'We develop a detailed monthly content plan, create post templates, form a unified profile style. Your feed will be harmonious and recognizable.' },
+                        { title: 'UGC & Reviews', description: 'We collect and process customer reviews, create UGC content (user-generated content), work with brand reputation. Reviews are your strongest sales tool.' }
+                    ]
+                },
+                process: {
+                    title: 'How I Work',
+                    subtitle: 'Transparent work process from introduction to results. Each stage is designed for maximum efficiency.',
+                    step1Title: 'Consultation',
+                    step1Desc: 'We discuss your goals, analyze the current state of social media. Define tasks and KPIs.',
+                    step2Title: 'Analysis',
+                    step2Desc: 'I research your niche, competitors, and target audience. Find growth points.',
+                    step3Title: 'Strategy',
+                    step3Desc: 'I develop a detailed SMM strategy: content plan, positioning, promotion channels.',
+                    step4Title: 'Implementation',
+                    step4Desc: 'I launch the strategy: create content, manage social media, set up advertising. Monthly reports.',
+                    timeframe: 'Average time to results: 2-3 months'
+                },
+                cases: {
+                    title: 'My Cases',
+                    subtitle: 'Real results of work with brands on social media. Numbers that speak for themselves.',
+                    viewProfile: 'View Profile',
+                    case1: {
+                        category: 'Dentistry',
+                        title: 'Dental Clinic',
+                        description: 'Developing content strategy, creating trustworthy content with work examples, targeted advertising. Attracting new patients through Instagram and Facebook.',
+                        result: 'Appointments: +280% in 3 months'
+                    },
+                    case2: {
+                        category: 'Beauty',
+                        title: 'Beauty Salon',
+                        description: 'Full Instagram management: aesthetic content, showcasing master\'s work, Stories with processes. Launching targeted ads to local audience and working with client reviews.',
+                        result: 'Clients: +195%'
+                    },
+                    case3: {
+                        category: 'E-commerce',
+                        title: 'Cosmetics Store',
+                        description: 'Comprehensive Instagram and Facebook management: product reviews, educational content, UGC from clients. Targeted advertising with high conversion to sales.',
+                        result: 'Sales: +340%'
+                    },
+                    case4: {
+                        category: 'Cosmetology',
+                        title: 'Cosmetology Clinic',
+                        description: 'Creating expert content, showcasing before/after procedure results, educational materials. Targeted advertising and engagement through client recommendations.',
+                        result: 'Appointments: +265%'
+                    },
+                    case5: {
+                        category: 'Military',
+                        title: 'Military Battalion',
+                        description: 'Full Instagram management for battalion profile: official information about activities, attracting support (donations, help, participation), publishing news, photos and videos about service, operations and life of the unit, motivation and recruitment of new fighters.',
+                        result: 'Followers: +450%'
+                    },
+                    case6: {
+                        category: 'Dance',
+                        title: 'Ballroom Dance School',
+                        description: 'Content creation for ballroom dance school in Vienna: backstage materials, reviews, competitions and awards, kids groups, FAQ. Photos/videos from classes and performances, recruitment announcements, competition information, polls and promo to attract new students.',
+                        result: 'Students: +320%'
+                    }
+                },
+                reviews: {
+                    title: 'Client Reviews',
+                    subtitle: 'Real reviews from our work chats'
+                },
+                faq: {
+                    title: 'Frequently Asked Questions',
+                    subtitle: 'Answers to the most popular questions about SMM services',
+                    q1: {
+                        question: 'How much do SMM services cost?',
+                        answer: 'The cost depends on the scope of work and your goals. I can give you an exact price after a free consultation, when I analyze your project and needs. Every business is unique, so I offer an individual approach and calculation.',
+                        button: 'Calculate cost'
+                    },
+                    q2: {
+                        question: 'What results can be expected?',
+                        answer: 'First results are noticeable in 2-4 weeks: growth in reach, audience engagement. Stable growth in followers and sales — in 2-3 months of systematic work. Each project is unique, so I always set realistic KPIs after analyzing your niche.'
+                    },
+                    q3: {
+                        question: 'How does the cooperation work?',
+                        answer: 'First, I conduct a free consultation where we discuss your goals and tasks. Then — niche and competitor analysis, strategy development. Monthly I provide detailed reports with results and plans for the next period. I maintain communication via Telegram for operational matters.'
+                    },
+                    q4: {
+                        question: 'Is a large advertising budget needed?',
+                        answer: 'You can start with a minimum budget of $80/month for testing. Optimal budget for stable results — from $250/month. I help effectively allocate budget and scale advertising as ROI grows.'
+                    },
+                    q5: {
+                        question: 'Which social networks are best for my business?',
+                        answer: 'It depends on your target audience and niche. Instagram — universal for B2C, especially beauty, fashion, HoReCa. Facebook is effective for B2B and older audience. TikTok — for young audience and viral content. During consultation we\'ll determine the best channels for you.'
+                    },
+                    q6: {
+                        question: 'Can we work without long-term contracts?',
+                        answer: 'Yes, minimum cooperation period is 1 month. However, for achieving stable results I recommend cooperation from 3 months, because SMM is systematic work that gives the best results in the long term.'
+                    }
+                },
+                audit: {
+                    title: 'Get a free consultation',
+                    description: 'Write to me in a way convenient for you. Tell me about your business and tasks. I will analyze your social media and give recommendations on how to increase sales through SMM.',
+                    button: 'Contact me'
+                },
+                footer: {
+                    tagline: 'Growing your brand on social media is my job.',
+                    navigation: 'Navigation',
+                    contactMe: 'Contact me',
+                    whatsapp: 'Write on WhatsApp',
+                    telegram: 'Write on Telegram',
+                    copyright: '© 2024 Anna Serputko. All rights reserved.'
+                },
+                modal: {
+                    wantConsultation: 'I want a consultation'
+                },
+                contactModal: {
+                    title: 'Choose a contact method',
+                    subtitle: 'Choose a convenient way to contact me, and I will respond to you as soon as possible',
+                    telegram: 'Write on Telegram',
+                    whatsapp: 'Write on WhatsApp',
+                    instagram: 'Write on Instagram',
+                    email: 'Write on Email'
+                }
+            }
+        };
+
+        // Get browser language or default to Ukrainian
+        let currentLang = localStorage.getItem('language') || 'uk';
+
+        // i18n helper function
+        function t(key) {
+            const keys = key.split('.');
+            let value = translations[currentLang];
+            for (const k of keys) {
+                value = value[k];
+                if (!value) return key;
+            }
+            return value;
+        }
+
+        // Update page content based on current language
+        function updateContent() {
+            // Update elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = t(key);
+            });
+
+            // Update elements with data-i18n-html attribute (for HTML content)
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                el.innerHTML = t(key);
+            });
+
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === currentLang) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Change language function
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            updateContent();
+
+            // Re-render service cards with new language
+            if (document.getElementById('services-grid')) {
+                renderServiceCards();
+            }
+
+            // Reinitialize lucide icons after content update
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        // Function to attach service card click handlers
+        let serviceClickHandlerAttached = false;
+        function attachServiceCardHandlers() {
+            if (serviceClickHandlerAttached) return;
+
+            const servicesGrid = document.getElementById('services-grid');
+            if (!servicesGrid) return;
+
+            servicesGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.service-card');
+                if (card) {
+                    const serviceId = parseInt(card.dataset.serviceId);
+                    const service = translations[currentLang].services.items[serviceId];
+
+                    // Open service modal
+                    const serviceModalBackdrop = document.getElementById('service-modal-backdrop');
+                    if (service && serviceModalBackdrop) {
+                        serviceModalBackdrop.querySelector('#service-modal-title').textContent = service.title;
+                        serviceModalBackdrop.querySelector('#service-modal-description').textContent = service.description;
+
+                        // Open modal using the existing openModal function
+                        const modalContent = serviceModalBackdrop.querySelector('.modal-content');
+                        serviceModalBackdrop.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                        setTimeout(() => {
+                            serviceModalBackdrop.classList.remove('opacity-0');
+                            if (modalContent) modalContent.classList.remove('scale-95', 'opacity-0');
+                        }, 10);
+                    }
+                }
+            });
+
+            serviceClickHandlerAttached = true;
+        }
+
+        // Render service cards
+        function renderServiceCards() {
+            const servicesGrid = document.getElementById('services-grid');
+            if (!servicesGrid) return;
+
+            servicesGrid.innerHTML = '';
+            const servicesData = [
+                { id: 0, icon: 'instagram' },
+                { id: 1, icon: 'pen-tool' },
+                { id: 2, icon: 'target' },
+                { id: 3, icon: 'video' },
+                { id: 4, icon: 'users' },
+                { id: 5, icon: 'message-circle' },
+                { id: 6, icon: 'bar-chart-2' },
+                { id: 7, icon: 'rocket' },
+                { id: 8, icon: 'layout' },
+                { id: 9, icon: 'star' }
+            ];
+
+            servicesData.forEach(service => {
+                const serviceData = translations[currentLang].services.items[service.id];
+                const card = document.createElement('div');
+                card.className = 'service-card custom-card p-[1.2rem] rounded-2xl cursor-pointer w-full flex flex-col items-center justify-center text-center max-w-[250px] h-full';
+                card.dataset.serviceId = service.id;
+                card.innerHTML = `
+                    <div class="bg-gradient-to-br from-[#D896C6] to-[#C279B0] text-white rounded-lg w-12 h-12 flex items-center justify-center shadow-lg">
+                        <i data-lucide="${service.icon}" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="mt-4 font-bold text-lg text-white">${serviceData.title}</h3>
+                `;
+                servicesGrid.appendChild(card);
+            });
+
+            // Reinitialize lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Attach click handlers once
+            attachServiceCardHandlers();
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize language
+            updateContent();
+
+            // Language switcher event listeners
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    changeLanguage(btn.dataset.lang);
+                });
+            });
+
             // --- Иконки Lucide ---
             requestAnimationFrame(() => {
                 if (typeof lucide !== 'undefined') {
@@ -1343,56 +2073,24 @@
                 });
             });
 
-            // --- Данные для карточек услуг ---
-            const servicesData = [
-                { id: 0, icon: 'instagram', title: 'Ведення соціальних мереж', description: 'Повне ведення ваших соцмереж від А до Я: контент-план, створення контенту, публікації, Stories, комунікація з аудиторією. Ви отримуєте живий, залучаючий профіль, який працює на ваш бізнес 24/7.' },
-                { id: 1, icon: 'pen-tool', title: 'Розробка SMM-стратегії', description: 'Створюємо стратегію просування в соціальних мережах на основі аналізу вашої ніші, конкурентів та цільової аудиторії. Чітке позиціонування, tone of voice, контент-стратегія та KPI для вимірювання результатів.' },
-                { id: 2, icon: 'target', title: 'Таргетована реклама', description: 'Налаштовуємо та ведемо таргетовану рекламу в Facebook, Instagram, TikTok. Створюємо креативи, тестуємо аудиторії, оптимізуємо бюджет. Ваша реклама буде приводити клієнтів, а не витрачати бюджет.' },
-                { id: 3, icon: 'video', title: 'Створення контенту', description: 'Створюємо якісний візуальний контент для соцмереж: фотозйомки, відеоролики, Reels, Stories. Від ідеї до готового поста. Ваш контент буде виділятися в стрічці та залучати аудиторію.' },
-                { id: 4, icon: 'users', title: 'Інфлюенс-маркетинг', description: 'Підбираємо блогерів та інфлюенсерів, які підходять вашому бренду. Організовуємо співпрацю, створюємо UGC-контент. Це швидкий спосіб збільшити впізнаваність та довіру до вашого бренду.' },
-                { id: 5, icon: 'message-circle', title: 'Комʼюніті-менеджмент', description: 'Працюємо з вашою аудиторією: відповідаємо на коментарі та повідомлення, модеруємо обговорення, залучаємо підписників. Створюємо активне комʼюніті навколо вашого бренду.' },
-                { id: 6, icon: 'bar-chart-2', title: 'Аналітика та звітність', description: 'Відстежуємо всі важливі метрики: охоплення, залученість, конверсії, ROI реклами. Надаємо детальні звіти та рекомендації для покращення результатів. Кожне рішення базується на даних.' },
-                { id: 7, icon: 'rocket', title: 'Запуск з нуля', description: 'Запускаємо ваш бренд у соціальних мережах з нуля: позиціонування, оформлення профілів, контент-стратегія, перші публікації та залучення аудиторії. Від ідеї до перших клієнтів.' },
-                { id: 8, icon: 'layout', title: 'Контент-план та візуал', description: 'Розробляємо детальний контент-план на місяць, створюємо шаблони для постів, формуємо єдиний стиль профілю. Ваша стрічка буде гармонійною та впізнаваною.' },
-                { id: 9, icon: 'star', title: 'UGC та відгуки', description: 'Збираємо та обробляємо відгуки клієнтів, створюємо UGC-контент (користувацький контент), працюємо з репутацією бренду. Відгуки — це ваш найсильніший інструмент продажів.' }
-            ];
-
-            const servicesGrid = document.getElementById('services-grid');
-            if(servicesGrid) {
-                servicesData.forEach(service => {
-                    const card = document.createElement('div');
-                    card.className = 'service-card custom-card p-[1.2rem] rounded-2xl cursor-pointer w-full flex flex-col items-center justify-center text-center max-w-[250px] h-full';
-                    card.dataset.serviceId = service.id;
-                    card.innerHTML = `
-                        <div class="bg-gradient-to-br from-[#10B981] to-[#059669] text-white rounded-lg w-12 h-12 flex items-center justify-center shadow-lg">
-                            <i data-lucide="${service.icon}" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="mt-4 font-bold text-lg text-white">${service.title}</h3>
-                    `;
-                    servicesGrid.appendChild(card);
-                });
-                requestAnimationFrame(() => {
-                    if (typeof lucide !== 'undefined') {
-                        lucide.createIcons();
-                    }
-                });
-            }
+            // --- Render initial service cards ---
+            renderServiceCards();
             
             // --- Данные для кейсов ---
             const casesData = {
                 firearm: {
                     title: 'Аксессуары для оружия',
                     content: `
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Проект</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Проект</h4>
                         <p class="mb-4">Firearm Accessories</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Миграция</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Миграция</h4>
                         <p class="mb-4">С WooCommerce на Shopify</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Выбор темы</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Выбор темы</h4>
                         <p class="mb-4">Тема выбрана в соответствии с эстетикой бренда</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Основные страницы созданы</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Основные страницы созданы</h4>
                         <ul class="list-disc list-inside mb-4 space-y-1">
                             <li>Главная страница</li>
                             <li>Страница коллекций</li>
@@ -1401,7 +2099,7 @@
                             <li>Дополнительные страницы</li>
                         </ul>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Ключевые функции реализованы</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Ключевые функции реализованы</h4>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Мега-меню</li>
                             <li>Подписка на рассылку</li>
@@ -1417,13 +2115,13 @@
                 toys: {
                     title: 'Игрушки и хобби',
                     content: `
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Проект</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Проект</h4>
                         <p class="mb-4">Toys & Hobbies</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Выбор темы</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Выбор темы</h4>
                         <p class="mb-4">Выбранная тема соответствует эстетике бренда</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Основные страницы созданы</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Основные страницы созданы</h4>
                         <ul class="list-disc list-inside mb-4 space-y-1">
                             <li>Главная страница</li>
                             <li>Страница коллекций</li>
@@ -1431,7 +2129,7 @@
                             <li>Бизнес-страницы: Оплата, Доставка и Политики</li>
                         </ul>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Ключевые функции реализованы</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Ключевые функции реализованы</h4>
                         <ul class="list-disc list-inside space-y-1">
                             <li>Мега-меню: Расширенная навигационная система</li>
                             <li>Instagram Feed: Отображение последних постов</li>
@@ -1445,25 +2143,25 @@
                 jewelry: {
                     title: 'Ювелирные изделия',
                     content: `
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Проект</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Проект</h4>
                         <p class="mb-4">Jewelry</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Реализация темы</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Реализация темы</h4>
                         <p class="mb-4">Разработка и кастомизация премиум темы</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Вовлечение клиентов</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Вовлечение клиентов</h4>
                         <p class="mb-4">Интеграция Google отзывов и быстрого чата</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Пользовательский интерфейс</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Пользовательский интерфейс</h4>
                         <p class="mb-4">Разработан кастомный хедер с мега-меню и единообразный футер</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Аналитика</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Аналитика</h4>
                         <p class="mb-4">Настроены Google Analytics и Facebook Pixel</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Разработка страниц</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Разработка страниц</h4>
                         <p class="mb-4">Созданы главная страница, страницы коллекций с фильтрами и страницы блога</p>
 
-                        <h4 class="text-xl font-bold text-[#10B981] mb-3">Социальная интеграция</h4>
+                        <h4 class="text-xl font-bold text-[#D896C6] mb-3">Социальная интеграция</h4>
                         <p class="mb-4">Интеграция Instagram feed на страницах товаров</p>
                     `
                 }
@@ -1478,23 +2176,6 @@
             const openFormButtons = document.querySelectorAll('.js-open-form');
             const closeContactChoiceButtons = document.querySelectorAll('.js-close-contact-choice');
 
-            // --- Логика модального окна УСЛУГ ---
-            function openServiceModal(service) {
-                if (!service || !serviceModalBackdrop) return;
-                serviceModalBackdrop.querySelector('#service-modal-title').textContent = service.title;
-                serviceModalBackdrop.querySelector('#service-modal-description').textContent = service.description;
-                openModal(serviceModalBackdrop);
-            }
-            
-            if(servicesGrid) {
-                servicesGrid.addEventListener('click', (e) => {
-                    const card = e.target.closest('.service-card');
-                    if (card) {
-                        const service = servicesData.find(s => s.id == card.dataset.serviceId);
-                        openServiceModal(service);
-                    }
-                });
-            }
 
             // --- Логика модального окна КЕЙСОВ ---
             function openCaseModal(caseData) {
@@ -1636,7 +2317,7 @@
                                 const spans = textAnimateElement.querySelectorAll('span');
                                 spans.forEach((span, index) => {
                                     setTimeout(() => {
-                                        span.style.color = '#10B981';
+                                        span.style.color = '#D896C6';
                                     }, index * 50); // 50ms задержка между буквами
                                 });
                             }, 600); // Задержка после появления текста
@@ -1792,57 +2473,6 @@
                 });
             });
 
-            // --- Логика слайдера отзывов ---
-            const reviewsTrack = document.getElementById('reviews-track');
-            const prevBtn = document.getElementById('reviews-prev');
-            const nextBtn = document.getElementById('reviews-next');
-
-            if (reviewsTrack && prevBtn && nextBtn) {
-                let currentSlide = 0;
-                const reviewCards = reviewsTrack.querySelectorAll('.review-card');
-                const totalSlides = reviewCards.length;
-
-                function getSlidesPerView() {
-                    if (window.innerWidth >= 1024) return 3;
-                    if (window.innerWidth >= 768) return 2;
-                    return 1;
-                }
-
-                function updateSlider() {
-                    const slidesPerView = getSlidesPerView();
-                    const maxSlide = totalSlides - slidesPerView;
-                    currentSlide = Math.max(0, Math.min(currentSlide, maxSlide));
-                    const translateX = -(currentSlide * (100 / slidesPerView));
-                    reviewsTrack.style.transform = `translateX(${translateX}%)`;
-
-                    // Управление состоянием кнопок
-                    prevBtn.disabled = currentSlide === 0;
-                    nextBtn.disabled = currentSlide >= maxSlide;
-                }
-
-                prevBtn.addEventListener('click', () => {
-                    if (currentSlide > 0) {
-                        currentSlide--;
-                        updateSlider();
-                    }
-                });
-
-                nextBtn.addEventListener('click', () => {
-                    const slidesPerView = getSlidesPerView();
-                    const maxSlide = totalSlides - slidesPerView;
-                    if (currentSlide < maxSlide) {
-                        currentSlide++;
-                        updateSlider();
-                    }
-                });
-
-                window.addEventListener('resize', () => {
-                    updateSlider();
-                });
-
-                updateSlider();
-            }
-
             // --- Логика FAQ Accordion ---
             const faqItems = document.querySelectorAll('.faq-item');
 
@@ -1920,6 +2550,92 @@
 
         // Initial call
         animateRocketOnScroll();
+
+        // === Reviews Lightbox Logic ===
+        const lightbox = document.getElementById('reviewLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const reviewCards = document.querySelectorAll('.review-card img');
+        const closeBtn = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+        const prevBtn = lightbox ? lightbox.querySelector('.lightbox-prev') : null;
+        const nextBtn = lightbox ? lightbox.querySelector('.lightbox-next') : null;
+
+        if (lightbox && reviewCards.length > 0) {
+            let currentImageIndex = 0;
+            const images = Array.from(reviewCards).map(img => img.src);
+            // Remove duplicates for lightbox navigation
+            const uniqueImages = [...new Set(images)];
+
+            function openLightbox(index) {
+                currentImageIndex = index;
+                lightboxImage.src = uniqueImages[currentImageIndex];
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % uniqueImages.length;
+                lightboxImage.src = uniqueImages[currentImageIndex];
+            }
+
+            function showPrevImage() {
+                currentImageIndex = (currentImageIndex - 1 + uniqueImages.length) % uniqueImages.length;
+                lightboxImage.src = uniqueImages[currentImageIndex];
+            }
+
+            // Открытие lightbox при клике на изображение
+            reviewCards.forEach((img) => {
+                img.parentElement.addEventListener('click', () => {
+                    const imgIndex = uniqueImages.indexOf(img.src);
+                    if (imgIndex !== -1) {
+                        openLightbox(imgIndex);
+                    }
+                });
+            });
+
+            // Закрытие
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeLightbox);
+            }
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Навигация
+            if (prevBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showPrevImage();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showNextImage();
+                });
+            }
+
+            // Клавиатурная навигация
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    showPrevImage();
+                } else if (e.key === 'ArrowRight') {
+                    showNextImage();
+                }
+            });
+        }
     </script>
 
 </body>
